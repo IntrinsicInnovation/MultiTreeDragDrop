@@ -171,6 +171,7 @@
       <DependentUpon>CutPlanes.edmx</DependentUpon>
       <LastGenOutput>CutPlanes.cs</LastGenOutput>
     </Content>
+    <Content Include="DbBackup\SQLserverdbackup.txt" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
