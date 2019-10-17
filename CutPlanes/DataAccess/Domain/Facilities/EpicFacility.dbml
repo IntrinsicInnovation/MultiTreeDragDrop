@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EpicDevNew" Class="EpicFacilityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=EDMEPICDV1;Initial Catalog=EpicDevNew;Integrated Security=True" SettingsObjectName="EpicDataAccess.Properties.Settings" SettingsPropertyName="EpicDevNewConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="lookup.Facilities" Member="Facilities">
+    <Type Name="Facility">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FacilityCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PreviousName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationNumber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GeneralComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FacilityComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Headquarters" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="FacilityStatuse_Facility" Member="FacilityStatuse" ThisKey="StatusId" OtherKey="Id" Type="FacilityStatuse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.FacilityType" Member="FacilityTypes">
+    <Type Name="FacilityType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkFacilityTypeFaclities" Member="LinkFacilityTypeFaclities">
+    <Type Name="LinkFacilityTypeFaclity">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FacilityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="lookup.FacilityStatuses" Member="FacilityStatuses">
+    <Type Name="FacilityStatuse">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="FacilityStatuse_Facility" Member="Facilities" ThisKey="Id" OtherKey="StatusId" Type="Facility" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EpicDevNew" Class="EpicResourceBundleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=edmepicdv1;Initial Catalog=EpicDevNew;Integrated Security=True" SettingsObjectName="EpicDataAccess.Properties.Settings" SettingsPropertyName="EpicDevNewConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="domain.ResourceBundle" Member="ResourceBundles">
+    <Type Name="ResourceBundle">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommericalOperationStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CommericalOperationEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PotentialIncludeCapacity" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DependableGeneratingCapacity" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="EffectiveLoadCarryingCapacity" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemCapacity" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PowerCallId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceBundleTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceBundleStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdatedUserId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ElectricalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ResourceBundle_Name" Member="Names" ThisKey="Id" OtherKey="ResourceBundleId" Type="Name" />
+      <Association Name="ResourceBundleType_ResourceBundle" Member="ResourceBundleType" ThisKey="ResourceBundleTypeId" OtherKey="Id" Type="ResourceBundleType" IsForeignKey="true" />
+      <Association Name="ResourceStatuse_ResourceBundle" Member="ResourceStatuse" ThisKey="ResourceBundleStatusId" OtherKey="Id" Type="ResourceStatuse" IsForeignKey="true" />
+      <Association Name="PowerCall_ResourceBundle" Member="PowerCall" ThisKey="PowerCallId" OtherKey="Id" Type="PowerCall" IsForeignKey="true" />
+      <Association Name="ElectricalGroup_ResourceBundle" Member="ElectricalGroup" ThisKey="ElectricalGroupId" OtherKey="Id" Type="ElectricalGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.ResourceBundleType" Member="ResourceBundleTypes">
+    <Type Name="ResourceBundleType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ResourceBundleType_ResourceBundle" Member="ResourceBundles" ThisKey="Id" OtherKey="ResourceBundleTypeId" Type="ResourceBundle" />
+    </Type>
+  </Table>
+  <Table Name="lookup.ResourceStatuses" Member="ResourceStatuses">
+    <Type Name="ResourceStatuse">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ResourceStatuse_ResourceBundle" Member="ResourceBundles" ThisKey="Id" OtherKey="ResourceBundleStatusId" Type="ResourceBundle" />
+    </Type>
+  </Table>
+  <Table Name="lookup.PowerCall" Member="PowerCalls">
+    <Type Name="PowerCall">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DatedCreated" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="PowerCall_ResourceBundle" Member="ResourceBundles" ThisKey="Id" OtherKey="PowerCallId" Type="ResourceBundle" />
+    </Type>
+  </Table>
+  <Table Name="domain.Names" Member="Names">
+    <Type Name="Name">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="NameTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SubstationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlantId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GeneratingUnitId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceBundleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ResourceBundle_Name" Member="ResourceBundle" ThisKey="ResourceBundleId" OtherKey="Id" Type="ResourceBundle" IsForeignKey="true" />
+      <Association Name="NameType_Name" Member="NameType" ThisKey="NameTypeId" OtherKey="Id" Type="NameType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.ElectricalGroups" Member="ElectricalGroups">
+    <Type Name="ElectricalGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentPk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ElectricalGroup_ResourceBundle" Member="ResourceBundles" ThisKey="Id" OtherKey="ElectricalGroupId" Type="ResourceBundle" />
+    </Type>
+  </Table>
+  <Table Name="domain.NameTypes" Member="NameTypes">
+    <Type Name="NameType">
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NameTypeAuthoritiesId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="NameType_Name" Member="Names" ThisKey="Id" OtherKey="NameTypeId" Type="Name" />
+      <Association Name="NameTypeAuthority_NameType" Member="NameTypeAuthority" ThisKey="NameTypeAuthoritiesId" OtherKey="Id" Type="NameTypeAuthority" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.NameTypeAuthorities" Member="NameTypeAuthorities">
+    <Type Name="NameTypeAuthority">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="NameTypeAuthority_NameType" Member="NameTypes" ThisKey="Id" OtherKey="NameTypeAuthoritiesId" Type="NameType" />
+    </Type>
+  </Table>
+</Database>

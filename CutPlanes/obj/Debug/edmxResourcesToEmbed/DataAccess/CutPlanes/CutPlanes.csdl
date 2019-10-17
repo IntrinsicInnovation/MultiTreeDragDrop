@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CutPlanesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Constraint">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ConstraintSetId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConstraintSetId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="FiscalYear" Type="Int32" />
+    <Property Name="SummerN0" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="SummerN1" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="WinterN0" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="WinterN1" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="AreaLoss" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="AreaLossInPercentage" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TotalLoss" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="TotalLossInPercentage" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="IntermittentRmr" Type="Decimal" Precision="20" Scale="10" />
+  </EntityType>
+  <EntityType Name="ConstraintSet">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PoolId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PoolId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CutPlane">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TypeId" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="MapId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="MapId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CutPlaneType">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DimCutPlaneSubstation">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserCreated" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BeginDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="SubtstaionType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FuelType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PrimaryPoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryPoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PoiVoltage" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="PoiCircuitDesignation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapDivisiion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapRegion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapSubRegion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapArea" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapZone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DimCutPlaneTimePeriod">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="UserCreated" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserCreated" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="DimLrbSubstation">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserCreated" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserCreated" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BeginDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="SubstationType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FuelType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PrimaryPoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryPoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PoiVoltage" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="PoiCircuitDesignation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LinkSubstationElectricalGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="SubstationId" />
+      <PropertyRef Name="ElectricalGroupId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubstationId" Type="Int32" Nullable="false" />
+    <Property Name="ElectricalGroupId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapType">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="CutPlanesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Constraints" EntityType="Self.Constraint" />
+    <EntitySet Name="ConstraintSets" EntityType="Self.ConstraintSet" />
+    <EntitySet Name="CutPlanes" EntityType="Self.CutPlane" />
+    <EntitySet Name="CutPlaneTypes" EntityType="Self.CutPlaneType" />
+    <EntitySet Name="DimCutPlaneSubstations" EntityType="Self.DimCutPlaneSubstation" />
+    <EntitySet Name="DimCutPlaneTimePeriods" EntityType="Self.DimCutPlaneTimePeriod" />
+    <EntitySet Name="DimLrbSubstations" EntityType="Self.DimLrbSubstation" />
+    <EntitySet Name="LinkSubstationElectricalGroups" EntityType="Self.LinkSubstationElectricalGroup" />
+    <EntitySet Name="MapTypes" EntityType="Self.MapType" />
+    <EntitySet Name="Pools" EntityType="CutPlanesModel.Pool" />
+    <EntitySet Name="PoolTypes" EntityType="CutPlanesModel.PoolType" />
+    <EntitySet Name="SubstationAttributes" EntityType="CutPlanesModel.SubstationAttribute" />
+    <EntitySet Name="Substations" EntityType="CutPlanesModel.Substation" />
+    <EntitySet Name="SubstationTypes" EntityType="CutPlanesModel.SubstationType" />
+    <EntitySet Name="Maps" EntityType="CutPlanesModel.Map" />
+    <EntitySet Name="ElectricalGroups" EntityType="CutPlanesModel.ElectricalGroup" />
+    <EntitySet Name="LinkSubstationPools" EntityType="CutPlanesModel.LinkSubstationPool" />
+  </EntityContainer>
+  <EntityType Name="Pool">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="CutPlaneId" />
+      <PropertyRef Name="PoolTypeId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="CutPlaneId" Type="Int32" Nullable="false" />
+    <Property Name="PoolTypeId" Type="Int32" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PoolType">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SubstationAttribute">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="SubstationId" />
+      <PropertyRef Name="ResourcePlanId" />
+      <PropertyRef Name="UsePdgcMasteredValue" />
+      <PropertyRef Name="UsePmpoMasteredValue" />
+      <PropertyRef Name="UsePptpMasteredValue" />
+      <PropertyRef Name="UsePrmrMasteredValue" />
+      <PropertyRef Name="UsePndcMasteredValue" />
+      <PropertyRef Name="UsePnpMasteredValue" />
+      <PropertyRef Name="UsePdmx0MasteredValue" />
+      <PropertyRef Name="UsePdmx1MasteredValue" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OriginalId" Type="Int32" />
+    <Property Name="UserCreatedId" Type="Int32" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="DateReplaced" Type="DateTime" Precision="3" />
+    <Property Name="DateEffective" Type="DateTime" Precision="3" />
+    <Property Name="ProjectPhaseId" Type="Int32" />
+    <Property Name="SubstationId" Type="Int32" Nullable="false" />
+    <Property Name="ResourcePlanId" Type="Int32" Nullable="false" />
+    <Property Name="RatedMVA" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="RatedOverExcitedPowerFactor" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="RatedUnderExcitedPowerFactor" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="NamePlateCapacityInMW" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="RatedOverExcitedMvar" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="RatedUnderExcitedMvar" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="RatedPowerFactor" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="DependableGeneratingCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="EffectiveLoadCarryingCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="LoadGrossSummerPeak" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="LoadGrossSummerMin" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="LoadGrossWinterPeak" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="LoadGrossWinterMin" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="MaximumPowerOutput" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="Nominated" Type="Boolean" />
+    <Property Name="Probability" Type="Int32" />
+    <Property Name="InServiceStartDate" Type="DateTime" Precision="3" />
+    <Property Name="InServiceEndDate" Type="DateTime" Precision="3" />
+    <Property Name="NitsDesignatedCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="EPACapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="MaxTakeOrPayCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="PointToPointCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="ReliabilityMustRunCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="SystemCapacity" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="UsePdgcMasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePmpoMasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePptpMasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePrmrMasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePndcMasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePnpMasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePdmx0MasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="UsePdmx1MasteredValue" Type="Boolean" Nullable="false" />
+    <Property Name="MaxOutputForFirmTransmission" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="MaxOutputForNonFirmTransmission" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Substation">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="GeoLocationId" Type="Int32" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SingleLineDiagramUri" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LocalOperationOrderLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MeterId" Type="Int32" />
+    <Property Name="ElectricalGroupId" Type="Int32" />
+    <Property Name="Latitude" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="Longitude" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="PowerCallId" Type="Int32" />
+    <Property Name="IsSynchronousCondenserCapable" Type="Boolean" />
+    <Property Name="CIMLoadTS" Type="DateTime" Precision="3" />
+    <Property Name="LRBLoadTS" Type="DateTime" Precision="3" />
+    <Property Name="FacilityLoadTS" Type="DateTime" Precision="3" />
+    <Property Name="NITSPlanLoadTS" Type="DateTime" Precision="3" />
+    <Property Name="SubStationTypeId" Type="Int32" />
+    <Property Name="FuelTypeId" Type="Int32" />
+    <Property Name="OwnershipTypeId" Type="Int32" />
+    <Property Name="LTAPSubRegionId" Type="Int32" />
+    <Property Name="ResourceStatusId" Type="Int32" />
+    <Property Name="PrimaryPoi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryPoi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PoiCircuitDesignation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PoiVoltage" Type="Decimal" Precision="20" Scale="10" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TLA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SubstationType">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="UserCreatedId" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Map">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="MapDefinitionRootId" />
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="UserUpatedId" Type="Int32" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="MapDefinitionRootId" Type="Int32" Nullable="false" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ElectricalGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Abbreviation" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <Property Name="UserUpdatedId" Type="Int32" />
+    <Property Name="ParentPk" Type="Int32" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Abbreviation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LinkSubstationPool">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubstationId" Type="Int32" Nullable="false" />
+    <Property Name="PoolId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 37.75, 60.25" name="EpicDomain">
+  <DataContextMoniker Name="/EpicDomainDataContext" />
+  <nestedChildShapes>
+    <classShape Id="feb7dfa1-44eb-4902-abce-299dcf6291d6" absoluteBounds="2.625, 11.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/MeterReading" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2935caaa-503f-4529-beb0-39114e8501f1" absoluteBounds="2.64, 12.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="917683bf-33e1-497c-be7f-2a98bd7d1973" absoluteBounds="12.125, 4.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkLinesVoltageLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b9e2e66-01a3-4867-892e-6daea9caf4c8" absoluteBounds="12.14, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67994cfd-936b-44e9-94c3-aa1e671d5013" absoluteBounds="15.625, 15.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/EpicDomainDataContext/GeneratorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c57c333-eead-46da-a942-e46c550c8b20" absoluteBounds="15.64, 16.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a16e5740-a2df-4abf-927b-0aa21ca0009d" absoluteBounds="3.75, 9.625, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/EpicDomainDataContext/Meter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4bddf47-a2af-40f2-b82d-e840eb9f9d5e" absoluteBounds="3.765, 10.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c235c99b-7ffb-4773-a71d-05d9d20e4811" absoluteBounds="11.5, 16.875, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/EpicDomainDataContext/Line" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91486c9e-612a-47bc-aa5d-790ed30fb666" absoluteBounds="11.515, 17.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.1875 : 11.5881982421875); (4.1875 : 11.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Meter/Meter_MeterReading" />
+      <nodes>
+        <classShapeMoniker Id="a16e5740-a2df-4abf-927b-0aa21ca0009d" />
+        <classShapeMoniker Id="feb7dfa1-44eb-4902-abce-299dcf6291d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.59375 : 16.875); (12.59375 : 6.1362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Line/Line_LinkLinesVoltageLevel" />
+      <nodes>
+        <classShapeMoniker Id="c235c99b-7ffb-4773-a71d-05d9d20e4811" />
+        <classShapeMoniker Id="917683bf-33e1-497c-be7f-2a98bd7d1973" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="930bb2f0-9e2b-4fd2-84bd-e08cf86e51c8" absoluteBounds="7, 11.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EpicDomainDataContext/NameType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ddd99e4-f4e1-4c22-a8e1-5780f2a340f3" absoluteBounds="7.0150000000000006, 12.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="039acf5f-b9ab-4edc-be38-e81118a1efcd" absoluteBounds="7, 13.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EpicDomainDataContext/NameTypeAuthority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e76ef2f-433e-41a7-9c05-13e4624a5fab" absoluteBounds="7.015, 14.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8 : 13.75); (8 : 13.4535953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/NameTypeAuthority/NameTypeAuthority_NameType" />
+      <nodes>
+        <classShapeMoniker Id="039acf5f-b9ab-4edc-be38-e81118a1efcd" />
+        <classShapeMoniker Id="930bb2f0-9e2b-4fd2-84bd-e08cf86e51c8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e6aeab4c-7519-4286-8a81-fa9c75188387" absoluteBounds="0.5, 10.875, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EpicDomainDataContext/ContractType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ea20244-2f7d-485b-bec0-9ec21b2f21fe" absoluteBounds="0.51499999999999968, 11.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63525342-c692-42f7-8cbc-1615dbd9afe9" absoluteBounds="0.5, 14.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/ContractStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93c6214e-caf9-482b-a4fb-ad7dd55c23f5" absoluteBounds="0.51500000000000012, 14.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" absoluteBounds="15.125, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/EpicUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ede06cad-c7f8-4eb0-b911-d8ba1569c0e9" absoluteBounds="15.14, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ac4a3f6-e5da-4a04-98d9-7f67ed3afeb8" absoluteBounds="4.75, 12.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EpicDomainDataContext/Breaker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd6c482f-4bd0-4d6f-a66e-5b5a2726142e" absoluteBounds="4.7650000000000006, 12.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="caf936e1-b43f-43dc-a937-7b359bea1502" absoluteBounds="3.125, 15.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicDomainDataContext/TableHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1acc7da3-8626-42d1-8eca-b6c6406437e2" absoluteBounds="3.1399999999999997, 15.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6647ab1-a4b8-4ab6-8d3e-a7134d713a81" absoluteBounds="0.5, 17, 2.5, 2.7324039713541666">
+      <DataClassMoniker Name="/EpicDomainDataContext/SubstationsSubstationAttributesView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="637a6db2-602c-4425-b413-6d7238b3baba" absoluteBounds="0.515, 17.46, 2.4699999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="031920bb-2f13-4ace-93cf-55060ce8a192" absoluteBounds="21.75, 4.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/ResourceStatuse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c17eaa00-9eda-47bd-80c9-06f9bbe9b0b6" absoluteBounds="21.765, 5.0850000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51e5a83b-1db8-49fa-aef8-75372960c14b" absoluteBounds="6.5, 1.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/VoltageLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c40d172-e7d6-4c78-bb53-06e2fe6d3b7e" absoluteBounds="6.515, 1.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 1.2812505); (8.79166666666667 : 1.2812505 : JumpStart); (9.08333333333333 : 1.2812505 : JumpEnd); (11.3229166666667 : 1.2812505 : JumpStart); (11.6458333333333 : 1.2812505 : JumpEnd); (11.8541666666667 : 1.2812505 : JumpStart); (12.0208333333333 : 1.2812505 : JumpEnd); (13.125 : 1.2812505); (13.125 : 4.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/VoltageLevel/VoltageLevel_LinkLinesVoltageLevel" />
+      <nodes>
+        <classShapeMoniker Id="51e5a83b-1db8-49fa-aef8-75372960c14b" />
+        <classShapeMoniker Id="917683bf-33e1-497c-be7f-2a98bd7d1973" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 1.46875); (6.0625 : 1.46875); (6.0625 : 12.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/VoltageLevel/VoltageLevel_Breaker" />
+      <nodes>
+        <classShapeMoniker Id="51e5a83b-1db8-49fa-aef8-75372960c14b" />
+        <classShapeMoniker Id="8ac4a3f6-e5da-4a04-98d9-7f67ed3afeb8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6946b421-082e-40d4-bdf2-9d1a9ac587b3" absoluteBounds="9.875, 7.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/Name" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5727b1e9-db8a-4be4-9e6d-e1bb1c282f6c" absoluteBounds="9.89, 8.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.71875 : 11.875); (8.71875 : 9.3069482421875); (9.29166441666667 : 9.3069482421875 : JumpStart); (9.58333333333333 : 9.3069482421875 : JumpEnd); (9.875 : 9.3069482421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/NameType/NameType_Name" />
+      <nodes>
+        <classShapeMoniker Id="930bb2f0-9e2b-4fd2-84bd-e08cf86e51c8" />
+        <classShapeMoniker Id="6946b421-082e-40d4-bdf2-9d1a9ac587b3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="84c6df22-eb72-4271-8940-f194d005bf11" absoluteBounds="6.625, 4.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkElectricityPurchaseAgreementsSubstation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34aa574b-41b2-4cb4-854c-85d4f0baa5e0" absoluteBounds="6.64, 5.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b4740e3-4a79-4a38-a186-3e0758c0bd54" absoluteBounds="0.75, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EpicDomainDataContext/Load" />
+      <nestedChildShapes>
+        <elementListCompartment Id="738c90ae-c866-458c-bfb3-a93dc5547436" absoluteBounds="0.765, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 0.9375); (8.91666666666667 : 0.937499999999999 : JumpStart); (9.08333333333333 : 0.9375 : JumpEnd); (11.40625 : 0.9375); (11.40625 : 7.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/Load/Load_Name" />
+      <nodes>
+        <classShapeMoniker Id="9b4740e3-4a79-4a38-a186-3e0758c0bd54" />
+        <classShapeMoniker Id="6946b421-082e-40d4-bdf2-9d1a9ac587b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 1.640625); (6.14583333333333 : 1.640625 : JumpStart); (5.97916666666667 : 1.640625 : JumpEnd); (2.75 : 1.640625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/VoltageLevel/VoltageLevel_Load" />
+      <nodes>
+        <classShapeMoniker Id="51e5a83b-1db8-49fa-aef8-75372960c14b" />
+        <classShapeMoniker Id="9b4740e3-4a79-4a38-a186-3e0758c0bd54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21.75 : 5.70274983723958); (21.25 : 5.70274983723958); (21.25 : 3.375); (20.9114593333333 : 3.375 : JumpStart); (20.7447926666667 : 3.375 : JumpEnd); (20.0833333333333 : 3.375 : JumpStart); (19.9166666666667 : 3.375 : JumpEnd); (19.7552098333333 : 3.375 : JumpStart); (19.5885431666667 : 3.375 : JumpEnd); (16.7395853333333 : 3.375 : JumpStart); (16.5729186666667 : 3.375 : JumpEnd); (16.2083333333333 : 3.375 : JumpStart); (16.0416666666667 : 3.375 : JumpEnd); (15.6770813333333 : 3.375 : JumpStart); (15.5104146666667 : 3.375 : JumpEnd); (14.3177058333333 : 3.375 : JumpStart); (14.1510391666667 : 3.375 : JumpEnd); (13.2083333333333 : 3.375 : JumpStart); (13.0416666666667 : 3.375 : JumpEnd); (12.0833333333333 : 3.375 : JumpStart); (11.7291666666667 : 3.375 : JumpEnd); (11.5625 : 3.375); (11.5625 : 1.125); (11.4895833333333 : 1.125 : JumpStart); (11.3229166666667 : 1.125 : JumpEnd); (9.08333333333333 : 1.125 : JumpStart); (8.91666666666667 : 1.125 : JumpEnd); (8.875 : 1.125); (8.875 : 6.46311686197917); (6.48958333333333 : 6.46311686197917 : JumpStart); (6.32291666666667 : 6.46311686197917 : JumpEnd); (6.14583333333333 : 6.46311686197917 : JumpStart); (5.97916666666667 : 6.46311686197917 : JumpEnd); (4.58333333333333 : 6.46311686197917 : JumpStart); (4.41666666666667 : 6.46311686197917 : JumpEnd); (2.75 : 6.46311686197917); (2.75 : 4.375); (1.75 : 4.375); (1.75 : 3.6170068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceStatuse/ResourceStatuse_Load" />
+      <nodes>
+        <classShapeMoniker Id="031920bb-2f13-4ace-93cf-55060ce8a192" />
+        <classShapeMoniker Id="9b4740e3-4a79-4a38-a186-3e0758c0bd54" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="228b6871-5d76-46ee-b7db-8d29993b2764" absoluteBounds="6.375, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EpicDomainDataContext/PowerCall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f504f43f-8f09-44d5-a258-50ef242199fa" absoluteBounds="6.39, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0eeec40b-fb17-4d66-a971-81f12b866956" absoluteBounds="3.5, 7.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/EPAStatuse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df610991-4db7-40a6-a44e-9a86ff914764" absoluteBounds="3.515, 8.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d871147-85a5-429e-9db9-b9a18ccd9d83" absoluteBounds="14.625, 4, 2, 7.7322412109375005">
+      <DataClassMoniker Name="/EpicDomainDataContext/GeneratorAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17b5888c-a233-4781-9d5a-2ed511f4fded" absoluteBounds="14.64, 4.46, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="242bd3ed-e6c5-41ff-ac92-659e415592f7" absoluteBounds="11.75, 20.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/BaseVoltage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af7170ec-3a15-4ec1-b47c-a6bee557f803" absoluteBounds="11.765, 20.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.625 : 20.125); (12.625 : 19.7997054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/BaseVoltage/BaseVoltage_Line" />
+      <nodes>
+        <classShapeMoniker Id="242bd3ed-e6c5-41ff-ac92-659e415592f7" />
+        <classShapeMoniker Id="c235c99b-7ffb-4773-a71d-05d9d20e4811" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" absoluteBounds="9.25, 1.375, 2, 5.4246240234375">
+      <DataClassMoniker Name="/EpicDomainDataContext/GeneratingUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aabbedf5-0a1c-4886-8eda-0767f7fa63a2" absoluteBounds="9.265, 1.835, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5625 : 6.7996240234375); (10.5625 : 7.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/GeneratingUnit/GeneratingUnit_Name" />
+      <nodes>
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+        <classShapeMoniker Id="6946b421-082e-40d4-bdf2-9d1a9ac587b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 4.34375); (11.3229166666667 : 4.34375 : JumpStart); (11.7083333333333 : 4.34375 : JumpEnd); (11.7291666666667 : 4.34375 : JumpStart); (12.1458333333333 : 4.34375 : JumpEnd); (13.0416666666667 : 4.34375 : JumpStart); (13.2083333333333 : 4.34375 : JumpEnd); (14.1510391666667 : 4.34375 : JumpStart); (14.5833333333333 : 4.34375 : JumpEnd); (14.625 : 4.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/GeneratingUnit/GeneratingUnit_GeneratorAttribute" />
+      <nodes>
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+        <classShapeMoniker Id="6d871147-85a5-429e-9db9-b9a18ccd9d83" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 3.09678933007813); (8.79166666666667 : 3.09678933007813 : JumpStart); (8.95833333333333 : 3.09678933007813 : JumpEnd); (9.25 : 3.09678933007813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/VoltageLevel/VoltageLevel_GeneratingUnit" />
+      <nodes>
+        <classShapeMoniker Id="51e5a83b-1db8-49fa-aef8-75372960c14b" />
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 8.03929718880208); (9.41666666666667 : 8.03929718880208 : JumpStart); (9.58333333333333 : 8.03929718880208 : JumpEnd); (9.656250375 : 8.03929718880208); (9.656250375 : 6.7996240234375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/PowerCall/PowerCall_GeneratingUnit" />
+      <nodes>
+        <classShapeMoniker Id="228b6871-5d76-46ee-b7db-8d29993b2764" />
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.75 : 4.625); (22.75 : 3.14265055338542); (20.9114593333333 : 3.14265055338542 : JumpStart); (20.7447926666667 : 3.14265055338542 : JumpEnd); (20.0833333333333 : 3.14265055338542 : JumpStart); (19.9166666666667 : 3.14265055338542 : JumpEnd); (19.7552098333333 : 3.14265055338542 : JumpStart); (19.5885431666667 : 3.14265055338542 : JumpEnd); (16.7395853333333 : 3.14265055338542 : JumpStart); (16.5729186666667 : 3.14265055338542 : JumpEnd); (16.2083333333333 : 3.14265055338542 : JumpStart); (16.0416666666667 : 3.14265055338542 : JumpEnd); (15.6770813333333 : 3.14265055338542 : JumpStart); (15.5104146666667 : 3.14265055338542 : JumpEnd); (14.3177058333333 : 3.14265055338542 : JumpStart); (14.1510391666667 : 3.14265055338542 : JumpEnd); (13.2083333333333 : 3.14265055338542 : JumpStart); (13.0416666666667 : 3.14265055338542 : JumpEnd); (12.0833333333333 : 3.14265055338542 : JumpStart); (11.7291666666667 : 3.14265055338542 : JumpEnd); (11.6458333333333 : 3.14265055338542 : JumpStart); (11.3229166666667 : 3.14265055338542 : JumpEnd); (11.25 : 3.14265055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceStatuse/ResourceStatuse_GeneratingUnit" />
+      <nodes>
+        <classShapeMoniker Id="031920bb-2f13-4ace-93cf-55060ce8a192" />
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ea3901e9-3343-43c6-8e5f-54db29e7b87a" absoluteBounds="24.25, 17, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/ResourcePlanType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b0f6232-fa3e-4bd6-a35e-6f36867f7160" absoluteBounds="24.265, 17.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" absoluteBounds="21.5, 14.375, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/EpicDomainDataContext/ResourcePlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d39789a1-66f8-4b07-bc9f-a6514eb35233" absoluteBounds="21.515, 14.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.48437775 : 14.375); (22.48437775 : 10.2844148763021); (21.8020838333333 : 10.2844148763021 : JumpStart); (21.6354171666667 : 10.2844148763021 : JumpEnd); (21.4583333333333 : 10.2844148763021 : JumpStart); (21.2916666666667 : 10.2844148763021 : JumpEnd); (20.0833333333333 : 10.2844148763021 : JumpStart); (19.9166666666667 : 10.2844148763021 : JumpEnd); (19.5520813333333 : 10.2844148763021 : JumpStart); (19.3854146666667 : 10.2844148763021 : JumpEnd); (18.0208333333333 : 10.2844148763021 : JumpStart); (17.7916666666667 : 10.2844148763021 : JumpEnd); (16.625 : 10.2844148763021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourcePlan/ResourcePlan_GeneratorAttribute" />
+      <nodes>
+        <classShapeMoniker Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" />
+        <classShapeMoniker Id="6d871147-85a5-429e-9db9-b9a18ccd9d83" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(24.25 : 17.4383048502604); (23.5 : 17.4383048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourcePlanType/ResourcePlanType_ResourcePlan" />
+      <nodes>
+        <classShapeMoniker Id="ea3901e9-3343-43c6-8e5f-54db29e7b87a" />
+        <classShapeMoniker Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7100bbfb-ac4b-49c9-b2d9-ca3f79033332" absoluteBounds="23.875, 21.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/FiscalYear" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1b5d3d8-736a-470e-94d0-be144df62925" absoluteBounds="23.89, 21.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd94761f-04c0-410a-b1f1-e0e18a328b4f" absoluteBounds="22.625, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicDomainDataContext/OwnershipType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca196c20-9d7c-4ae4-b7c4-f796e96cb5a2" absoluteBounds="22.64, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d25ccdef-f684-4160-9478-3aca5d77904e" absoluteBounds="9.75, 13.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicDomainDataContext/Note" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b60270e-eab6-487f-b008-cb2894ee15a6" absoluteBounds="9.765, 13.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6e3627b-709b-4737-848e-c88f29cfa752" absoluteBounds="3.5, 1.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/ElectricityPurchaseAgreement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee2619c9-f3e9-4048-8051-84777dbd831a" absoluteBounds="3.5149999999999997, 2.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 5.31814697265625); (5.97916666666667 : 5.31814697265625 : JumpStart); (6.14583333333333 : 5.31814697265625 : JumpEnd); (6.625 : 5.31814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricityPurchaseAgreement/ElectricityPurchaseAgreement_LinkElectricityPurchaseAgreementsSubstation" />
+      <nodes>
+        <classShapeMoniker Id="a6e3627b-709b-4737-848e-c88f29cfa752" />
+        <classShapeMoniker Id="84c6df22-eb72-4271-8940-f194d005bf11" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.625); (4.5 : 6.21311686197917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EPAStatuse/EPAStatuse_ElectricityPurchaseAgreement" />
+      <nodes>
+        <classShapeMoniker Id="0eeec40b-fb17-4d66-a971-81f12b866956" />
+        <classShapeMoniker Id="a6e3627b-709b-4737-848e-c88f29cfa752" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.40625 : 6.75); (6.40625 : 4.11140055338542); (6.14583333333333 : 4.11140055338542 : JumpStart); (5.97916666666667 : 4.11140055338542 : JumpEnd); (5.5 : 4.11140055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/PowerCall/PowerCall_ElectricityPurchaseAgreement" />
+      <nodes>
+        <classShapeMoniker Id="228b6871-5d76-46ee-b7db-8d29993b2764" />
+        <classShapeMoniker Id="a6e3627b-709b-4737-848e-c88f29cfa752" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ccedcce2-75d2-4c4e-8c40-55baeba86292" absoluteBounds="15.25, 19, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicDomainDataContext/Batch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c35e574e-e39f-49e1-aa2f-fc012948f003" absoluteBounds="15.265, 19.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.125 : 2.84780110677083); (16.125 : 3.5); (16.5729186666667 : 3.5 : JumpStart); (16.7395853333333 : 3.5 : JumpEnd); (17.875 : 3.5); (17.875 : 20.2700512695313); (17.25 : 20.2700512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_Batch" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="ccedcce2-75d2-4c4e-8c40-55baeba86292" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.656252 : 2.84780110677083); (16.656252 : 3.6875); (16.7916666666667 : 3.6875 : JumpStart); (16.9583333333333 : 3.6875 : JumpEnd); (17.7916666666667 : 3.6875 : JumpStart); (17.9583333333333 : 3.6875 : JumpEnd); (18.125 : 3.6875); (18.125 : 19.6037736347656); (18.0208333333333 : 19.6037736347656 : JumpStart); (17.7916666666667 : 19.6037736347656 : JumpEnd); (17.25 : 19.6037736347656)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_Batch1" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="ccedcce2-75d2-4c4e-8c40-55baeba86292" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a83065c4-95c8-41c8-8ffa-f89c29e9a1cf" absoluteBounds="15.25, 21.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/BatchType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2de18496-ed72-49c7-8b8b-8107ef1f35d6" absoluteBounds="15.265, 22.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.25 : 21.875); (16.25 : 21.5401025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/BatchType/BatchType_Batch" />
+      <nodes>
+        <classShapeMoniker Id="a83065c4-95c8-41c8-8ffa-f89c29e9a1cf" />
+        <classShapeMoniker Id="ccedcce2-75d2-4c4e-8c40-55baeba86292" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.593748 : 2.84780110677083); (15.593748 : 3.9375); (16.7916666666667 : 3.9375 : JumpStart); (16.9583333333333 : 3.9375 : JumpEnd); (17.0416666666667 : 3.9375 : JumpStart); (17.2083333333333 : 3.9375 : JumpEnd); (17.9375 : 3.9375); (17.9375 : 22.7604484049479); (17.25 : 22.7604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_BatchType" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="a83065c4-95c8-41c8-8ffa-f89c29e9a1cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="49e0a08c-2a51-48a0-a0ad-fb4b65ba450e" absoluteBounds="19.875, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicDomainDataContext/SubstationType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62cdec54-4ae9-4c90-bd7b-0157d0994288" absoluteBounds="19.89, 0.96000000000000085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="372f6e3d-affc-4532-af14-696cbc69b013" absoluteBounds="28.75, 3, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/EpicDomainDataContext/FuelType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26b33e31-29dd-4096-a568-9df12b72b5c1" absoluteBounds="28.765, 3.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(29.75 : 3); (29.75 : 2.25); (28.4583333333333 : 2.25 : JumpStart); (28.2916666666667 : 2.25 : JumpEnd); (25.2083333333333 : 2.25 : JumpStart); (25.0416666666667 : 2.25 : JumpEnd); (24.875 : 2.25); (24.875 : 3.625); (22.8333333333333 : 3.625 : JumpStart); (22.6666666666667 : 3.625 : JumpEnd); (21.3333333333333 : 3.625 : JumpStart); (21.1666666666667 : 3.625 : JumpEnd); (20.9114593333333 : 3.625 : JumpStart); (20.7447926666667 : 3.625 : JumpEnd); (20.0833333333333 : 3.625 : JumpStart); (19.9166666666667 : 3.625 : JumpEnd); (19.7552098333333 : 3.625 : JumpStart); (19.5885431666667 : 3.625 : JumpEnd); (17.9583333333333 : 3.625 : JumpStart); (17.7916666666667 : 3.625 : JumpEnd); (16.9583333333333 : 3.625 : JumpStart); (16.7916666666667 : 3.625 : JumpEnd); (15.6770813333333 : 3.625 : JumpStart); (15.5104146666667 : 3.625 : JumpEnd); (14.3177058333333 : 3.625 : JumpStart); (14.1510391666667 : 3.625 : JumpEnd); (13.2083333333333 : 3.625 : JumpStart); (13.0416666666667 : 3.625 : JumpEnd); (12.1458333333333 : 3.625 : JumpStart); (11.9166666666667 : 3.625 : JumpEnd); (11.875 : 3.625); (11.875 : 5.60293901171875); (11.7083333333333 : 5.60293901171875 : JumpStart); (11.3229166666667 : 5.60293901171875 : JumpEnd); (11.25 : 5.60293901171875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/FuelType/FuelType_GeneratingUnit" />
+      <nodes>
+        <classShapeMoniker Id="372f6e3d-affc-4532-af14-696cbc69b013" />
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" absoluteBounds="19, 10.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/ElectricalGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7859fe99-2679-43ff-856e-df02f8135d9d" absoluteBounds="19.015, 11.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e5b11a6-3f63-4935-be2d-4c12be4d1a66" absoluteBounds="19, 14.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkElectricalGroupToLTAPSubRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f75c476-720e-4c82-9009-21f279e1389a" absoluteBounds="19.015, 14.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20 : 13.2228011067708); (20 : 14.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricalGroup/ElectricalGroup_LinkElectricalGroupToLTAPSubRegion" />
+      <nodes>
+        <classShapeMoniker Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" />
+        <classShapeMoniker Id="2e5b11a6-3f63-4935-be2d-4c12be4d1a66" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="350d5178-f07e-4429-bf8d-6196dc338cfa" absoluteBounds="18.5, 16.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/LTAPSubRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b3fa880-a0d6-4b52-b7df-cfbbaac555b2" absoluteBounds="18.515, 17.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(19.75 : 16.625); (19.75 : 15.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/LTAPSubRegion/LTAPSubRegion_LinkElectricalGroupToLTAPSubRegion" />
+      <nodes>
+        <classShapeMoniker Id="350d5178-f07e-4429-bf8d-6196dc338cfa" />
+        <classShapeMoniker Id="2e5b11a6-3f63-4935-be2d-4c12be4d1a66" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" absoluteBounds="19, 3.875, 2, 6.1938297526041657">
+      <DataClassMoniker Name="/EpicDomainDataContext/Substation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="607d0b72-9159-4e66-8df7-774339775a1a" absoluteBounds="19.015, 4.335, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20 : 3.875); (20 : 2.97280110677083); (19.7552098333333 : 2.97280110677083 : JumpStart); (19.5885431666667 : 2.97280110677083 : JumpEnd); (19.4583333333333 : 2.97280110677083 : JumpStart); (19.2916666666667 : 2.97280110677083 : JumpEnd); (16.7395853333333 : 2.97280110677083 : JumpStart); (16.5729186666667 : 2.97280110677083 : JumpEnd); (16.2083333333333 : 2.97280110677083 : JumpStart); (16.0416666666667 : 2.97280110677083 : JumpEnd); (15.6770813333333 : 2.97280110677083 : JumpStart); (15.5104146666667 : 2.97280110677083 : JumpEnd); (14.3177058333333 : 2.97280110677083 : JumpStart); (14.1510391666667 : 2.97280110677083 : JumpEnd); (13.2083333333333 : 2.97280110677083 : JumpStart); (13.0416666666667 : 2.97280110677083 : JumpEnd); (12.0833333333333 : 2.97280110677083 : JumpStart); (11.7291666666667 : 2.97280110677083 : JumpEnd); (11.5 : 2.97280110677083); (11.5 : 0.75); (9 : 0.75); (9 : 2.47077780338542); (8.95833333333333 : 2.47077780338542 : JumpStart); (8.79166666666667 : 2.47077780338542 : JumpEnd); (8.5 : 2.47077780338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_VoltageLevel" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="51e5a83b-1db8-49fa-aef8-75372960c14b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19 : 7.00316437630208); (18.2083333333333 : 7.00316437630208 : JumpStart); (18.0416666666667 : 7.00316437630208 : JumpEnd); (18.0208333333333 : 7.00316437630208 : JumpStart); (17.7916666666667 : 7.00316437630208 : JumpEnd); (17.125 : 7.00316437630208); (17.125 : 3.75); (16.9583333333333 : 3.75 : JumpStart); (16.7916666666667 : 3.75 : JumpEnd); (15.6770813333333 : 3.75 : JumpStart); (15.5104146666667 : 3.75 : JumpEnd); (14.3177058333333 : 3.75 : JumpStart); (14.1510391666667 : 3.75 : JumpEnd); (13.2083333333333 : 3.75 : JumpStart); (13.0416666666667 : 3.75 : JumpEnd); (12.1458333333333 : 3.75 : JumpStart); (11.7291666666667 : 3.75 : JumpEnd); (11.7083333333333 : 3.75 : JumpStart); (11.5416666666667 : 3.75 : JumpEnd); (11.5 : 3.75); (11.5 : 7.0496240234375); (11.4895833333333 : 7.0496240234375 : JumpStart); (11.3229166666667 : 7.0496240234375 : JumpEnd); (11.019531375 : 7.0496240234375); (11.019531375 : 7.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_Name" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="6946b421-082e-40d4-bdf2-9d1a9ac587b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.468748 : 3.875); (19.468748 : 3.5625); (16.9583333333333 : 3.5625 : JumpStart); (16.7916666666667 : 3.5625 : JumpEnd); (16.7395853333333 : 3.5625 : JumpStart); (16.5729186666667 : 3.5625 : JumpEnd); (15.6770813333333 : 3.5625 : JumpStart); (15.5104146666667 : 3.5625 : JumpEnd); (14.3177058333333 : 3.5625 : JumpStart); (14.1510391666667 : 3.5625 : JumpEnd); (13.2083333333333 : 3.5625 : JumpStart); (13.0416666666667 : 3.5625 : JumpEnd); (12.1458333333333 : 3.5625 : JumpStart); (11.7291666666667 : 3.5625 : JumpEnd); (11.625 : 3.5625); (11.625 : 7.4246240234375); (11.4895833333333 : 7.4246240234375 : JumpStart); (11.3229166666667 : 7.4246240234375 : JumpEnd); (11.1028647083333 : 7.4246240234375 : JumpStart); (10.9361980416667 : 7.4246240234375 : JumpEnd); (10.6458333333333 : 7.4246240234375 : JumpStart); (10.4791666666667 : 7.4246240234375 : JumpEnd); (10.4524767083333 : 7.4246240234375 : JumpStart); (10.2858100416667 : 7.4246240234375 : JumpEnd); (9.73958370833333 : 7.4246240234375 : JumpStart); (9.57291704166667 : 7.4246240234375 : JumpEnd); (9.45833108333333 : 7.4246240234375 : JumpStart); (9.29166441666667 : 7.4246240234375 : JumpEnd); (9 : 7.4246240234375); (9 : 5.31814697265625); (8.95833333333333 : 5.31814697265625 : JumpStart); (8.79166666666667 : 5.31814697265625 : JumpEnd); (8.625 : 5.31814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_LinkElectricityPurchaseAgreementsSubstation" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="84c6df22-eb72-4271-8940-f194d005bf11" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20 : 10.875); (20 : 10.0688297526042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricalGroup/ElectricalGroup_Substation" />
+      <nodes>
+        <classShapeMoniker Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.75 : 4.75080485026042); (28.375 : 4.75080485026042); (28.375 : 2); (25.125 : 2); (25.125 : 3.75); (22.8333333333333 : 3.75 : JumpStart); (22.6666666666667 : 3.75 : JumpEnd); (21.3333333333333 : 3.75 : JumpStart); (21.1666666666667 : 3.75 : JumpEnd); (20.9114593333333 : 3.75 : JumpStart); (20.7447926666667 : 3.75 : JumpEnd); (20.531252 : 3.75); (20.531252 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/FuelType/FuelType_Substation" />
+      <nodes>
+        <classShapeMoniker Id="372f6e3d-affc-4532-af14-696cbc69b013" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.7187475 : 16.625); (18.7187475 : 8.56724956445312); (19 : 8.56724956445312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/LTAPSubRegion/LTAPSubRegion_Substation" />
+      <nodes>
+        <classShapeMoniker Id="350d5178-f07e-4429-bf8d-6196dc338cfa" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.625 : 2.6819482421875); (20.9114593333333 : 2.6819482421875 : JumpStart); (20.7447926666667 : 2.6819482421875 : JumpEnd); (19.6718765 : 2.6819482421875); (19.6718765 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/OwnershipType/OwnershipType_Substation" />
+      <nodes>
+        <classShapeMoniker Id="cd94761f-04c0-410a-b1f1-e0e18a328b4f" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.828126 : 2.4631982421875); (20.828126 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/SubstationType/SubstationType_Substation" />
+      <nodes>
+        <classShapeMoniker Id="49e0a08c-2a51-48a0-a0ad-fb4b65ba450e" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 10.9367491744792); (5.97916666666667 : 10.9367491744792 : JumpStart); (6.14583333333333 : 10.9367491744792 : JumpEnd); (8.63541666666667 : 10.9367491744792 : JumpStart); (8.80208333333333 : 10.9367491744792 : JumpEnd); (9.29166441666667 : 10.9367491744792 : JumpStart); (9.58333333333333 : 10.9367491744792 : JumpEnd); (10.7916666666667 : 10.9367491744792 : JumpStart); (10.9583333333333 : 10.9367491744792 : JumpEnd); (12.5104166666667 : 10.9367491744792 : JumpStart); (13.0833333333333 : 10.9367491744792 : JumpEnd); (13.4791671666667 : 10.9367491744792 : JumpStart); (13.6458338333333 : 10.9367491744792 : JumpEnd); (14 : 10.9367491744792); (14 : 11.9822412109375); (14.1510391666667 : 11.9822412109375 : JumpStart); (14.4270833333333 : 11.9822412109375 : JumpEnd); (14.7916666666667 : 11.9822412109375 : JumpStart); (14.9583333333333 : 11.9822412109375 : JumpEnd); (17.7916666666667 : 11.9822412109375 : JumpStart); (18.0208333333333 : 11.9822412109375 : JumpEnd); (18.0416666666667 : 11.9822412109375 : JumpStart); (18.5833333333333 : 11.9822412109375 : JumpEnd); (18.6354141666667 : 11.9822412109375 : JumpStart); (18.8020808333333 : 11.9822412109375 : JumpEnd); (18.875 : 11.9822412109375); (18.875 : 10.5); (19.3854146666667 : 10.5 : JumpStart); (19.5520813333333 : 10.5 : JumpEnd); (20 : 10.5); (20 : 10.0688297526042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Meter/Meter_Substation" />
+      <nodes>
+        <classShapeMoniker Id="a16e5740-a2df-4abf-927b-0aa21ca0009d" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 7.58731201171875); (9.29166441666667 : 7.58731201171875 : JumpStart); (9.45833108333333 : 7.58731201171875 : JumpEnd); (9.57291704166667 : 7.58731201171875 : JumpStart); (9.73958370833333 : 7.58731201171875 : JumpEnd); (10.2858100416667 : 7.58731201171875 : JumpStart); (10.4524767083333 : 7.58731201171875 : JumpEnd); (10.4791666666667 : 7.58731201171875 : JumpStart); (10.6458333333333 : 7.58731201171875 : JumpEnd); (10.9361980416667 : 7.58731201171875 : JumpStart); (11.1028647083333 : 7.58731201171875 : JumpEnd); (11.3229166666667 : 7.58731201171875 : JumpStart); (11.4895833333333 : 7.58731201171875 : JumpEnd); (11.7291666666667 : 7.58731201171875 : JumpStart); (11.8958333333333 : 7.58731201171875 : JumpEnd); (11.9166666666667 : 7.58731201171875 : JumpStart); (12.0833333333333 : 7.58731201171875 : JumpEnd); (12.5104166666667 : 7.58731201171875 : JumpStart); (12.6770833333333 : 7.58731201171875 : JumpEnd); (12.9166666666667 : 7.58731201171875 : JumpStart); (13.0833333333333 : 7.58731201171875 : JumpEnd); (13.4791671666667 : 7.58731201171875 : JumpStart); (13.6458338333333 : 7.58731201171875 : JumpEnd); (14.0416666666667 : 7.58731201171875 : JumpStart); (14.4270833333333 : 7.58731201171875 : JumpEnd); (14.5 : 7.58731201171875); (14.5 : 3.8125); (15.5104146666667 : 3.8125 : JumpStart); (15.6770813333333 : 3.8125 : JumpEnd); (16.7916666666667 : 3.8125 : JumpStart); (16.9583333333333 : 3.8125 : JumpEnd); (17.7916666666667 : 3.8125 : JumpStart); (17.9583333333333 : 3.8125 : JumpEnd); (18.0416666666667 : 3.8125 : JumpStart); (18.2083333333333 : 3.8125 : JumpEnd); (19.203122 : 3.8125); (19.203122 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/PowerCall/PowerCall_Substation" />
+      <nodes>
+        <classShapeMoniker Id="228b6871-5d76-46ee-b7db-8d29993b2764" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21.75 : 5.10137491861979); (21.3333333333333 : 5.10137491861979 : JumpStart); (21.1666666666667 : 5.10137491861979 : JumpEnd); (21 : 5.10137491861979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceStatuse/ResourceStatuse_Substation" />
+      <nodes>
+        <classShapeMoniker Id="031920bb-2f13-4ace-93cf-55060ce8a192" />
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f8bb19af-d0c2-4e98-b779-93bf005ceb42" absoluteBounds="3.5, 18.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/AuditRecord" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a420a6e-3de5-4b16-bc8e-2876be5e902b" absoluteBounds="3.5149999999999997, 18.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e070d28b-af7c-4ce1-9e63-96c60759d336" absoluteBounds="5.875, 18.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/AuditRecordField" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdaab15e-d60c-4322-a7ff-0e8410869b1c" absoluteBounds="5.89, 18.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 19.5136539713542); (5.875 : 19.5136539713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/AuditRecord/AuditRecord_AuditRecordField" />
+      <nodes>
+        <classShapeMoniker Id="f8bb19af-d0c2-4e98-b779-93bf005ceb42" />
+        <classShapeMoniker Id="e070d28b-af7c-4ce1-9e63-96c60759d336" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1535efa1-e7fa-44db-8d8a-43abaa78f39c" absoluteBounds="26.125, 2.5, 2, 10.0398583984375">
+      <DataClassMoniker Name="/EpicDomainDataContext/SubstationAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d627c898-9ddc-4fb1-b374-c26c88f32d6c" absoluteBounds="26.14, 2.96, 1.9700000000000002, 9.4798583984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.7187505 : 14.375); (21.7187505 : 7.51524983723958); (25.5416666666667 : 7.51524983723958 : JumpStart); (25.7083333333333 : 7.51524983723958 : JumpEnd); (25.7916666666667 : 7.51524983723958 : JumpStart); (25.9583333333333 : 7.51524983723958 : JumpEnd); (26.125 : 7.51524983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourcePlan/ResourcePlan_SubstationAttribute" />
+      <nodes>
+        <classShapeMoniker Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" />
+        <classShapeMoniker Id="1535efa1-e7fa-44db-8d8a-43abaa78f39c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21 : 4.21875); (21.1666666666667 : 4.21875 : JumpStart); (21.3333333333333 : 4.21875 : JumpEnd); (22.6666666666667 : 4.21875 : JumpStart); (22.8333333333333 : 4.21875 : JumpEnd); (25.5416666666667 : 4.21875 : JumpStart); (25.7083333333333 : 4.21875 : JumpEnd); (26.125 : 4.21875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_SubstationAttribute" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="1535efa1-e7fa-44db-8d8a-43abaa78f39c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1d0d1a25-772b-4aba-a1ab-c004cb770f64" absoluteBounds="23.25, 10.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EpicDomainDataContext/Map" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1da3a963-669c-4bb7-952d-761c814f19d6" absoluteBounds="23.265, 10.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21 : 12.0489005533854); (21.6354171666667 : 12.0489005533854 : JumpStart); (21.8020838333333 : 12.0489005533854 : JumpEnd); (23.25 : 12.0489005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricalGroup/ElectricalGroup_Map" />
+      <nodes>
+        <classShapeMoniker Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" />
+        <classShapeMoniker Id="1d0d1a25-772b-4aba-a1ab-c004cb770f64" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b7bd9b5d-916f-4476-9623-f1e0e4c38c51" absoluteBounds="3.625, 23.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkTsrSubstation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61be6fb1-fa9d-40a0-a1cd-90823c08f4c4" absoluteBounds="3.64, 24.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20 : 10.0688297526042); (20 : 10.625); (19.5520813333333 : 10.625 : JumpStart); (19.3854146666667 : 10.625 : JumpEnd); (18.9583333333333 : 10.625 : JumpStart); (18.6354141666667 : 10.625 : JumpEnd); (18.375 : 10.625); (18.375 : 24.5521463098958); (18.3333333333333 : 24.5521463098958 : JumpStart); (18.1666666666667 : 24.5521463098958 : JumpEnd); (14.5520833333333 : 24.5521463098958 : JumpStart); (14.3854166666667 : 24.5521463098958 : JumpEnd); (11.3958333333333 : 24.5521463098958 : JumpStart); (11.2291666666667 : 24.5521463098958 : JumpEnd); (9.08333333333333 : 24.5521463098958 : JumpStart); (8.91666666666667 : 24.5521463098958 : JumpEnd); (8.83333333333333 : 24.5521463098958 : JumpStart); (8.54166666666667 : 24.5521463098958 : JumpEnd); (5.625 : 24.5521463098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_LinkTsrSubstation" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="b7bd9b5d-916f-4476-9623-f1e0e4c38c51" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f30727ca-3634-4e23-a35e-ac67695264dc" absoluteBounds="31.625, 10.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkResourceBundleElectricalGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de8269a1-f142-4411-a174-adcfdc4198d2" absoluteBounds="31.64, 10.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.531252 : 13.2228011067708); (20.531252 : 13.4728011067708); (21.6354171666667 : 13.4728011067708 : JumpStart); (21.8020838333333 : 13.4728011067708 : JumpEnd); (31.1354191666667 : 13.4728011067708 : JumpStart); (31.3020858333333 : 13.4728011067708 : JumpEnd); (31.5 : 13.4728011067708); (31.5 : 11.4844246074219); (31.625 : 11.4844246074219)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricalGroup/ElectricalGroup_LinkResourceBundleElectricalGroup" />
+      <nodes>
+        <classShapeMoniker Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" />
+        <classShapeMoniker Id="f30727ca-3634-4e23-a35e-ac67695264dc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5b0312bc-ba02-4dbc-83ad-5de96fc6af06" absoluteBounds="24.375, 14.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/MapType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ae8768b-4479-463b-a610-7cc7b2670c2b" absoluteBounds="24.39, 15.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(24.8125 : 14.625); (24.8125 : 13.2324039713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/MapType/MapType_Map" />
+      <nodes>
+        <classShapeMoniker Id="5b0312bc-ba02-4dbc-83ad-5de96fc6af06" />
+        <classShapeMoniker Id="1d0d1a25-772b-4aba-a1ab-c004cb770f64" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f2e47d40-528f-4223-a54e-08bb89b65df6" absoluteBounds="1.375, 25.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EpicDomainDataContext/TransmissionServiceRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dfdade5-cd0c-4a63-a9db-c0f43f11ac30" absoluteBounds="1.3900000000000001, 25.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 26.8373527018229); (4.625 : 26.8373527018229); (4.625 : 25.3958968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionServiceRequest/TransmissionServiceRequest_LinkTsrSubstation" />
+      <nodes>
+        <classShapeMoniker Id="f2e47d40-528f-4223-a54e-08bb89b65df6" />
+        <classShapeMoniker Id="b7bd9b5d-916f-4476-9623-f1e0e4c38c51" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="09614adc-fa65-4276-81fb-736113c6d76b" absoluteBounds="4, 27.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EpicDomainDataContext/FileReference" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0066c1c-ea17-4c8e-bb30-bd5960cc5958" absoluteBounds="4.015, 27.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 29.1888707961426); (11.3125 : 29.1888707961426); (11.3125 : 16.0401025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/FileReference/FileReference_Note" />
+      <nodes>
+        <classShapeMoniker Id="09614adc-fa65-4276-81fb-736113c6d76b" />
+        <classShapeMoniker Id="d25ccdef-f684-4160-9478-3aca5d77904e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 27.7748527018229); (3.375 : 27.7748527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/FileReference/FileReference_TransmissionServiceRequest" />
+      <nodes>
+        <classShapeMoniker Id="09614adc-fa65-4276-81fb-736113c6d76b" />
+        <classShapeMoniker Id="f2e47d40-528f-4223-a54e-08bb89b65df6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21.968748 : 17.8766097005208); (21.968748 : 28.1405311886393); (18.3333333333333 : 28.1405311886393 : JumpStart); (18.1666666666667 : 28.1405311886393 : JumpEnd); (11.3958333333333 : 28.1405311886393 : JumpStart); (11.2291666666667 : 28.1405311886393 : JumpEnd); (6 : 28.1405311886393)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourcePlan/ResourcePlan_FileReference" />
+      <nodes>
+        <classShapeMoniker Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" />
+        <classShapeMoniker Id="09614adc-fa65-4276-81fb-736113c6d76b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.125 : 2.06452530338542); (14.3177058333333 : 2.06452530338542 : JumpStart); (14.1510391666667 : 2.06452530338542 : JumpEnd); (13.2083333333333 : 2.06452530338542 : JumpStart); (13.0416666666667 : 2.06452530338542 : JumpEnd); (12 : 2.06452530338542); (12 : 7.75); (12.5104166666667 : 7.75 : JumpStart); (12.6770833333333 : 7.75 : JumpEnd); (12.875 : 7.75); (12.875 : 16.375); (12.8333333333333 : 16.375 : JumpStart); (12.5104166666667 : 16.375 : JumpEnd); (12.2552058333333 : 16.375 : JumpStart); (12.0885391666667 : 16.375 : JumpEnd); (11.3958333333333 : 16.375 : JumpStart); (11.2291666666667 : 16.375 : JumpEnd); (10.5208333333333 : 16.375 : JumpStart); (10.3541666666667 : 16.375 : JumpEnd); (9.58333333333333 : 16.375 : JumpStart); (9.41666666666667 : 16.375 : JumpEnd); (8.625 : 16.375); (8.625 : 26.875); (5.61458533333333 : 26.875 : JumpStart); (5.44791866666667 : 26.875 : JumpEnd); (5 : 26.875); (5 : 27.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_FileReference" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="09614adc-fa65-4276-81fb-736113c6d76b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.125 : 0.89062575); (14.3177058333333 : 0.890625749999999 : JumpStart); (14.1510391666667 : 0.89062575 : JumpEnd); (11.9375 : 0.89062575); (11.9375 : 7.375); (11.9791666666667 : 7.375 : JumpStart); (12.1458333333333 : 7.375 : JumpEnd); (12.5104166666667 : 7.375 : JumpStart); (12.6770833333333 : 7.375 : JumpEnd); (13 : 7.375); (13 : 16.625); (12.6770833333333 : 16.625 : JumpStart); (12.5104166666667 : 16.625 : JumpEnd); (12.2552058333333 : 16.625 : JumpStart); (12.0885391666667 : 16.625 : JumpEnd); (11.3958333333333 : 16.625 : JumpStart); (11.2291666666667 : 16.625 : JumpEnd); (10.5208333333333 : 16.625 : JumpStart); (10.3541666666667 : 16.625 : JumpEnd); (9.58333333333333 : 16.625 : JumpStart); (9.41666666666667 : 16.625 : JumpEnd); (9 : 16.625); (9 : 26.625); (8.83333333333333 : 26.625 : JumpStart); (8.54166666666667 : 26.625 : JumpEnd); (5.531252 : 26.625); (5.531252 : 27.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_FileReference1" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="09614adc-fa65-4276-81fb-736113c6d76b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.125 : 2.48741520507813); (14.3177058333333 : 2.48741520507813 : JumpStart); (14.1510391666667 : 2.48741520507813 : JumpEnd); (13.2083333333333 : 2.48741520507813 : JumpStart); (13.0416666666667 : 2.48741520507813 : JumpEnd); (12.0833333333333 : 2.48741520507813 : JumpStart); (11.8541666666667 : 2.48741520507813 : JumpEnd); (11.8125 : 2.48741520507813); (11.8125 : 7.6875); (12.5104166666667 : 7.6875 : JumpStart); (12.6770833333333 : 7.6875 : JumpEnd); (12.75 : 7.6875); (12.75 : 16.5); (12.6770833333333 : 16.5 : JumpStart); (12.5104166666667 : 16.5 : JumpEnd); (12.2552058333333 : 16.5 : JumpStart); (12.0885391666667 : 16.5 : JumpEnd); (11.3958333333333 : 16.5 : JumpStart); (11.2291666666667 : 16.5 : JumpEnd); (10.5208333333333 : 16.5 : JumpStart); (10.3541666666667 : 16.5 : JumpEnd); (9.58333333333333 : 16.5 : JumpStart); (9.41666666666667 : 16.5 : JumpEnd); (8.75 : 16.5); (8.75 : 27); (5.61458533333333 : 27 : JumpStart); (5.44791866666667 : 27 : JumpEnd); (5.08333333333333 : 27 : JumpStart); (4.91666666666667 : 27 : JumpEnd); (4.468748 : 27); (4.468748 : 27.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_FileReference2" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="09614adc-fa65-4276-81fb-736113c6d76b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6676e76c-fa5a-411b-93dd-b6879c4a05f9" absoluteBounds="0.75, 23, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkTsrGeneratingUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecb73f8b-84f3-443c-881b-2b8574faffb9" absoluteBounds="0.76500000000000012, 23.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.369143375 : 6.7996240234375); (10.369143375 : 7.75); (9.5 : 7.75); (9.5 : 16.75); (8.875 : 16.75); (8.875 : 23.375); (3.125 : 23.375); (3.125 : 23.8854484049479); (2.75 : 23.8854484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/GeneratingUnit/GeneratingUnit_LinkTsrGeneratingUnit" />
+      <nodes>
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+        <classShapeMoniker Id="6676e76c-fa5a-411b-93dd-b6879c4a05f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.0625 : 25.375); (2.0625 : 24.7708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionServiceRequest/TransmissionServiceRequest_LinkTsrGeneratingUnit" />
+      <nodes>
+        <classShapeMoniker Id="f2e47d40-528f-4223-a54e-08bb89b65df6" />
+        <classShapeMoniker Id="6676e76c-fa5a-411b-93dd-b6879c4a05f9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4f32c960-7ac6-4e42-b6b7-691dda434c8d" absoluteBounds="1.25, 30, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkTsrProject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25c10bec-dd89-4cb4-be8e-b9772cd11915" absoluteBounds="1.2650000000000001, 30.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.3125 : 28.2997054036458); (2.3125 : 30)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionServiceRequest/TransmissionServiceRequest_LinkTsrProject" />
+      <nodes>
+        <classShapeMoniker Id="f2e47d40-528f-4223-a54e-08bb89b65df6" />
+        <classShapeMoniker Id="4f32c960-7ac6-4e42-b6b7-691dda434c8d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e6a44b07-d93c-4708-bf8e-0cf23263c781" absoluteBounds="32.625, 13.75, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/EpicDomainDataContext/ResourceBundleAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d8b6d99-280b-4bdc-9d40-8bc519eb9442" absoluteBounds="32.64, 14.21, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.5 : 17.8766097005208); (22.5 : 19.965517578125); (32.625 : 19.965517578125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourcePlan/ResourcePlan_ResourceBundleAttribute" />
+      <nodes>
+        <classShapeMoniker Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" />
+        <classShapeMoniker Id="e6a44b07-d93c-4708-bf8e-0cf23263c781" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" absoluteBounds="29.875, 13.875, 2, 4.2708154296875">
+      <DataClassMoniker Name="/EpicDomainDataContext/ResourceBundle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1c7a3b5-24cb-4bf9-9917-433176a271b9" absoluteBounds="29.89, 14.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(29.875 : 16.0104077148438); (26.625 : 16.0104077148438); (26.625 : 14); (24.8958333333333 : 14 : JumpStart); (24.7291666666667 : 14 : JumpEnd); (22.5677110833333 : 14 : JumpStart); (22.4010444166667 : 14 : JumpEnd); (22.1848974583333 : 14 : JumpStart); (22.0182307916667 : 14 : JumpEnd); (21.8020838333333 : 14 : JumpStart); (21.6354171666667 : 14 : JumpEnd); (20.0833333333333 : 14 : JumpStart); (19.9166666666667 : 14 : JumpEnd); (18.8020808333333 : 14 : JumpStart); (18.6354141666667 : 14 : JumpEnd); (18.4583333333333 : 14 : JumpStart); (18.0416666666667 : 14 : JumpEnd); (18.0208333333333 : 14 : JumpStart); (17.7916666666667 : 14 : JumpEnd); (15.375 : 14); (15.375 : 12.125); (14.9583333333333 : 12.125 : JumpStart); (14.7916666666667 : 12.125 : JumpEnd); (14.4270833333333 : 12.125 : JumpStart); (14.1510391666667 : 12.125 : JumpEnd); (13.6458338333333 : 12.125 : JumpStart); (13.4791671666667 : 12.125 : JumpEnd); (13.0833333333333 : 12.125 : JumpStart); (12.5104166666667 : 12.125 : JumpEnd); (10.875 : 12.125); (10.875 : 10.2228011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceBundle/ResourceBundle_Name" />
+      <nodes>
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+        <classShapeMoniker Id="6946b421-082e-40d4-bdf2-9d1a9ac587b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(30.343748 : 13.875); (30.343748 : 11.0104484049479); (31.625 : 11.0104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceBundle/ResourceBundle_LinkResourceBundleElectricalGroup" />
+      <nodes>
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+        <classShapeMoniker Id="f30727ca-3634-4e23-a35e-ac67695264dc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(31.875 : 16.0104077148438); (32.625 : 16.0104077148438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceBundle/ResourceBundle_ResourceBundleAttribute" />
+      <nodes>
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+        <classShapeMoniker Id="e6a44b07-d93c-4708-bf8e-0cf23263c781" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21 : 13.2228011067708); (21.375 : 13.5978011067708); (21.6354171666667 : 13.5978011067708 : JumpStart); (21.8020838333333 : 13.5978011067708 : JumpEnd); (30.0963537916667 : 13.5978011067708 : JumpStart); (30.2630204583333 : 13.5978011067708 : JumpEnd); (30.875 : 13.5978011067708); (30.875 : 13.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricalGroup/ElectricalGroup_ResourceBundle" />
+      <nodes>
+        <classShapeMoniker Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" />
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(30.179687125 : 6.50160970052083); (30.179687125 : 13.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/FuelType/FuelType_ResourceBundle" />
+      <nodes>
+        <classShapeMoniker Id="372f6e3d-affc-4532-af14-696cbc69b013" />
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.5 : 17.7027498372396); (21.25 : 17.7027498372396); (21.25 : 19.4054996744792); (22.4166666666667 : 19.4054996744792 : JumpStart); (22.5833333333333 : 19.4054996744792 : JumpEnd); (30.875 : 19.4054996744792); (30.875 : 18.1458154296875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/LTAPSubRegion/LTAPSubRegion_ResourceBundle" />
+      <nodes>
+        <classShapeMoniker Id="350d5178-f07e-4429-bf8d-6196dc338cfa" />
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 7.14981201171875); (8.54166666666667 : 7.14981201171875 : JumpStart); (8.70833333333333 : 7.14981201171875 : JumpEnd); (8.91666666666667 : 7.14981201171875 : JumpStart); (9.08333333333333 : 7.14981201171875 : JumpEnd); (9.29166441666667 : 7.14981201171875 : JumpStart); (9.45833108333333 : 7.14981201171875 : JumpEnd); (9.57291704166667 : 7.14981201171875 : JumpStart); (9.73958370833333 : 7.14981201171875 : JumpEnd); (10.2858100416667 : 7.14981201171875 : JumpStart); (10.4524767083333 : 7.14981201171875 : JumpEnd); (10.4791666666667 : 7.14981201171875 : JumpStart); (10.6458333333333 : 7.14981201171875 : JumpEnd); (10.9361980416667 : 7.14981201171875 : JumpStart); (11.1028647083333 : 7.14981201171875 : JumpEnd); (11.3229166666667 : 7.14981201171875 : JumpStart); (11.4895833333333 : 7.14981201171875 : JumpEnd); (11.5416666666667 : 7.14981201171875 : JumpStart); (11.7083333333333 : 7.14981201171875 : JumpEnd); (11.7291666666667 : 7.14981201171875 : JumpStart); (12.1458333333333 : 7.14981201171875 : JumpEnd); (12.5104166666667 : 7.14981201171875 : JumpStart); (12.6770833333333 : 7.14981201171875 : JumpEnd); (13.4791671666667 : 7.14981201171875 : JumpStart); (13.6458338333333 : 7.14981201171875 : JumpEnd); (14.125 : 7.14981201171875); (14.125 : 11.8572412109375); (14.1510391666667 : 11.8572412109375 : JumpStart); (14.4270833333333 : 11.8572412109375 : JumpEnd); (14.7916666666667 : 11.8572412109375 : JumpStart); (14.9583333333333 : 11.8572412109375 : JumpEnd); (17.7916666666667 : 11.8572412109375 : JumpStart); (18.0208333333333 : 11.8572412109375 : JumpEnd); (18.0416666666667 : 11.8572412109375 : JumpStart); (18.4583333333333 : 11.8572412109375 : JumpEnd); (18.5 : 11.8572412109375); (18.5 : 13.7324039713542); (18.6354141666667 : 13.7324039713542 : JumpStart); (18.8020808333333 : 13.7324039713542 : JumpEnd); (19.9166666666667 : 13.7324039713542 : JumpStart); (20.0833333333333 : 13.7324039713542 : JumpEnd); (21.6354171666667 : 13.7324039713542 : JumpStart); (21.8020838333333 : 13.7324039713542 : JumpEnd); (22.0182307916667 : 13.7324039713542 : JumpStart); (22.1848974583333 : 13.7324039713542 : JumpEnd); (22.4010444166667 : 13.7324039713542 : JumpStart); (22.5677110833333 : 13.7324039713542 : JumpEnd); (24.7291666666667 : 13.7324039713542 : JumpStart); (24.8958333333333 : 13.7324039713542 : JumpEnd); (30.0963537916667 : 13.7324039713542 : JumpStart); (30.4270813333333 : 13.7324039713542 : JumpEnd); (30.875 : 13.7324039713542); (30.875 : 13.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/PowerCall/PowerCall_ResourceBundle" />
+      <nodes>
+        <classShapeMoniker Id="228b6871-5d76-46ee-b7db-8d29993b2764" />
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.75 : 5.70274983723958); (25.875 : 5.70274983723958); (25.875 : 12.7898583984375); (31.2187525 : 12.7898583984375); (31.2187525 : 13.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceStatuse/ResourceStatuse_ResourceBundle" />
+      <nodes>
+        <classShapeMoniker Id="031920bb-2f13-4ace-93cf-55060ce8a192" />
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="378e9ce9-ab56-4ea8-aa84-1ca2abcf993f" absoluteBounds="22, 8.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkSubstationElectricalGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3de03b21-3a02-4ab7-b5f5-13e8a7e57906" absoluteBounds="22.015, 8.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21 : 10.8765374615385); (21.375 : 10.5015374615385); (21.375 : 9.13544840494792); (22 : 9.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricalGroup/ElectricalGroup_LinkSubstationElectricalGroup" />
+      <nodes>
+        <classShapeMoniker Id="287c2d48-9749-48d8-8a07-9ddbe3179d0f" />
+        <classShapeMoniker Id="378e9ce9-ab56-4ea8-aa84-1ca2abcf993f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(21 : 8.63022420247396); (21.6354171666667 : 8.63022420247396 : JumpStart); (21.8020838333333 : 8.63022420247396 : JumpEnd); (22 : 8.63022420247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_LinkSubstationElectricalGroup" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="378e9ce9-ab56-4ea8-aa84-1ca2abcf993f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="deabac25-4ba1-46c0-8279-d43513a8b668" absoluteBounds="9.125, 17, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/NotesType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee781c3c-fea3-4af2-82de-b4695d4464df" absoluteBounds="9.14, 17.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.4375 : 17); (10.4375 : 16.0401025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/NotesType/NotesType_Note" />
+      <nodes>
+        <classShapeMoniker Id="deabac25-4ba1-46c0-8279-d43513a8b668" />
+        <classShapeMoniker Id="d25ccdef-f684-4160-9478-3aca5d77904e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0c7b8644-0e4d-4abf-832e-25e4da9d68eb" absoluteBounds="1.375, 38.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/TvcFacilityStage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dae7315e-e948-4aca-b4cd-ca04e41e5bf1" absoluteBounds="1.3900000000000001, 39.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="951845a1-0839-44a3-bbe8-334cb4fa3f6b" absoluteBounds="4.5, 41.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/TvcFacilityStatuse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5408cd42-b394-4ff1-8f62-734a08ea3b4e" absoluteBounds="4.5150000000000006, 41.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0893fe65-665a-4777-9b52-148bda7d2787" absoluteBounds="4, 37.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/TvcFacilityType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e2c391d-fd21-4cfb-a757-7e8847b85b55" absoluteBounds="4.015, 38.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f92f18b-9d8f-4d02-b01a-cc8e80f19fe2" absoluteBounds="9.125, 35.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkTsrTvc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87ec0193-5582-47e6-8eba-ec625fb72137" absoluteBounds="9.14, 36.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 26.2226813037109); (4.54166666666667 : 26.2226813037109 : JumpStart); (4.70833333333333 : 26.2226813037109 : JumpEnd); (8.54166666666667 : 26.2226813037109 : JumpStart); (8.83333333333333 : 26.2226813037109 : JumpEnd); (8.91666666666667 : 26.2226813037109 : JumpStart); (9.08333333333333 : 26.2226813037109 : JumpEnd); (9.28125 : 26.2226813037109); (9.28125 : 35.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionServiceRequest/TransmissionServiceRequest_LinkTsrTvc" />
+      <nodes>
+        <classShapeMoniker Id="f2e47d40-528f-4223-a54e-08bb89b65df6" />
+        <classShapeMoniker Id="4f92f18b-9d8f-4d02-b01a-cc8e80f19fe2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="48bf9f06-2e8d-4a05-90c5-8e4e7a6a1e7c" absoluteBounds="7.5, 40.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/TvcStagedLoadMeasure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f84e7773-e32c-420b-a92c-90e757165b15" absoluteBounds="7.515, 41.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8703f968-c6a8-4d30-9306-50ae37d1c973" absoluteBounds="10.375, 38.625, 2, 5.8092268880208326">
+      <DataClassMoniker Name="/EpicDomainDataContext/TransmissionVoltageCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="055e58e1-f617-491e-947b-0eb34888189c" absoluteBounds="10.39, 39.085, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.75 : 38.625); (10.75 : 37.6458968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionVoltageCustomer/TransmissionVoltageCustomer_LinkTsrTvc" />
+      <nodes>
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+        <classShapeMoniker Id="4f92f18b-9d8f-4d02-b01a-cc8e80f19fe2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.375 : 41.9527498372396); (10.0833333333333 : 41.9527498372396 : JumpStart); (9.91666666666667 : 41.9527498372396 : JumpEnd); (9.5 : 41.9527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionVoltageCustomer/TransmissionVoltageCustomer_TvcStagedLoadMeasure" />
+      <nodes>
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+        <classShapeMoniker Id="48bf9f06-2e8d-4a05-90c5-8e4e7a6a1e7c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.468748 : 10.0688297526042); (19.468748 : 10.75); (18.25 : 10.75); (18.25 : 41.5296134440104); (12.375 : 41.5296134440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_TransmissionVoltageCustomer" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.375 : 40.1979484049479); (3.54166666666667 : 40.1979484049479 : JumpStart); (3.70833333333333 : 40.1979484049479 : JumpEnd); (10.375 : 40.1979484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TvcFacilityStage/TvcFacilityStage_TransmissionVoltageCustomer" />
+      <nodes>
+        <classShapeMoniker Id="0c7b8644-0e4d-4abf-832e-25e4da9d68eb" />
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 43.3742496744792); (10.375 : 43.3742496744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TvcFacilityStatuse/TvcFacilityStatuse_TransmissionVoltageCustomer" />
+      <nodes>
+        <classShapeMoniker Id="951845a1-0839-44a3-bbe8-334cb4fa3f6b" />
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6 : 39.0729484049479); (10.375 : 39.0729484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TvcFacilityType/TvcFacilityType_TransmissionVoltageCustomer" />
+      <nodes>
+        <classShapeMoniker Id="0893fe65-665a-4777-9b52-148bda7d2787" />
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2d93698f-f478-4121-8e52-7c87cd3ab794" absoluteBounds="9.5, 33, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/FacilityTempCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16b95dea-c528-4743-a1e2-e3c42e74610a" absoluteBounds="9.515, 33.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c888b91-2bda-475f-bbe2-bd4b0ce1b84a" absoluteBounds="5.875, 34.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EpicDomainDataContext/FacilityCodeType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47fbee26-a0ee-452c-85de-dc0fb8c1eab2" absoluteBounds="5.89, 34.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.875 : 34.7027498372396); (9.5 : 34.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/FacilityCodeType/FacilityCodeType_FacilityTempCode" />
+      <nodes>
+        <classShapeMoniker Id="8c888b91-2bda-475f-bbe2-bd4b0ce1b84a" />
+        <classShapeMoniker Id="2d93698f-f478-4121-8e52-7c87cd3ab794" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aba3b3e5-1189-4669-a614-e414a8a9f77c" absoluteBounds="1.25, 33.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicDomainDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa9c58b3-e561-496b-8cb3-770ce389d009" absoluteBounds="1.2650000000000001, 33.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 35.0825512695313); (5.875 : 35.0825512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Department/Department_FacilityCodeType" />
+      <nodes>
+        <classShapeMoniker Id="aba3b3e5-1189-4669-a614-e414a8a9f77c" />
+        <classShapeMoniker Id="8c888b91-2bda-475f-bbe2-bd4b0ce1b84a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a56edb61-e691-4439-a0c1-d9ea87cb6ec4" absoluteBounds="1.375, 36.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce8ffbec-34a6-49d4-a202-b405498a5cdb" absoluteBounds="1.3900000000000001, 36.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.375 : 38.4054996744792); (2.375 : 38.6554996744792); (3.625 : 38.6554996744792); (3.625 : 40.625); (10 : 40.625); (10 : 42.3473396464844); (10.375 : 42.3473396464844)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Customer/Customer_TransmissionVoltageCustomer" />
+      <nodes>
+        <classShapeMoniker Id="a56edb61-e691-4439-a0c1-d9ea87cb6ec4" />
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" absoluteBounds="13.125, 12.25, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/EpicDomainDataContext/LinkNote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4755c24f-c5c1-4628-a548-df1b8a631a97" absoluteBounds="13.14, 12.71, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.36820277669271); (5.97916666666667 : 4.36820277669271 : JumpStart); (6.14583333333333 : 4.36820277669271 : JumpEnd); (6.32291666666667 : 4.36820277669271 : JumpStart); (6.48958333333333 : 4.36820277669271 : JumpEnd); (8.79166666666667 : 4.36820277669271 : JumpStart); (8.95833333333333 : 4.36820277669271 : JumpEnd); (9.125 : 4.36820277669271); (9.125 : 6.9246240234375); (9.29166441666667 : 6.9246240234375 : JumpStart); (9.45833108333333 : 6.9246240234375 : JumpEnd); (9.57291704166667 : 6.9246240234375 : JumpStart); (9.73958370833333 : 6.9246240234375 : JumpEnd); (10.2858100416667 : 6.9246240234375 : JumpStart); (10.4524767083333 : 6.9246240234375 : JumpEnd); (10.4791666666667 : 6.9246240234375 : JumpStart); (10.6458333333333 : 6.9246240234375 : JumpEnd); (11.3229166666667 : 6.9246240234375 : JumpStart); (11.7083333333333 : 6.9246240234375 : JumpEnd); (11.7291666666667 : 6.9246240234375 : JumpStart); (12.1458333333333 : 6.9246240234375 : JumpEnd); (12.5104166666667 : 6.9246240234375 : JumpStart); (12.6770833333333 : 6.9246240234375 : JumpEnd); (13.5625005 : 6.9246240234375); (13.5625005 : 12.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ElectricityPurchaseAgreement/ElectricityPurchaseAgreement_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="a6e3627b-709b-4737-848e-c88f29cfa752" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.37499775 : 6.7996240234375); (9.37499775 : 12.8437505); (9.41666666666667 : 12.8437505 : JumpStart); (9.58333333333333 : 12.8437505 : JumpEnd); (12.6666666666667 : 12.8437505 : JumpStart); (12.8333333333333 : 12.8437505 : JumpEnd); (12.9166666666667 : 12.8437505 : JumpStart); (13.0833333333333 : 12.8437505 : JumpEnd); (13.125 : 12.8437505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/GeneratingUnit/GeneratingUnit_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="a85f87dc-87ac-4dca-81ef-e74fcacdfc7e" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.875 : 11.7322412109375); (14.875 : 12.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/GeneratorAttribute/GeneratorAttribute_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="6d871147-85a5-429e-9db9-b9a18ccd9d83" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.1718725 : 16.875); (12.1718725 : 14.5212335325521); (12.5104166666667 : 14.5212335325521 : JumpStart); (13.0833333333333 : 14.5212335325521 : JumpEnd); (13.125 : 14.5212335325521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Line/Line_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="c235c99b-7ffb-4773-a71d-05d9d20e4811" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 0.625); (14.2343725 : 0.625); (14.2343725 : 12.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/Load/Load_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="9b4740e3-4a79-4a38-a186-3e0758c0bd54" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.1875005 : 11.5881982421875); (5.1875005 : 12.0625); (6.9375 : 12.0625); (6.9375 : 13.6875); (9.41666666666667 : 13.6875 : JumpStart); (9.58333333333333 : 13.6875 : JumpEnd); (9.6875 : 13.6875); (9.6875 : 13.4375); (12.65625 : 13.4375); (12.65625 : 14.1931062825521); (12.6666666666667 : 14.1931062825521 : JumpStart); (12.8333333333333 : 14.1931062825521 : JumpEnd); (12.9166666666667 : 14.1931062825521 : JumpStart); (13.0833333333333 : 14.1931062825521 : JumpEnd); (13.125 : 14.1931062825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Meter/Meter_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="a16e5740-a2df-4abf-927b-0aa21ca0009d" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 14.7700512695312); (12.6666666666667 : 14.7700512695312 : JumpStart); (12.8333333333333 : 14.7700512695312 : JumpEnd); (12.9166666666667 : 14.7700512695312 : JumpStart); (13.0833333333333 : 14.7700512695312 : JumpEnd); (13.125 : 14.7700512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Note/Note_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="d25ccdef-f684-4160-9478-3aca5d77904e" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(29.875 : 14.15625); (26.7083333333333 : 14.15625 : JumpStart); (26.5416666666667 : 14.15625 : JumpEnd); (22.5677110833333 : 14.15625 : JumpStart); (22.4010444166667 : 14.15625 : JumpEnd); (21.8020838333333 : 14.15625 : JumpStart); (21.6354171666667 : 14.15625 : JumpEnd); (18.8020808333333 : 14.15625 : JumpStart); (18.6354141666667 : 14.15625 : JumpEnd); (18.3333333333333 : 14.15625 : JumpStart); (18.0416666666667 : 14.15625 : JumpEnd); (18.0208333333333 : 14.15625 : JumpStart); (17.7916666666667 : 14.15625 : JumpEnd); (15.125 : 14.15625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceBundle/ResourceBundle_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="3eb0fd9e-ff90-41b8-a511-3bea79385388" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19 : 3.90625); (17.9583333333333 : 3.90625 : JumpStart); (17.7916666666667 : 3.90625 : JumpEnd); (17.2083333333333 : 3.90625 : JumpStart); (17.0416666666667 : 3.90625 : JumpEnd); (14.5833333333333 : 3.90625 : JumpStart); (14.4166666666667 : 3.90625 : JumpEnd); (14.34375 : 3.90625); (14.34375 : 12.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/Substation/Substation_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="447801b4-3660-490b-b1b9-9a9a8df3d29d" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.375 : 25.7578576074219); (8.66666666666667 : 25.7578576074219 : JumpStart); (8.83333333333333 : 25.7578576074219 : JumpEnd); (8.91666666666667 : 25.7578576074219 : JumpStart); (9.08333333333333 : 25.7578576074219 : JumpEnd); (11.2291666666667 : 25.7578576074219 : JumpStart); (11.3958333333333 : 25.7578576074219 : JumpEnd); (14.46875 : 25.7578576074219); (14.46875 : 16.1362125651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionServiceRequest/TransmissionServiceRequest_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="f2e47d40-528f-4223-a54e-08bb89b65df6" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.375 : 40.0460542220052); (14.1093725 : 40.0460542220052); (14.1093725 : 16.1362125651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransmissionVoltageCustomer/TransmissionVoltageCustomer_LinkNote" />
+      <nodes>
+        <classShapeMoniker Id="8703f968-c6a8-4d30-9306-50ae37d1c973" />
+        <classShapeMoniker Id="ceb28f9c-8b21-4f2c-9f50-6b994693ae58" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="816dccef-00ff-41a3-86ba-13eef4cf5263" absoluteBounds="0.5, 4.625, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/EpicDomainDataContext/LoadAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f25f069-1b89-4b3e-8ac6-2dc7ea7181fb" absoluteBounds="0.51500000000000012, 5.085, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.1875 : 3.6170068359375); (1.1875 : 4.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/Load/Load_LoadAttribute" />
+      <nodes>
+        <classShapeMoniker Id="9b4740e3-4a79-4a38-a186-3e0758c0bd54" />
+        <classShapeMoniker Id="816dccef-00ff-41a3-86ba-13eef4cf5263" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.101564125 : 14.375); (22.101564125 : 10.3813297526042); (21.8020838333333 : 10.3813297526042 : JumpStart); (21.6354171666667 : 10.3813297526042 : JumpEnd); (21.4583333333333 : 10.3813297526042 : JumpStart); (21.2916666666667 : 10.3813297526042 : JumpEnd); (20.0833333333333 : 10.3813297526042 : JumpStart); (19.9166666666667 : 10.3813297526042 : JumpEnd); (19.5520813333333 : 10.3813297526042 : JumpStart); (19.3854146666667 : 10.3813297526042 : JumpEnd); (18.8020808333333 : 10.3813297526042 : JumpStart); (18.6354141666667 : 10.3813297526042 : JumpEnd); (18.2083333333333 : 10.3813297526042 : JumpStart); (18.0416666666667 : 10.3813297526042 : JumpEnd); (18.0208333333333 : 10.3813297526042 : JumpStart); (17.7916666666667 : 10.3813297526042 : JumpEnd); (16.875 : 10.3813297526042); (16.875 : 3.4375); (16.7395853333333 : 3.4375 : JumpStart); (16.5729186666667 : 3.4375 : JumpEnd); (15.6770813333333 : 3.4375 : JumpStart); (15.5104146666667 : 3.4375 : JumpEnd); (14.3177058333333 : 3.4375 : JumpStart); (14.1510391666667 : 3.4375 : JumpEnd); (13.2083333333333 : 3.4375 : JumpStart); (13.0416666666667 : 3.4375 : JumpEnd); (12.0625 : 3.4375); (12.0625 : 7.5); (11.8958333333333 : 7.5 : JumpStart); (11.7291666666667 : 7.5 : JumpEnd); (11.4895833333333 : 7.5 : JumpStart); (11.3229166666667 : 7.5 : JumpEnd); (11.1028647083333 : 7.5 : JumpStart); (10.9361980416667 : 7.5 : JumpEnd); (10.6458333333333 : 7.5 : JumpStart); (10.4791666666667 : 7.5 : JumpEnd); (10.4524767083333 : 7.5 : JumpStart); (10.2858100416667 : 7.5 : JumpEnd); (9.73958370833333 : 7.5 : JumpStart); (9.57291704166667 : 7.5 : JumpEnd); (9.45833108333333 : 7.5 : JumpStart); (9.29166441666667 : 7.5 : JumpEnd); (8.625 : 7.5); (8.625 : 6.625); (6.48958333333333 : 6.625 : JumpStart); (6.32291666666667 : 6.625 : JumpEnd); (6.14583333333333 : 6.625 : JumpStart); (5.97916666666667 : 6.625 : JumpEnd); (4.58333333333333 : 6.625 : JumpStart); (4.41666666666667 : 6.625 : JumpEnd); (3.125 : 6.625); (3.125 : 8.1602192265625); (2.5 : 8.1602192265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourcePlan/ResourcePlan_LoadAttribute" />
+      <nodes>
+        <classShapeMoniker Id="b04f25cd-e31e-42e2-b349-27cb9bc806bd" />
+        <classShapeMoniker Id="816dccef-00ff-41a3-86ba-13eef4cf5263" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="98266b69-23de-429c-ad85-b1046e70a4cb" absoluteBounds="1.5, 43.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicDomainDataContext/TransVoltageCustLoadForecast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a5200b8-438e-4978-8014-160796dc5abb" absoluteBounds="1.5150000000000001, 43.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7a78446-858e-473d-a741-5b549299e73b" absoluteBounds="5.625, 47, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcLdScenario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d7c5cb3-e09c-45bf-b6a4-2822cd026bf7" absoluteBounds="5.64, 47.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9bb48b32-e8a0-4242-a6fe-22f07a7991d7" absoluteBounds="0.5, 46.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcLdTimePeriod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d63617ac-32ab-44f6-b09a-ada7a3ee9218" absoluteBounds="0.51500000000000012, 47.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dcec0a03-3460-41e2-9a0d-6353d6d36a1c" absoluteBounds="0.5, 49.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcLdTransVoltCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8827c73b-6ed0-43f7-8282-ab7da51b25ca" absoluteBounds="0.515, 49.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2632ccd7-f2c9-486d-836b-c3b5318c66fb" absoluteBounds="1.25, 52.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcLdFacility" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89c758d2-ddd0-416a-93f8-90af4f78374e" absoluteBounds="1.2650000000000001, 52.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2add5f0-1713-40cd-aa1a-0d8830e77070" absoluteBounds="4, 50.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/TransVoltageCustForecastLoadFact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e421a62-6500-4c38-9247-801056d3a67e" absoluteBounds="4.015, 50.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 53.4527498372396); (5 : 53.4527498372396); (5 : 52.2804996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcLdFacility/DimTvcLdFacility_TransVoltageCustForecastLoadFact" />
+      <nodes>
+        <classShapeMoniker Id="2632ccd7-f2c9-486d-836b-c3b5318c66fb" />
+        <classShapeMoniker Id="d2add5f0-1713-40cd-aa1a-0d8830e77070" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.03125 : 45.8478011067708); (3.03125 : 51.8117496744792); (4 : 51.8117496744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/TransVoltageCustLoadForecast/TransVoltageCustLoadForecast_TransVoltageCustForecastLoadFact" />
+      <nodes>
+        <classShapeMoniker Id="98266b69-23de-429c-ad85-b1046e70a4cb" />
+        <classShapeMoniker Id="d2add5f0-1713-40cd-aa1a-0d8830e77070" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.4062505 : 48.9631982421875); (6.4062505 : 52.2492496744792); (6 : 52.2492496744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcLdScenario/DimTvcLdScenario_TransVoltageCustForecastLoadFact" />
+      <nodes>
+        <classShapeMoniker Id="c7a78446-858e-473d-a741-5b549299e73b" />
+        <classShapeMoniker Id="d2add5f0-1713-40cd-aa1a-0d8830e77070" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 46.78125); (2.94791666666667 : 46.78125 : JumpStart); (3.11458333333333 : 46.78125 : JumpEnd); (4.78125 : 46.78125); (4.78125 : 50.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcLdTimePeriod/DimTvcLdTimePeriod_TransVoltageCustForecastLoadFact" />
+      <nodes>
+        <classShapeMoniker Id="9bb48b32-e8a0-4242-a6fe-22f07a7991d7" />
+        <classShapeMoniker Id="d2add5f0-1713-40cd-aa1a-0d8830e77070" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 50.7027498372396); (4 : 50.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcLdTransVoltCustomer/DimTvcLdTransVoltCustomer_TransVoltageCustForecastLoadFact" />
+      <nodes>
+        <classShapeMoniker Id="dcec0a03-3460-41e2-9a0d-6353d6d36a1c" />
+        <classShapeMoniker Id="d2add5f0-1713-40cd-aa1a-0d8830e77070" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c1baa82a-145b-4382-a48d-90cc7f86acb3" absoluteBounds="9, 47, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/TvcForecast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70e32ed5-d5cc-4119-86fc-ef3d45ef26ab" absoluteBounds="9.015, 47.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79bd9d2b-6055-4faf-8472-9987003644a2" absoluteBounds="13.75, 46.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcScenario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32571d26-3b74-4a3c-8273-5ce2eb89d06b" absoluteBounds="13.765, 47.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0e5e31b-dfab-4b0e-ae23-a9a76f4c28f6" absoluteBounds="7.375, 52.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcTransServiceRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5acd45f8-7c70-4e80-9259-f65f8c6f5275" absoluteBounds="7.3900000000000006, 53.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07971fb0-bf3c-457e-a7dc-2da9d291219c" absoluteBounds="13.25, 54.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcStatuse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15a716ba-9c81-49c0-a29f-c992e2587ca6" absoluteBounds="13.265, 54.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c525e98f-33a3-4748-ace3-dc00146f6294" absoluteBounds="15.5, 49.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcTimePeriod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4543b8be-e40d-4e51-a444-3610a7ca8fe6" absoluteBounds="15.515, 50.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b28b6f53-44fc-401e-8d0b-19d07e3d3b3a" absoluteBounds="15.5, 52.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcKiloVolt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8de360c2-1249-4767-b9b0-7600c924bc4a" absoluteBounds="15.515, 53.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cd83e5f-d98e-403f-a84f-d66ba1ce0866" absoluteBounds="17.875, 54.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcStage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ece88e8-5052-4018-84e3-7ae2db257c14" absoluteBounds="17.89, 55.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5ca14bb-8738-4d1f-8e26-992617aed023" absoluteBounds="18.625, 50.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcLine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83922bde-c6ef-40fc-8864-d9b1785f737b" absoluteBounds="18.64, 50.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d197a9a-464a-46aa-b89c-dc5cd1bdfb50" absoluteBounds="18.125, 47.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="741427a9-947d-4f57-a32f-24c782355b22" absoluteBounds="18.14, 48.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad45470b-3071-4762-9d0d-d9ce09cd48bd" absoluteBounds="35.5, 14.25, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/EpicDomainDataContext/ResourceOptionAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac056593-9951-453d-bfe3-624276be0fec" absoluteBounds="35.515, 14.71, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(24.625 : 1.4375); (36.5 : 1.4375); (36.5 : 14.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/OwnershipType/OwnershipType_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="cd94761f-04c0-410a-b1f1-e0e18a328b4f" />
+        <classShapeMoniker Id="ad45470b-3071-4762-9d0d-d9ce09cd48bd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(34.625 : 16.7700105794271); (35.5 : 16.7700105794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/ResourceBundleAttribute/ResourceBundleAttribute_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="e6a44b07-d93c-4708-bf8e-0cf23263c781" />
+        <classShapeMoniker Id="ad45470b-3071-4762-9d0d-d9ce09cd48bd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.125 : 1.67390055338542); (19.375 : 1.67390055338542); (19.375 : 3.2131982421875); (19.9166666666667 : 3.2131982421875 : JumpStart); (20.0833333333333 : 3.2131982421875 : JumpEnd); (25.625 : 3.2131982421875); (25.625 : 13.0398583984375); (31.1354191666667 : 13.0398583984375 : JumpStart); (31.3020858333333 : 13.0398583984375 : JumpEnd); (35.968748 : 13.0398583984375); (35.968748 : 14.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicDomainDataContext/EpicUser/EpicUser_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="aced45e7-5a2f-482e-a281-c4d2b06ceb4c" />
+        <classShapeMoniker Id="ad45470b-3071-4762-9d0d-d9ce09cd48bd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="095eb747-d971-4bbb-ac7b-651882714f54" absoluteBounds="13.625, 57.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6794827-a94c-4b73-a635-3178ddcbc3ef" absoluteBounds="13.64, 58.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a76792ab-fda7-47f7-b067-b839741fd1bb" absoluteBounds="10.625, 56, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcSubstation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d058d389-0235-4a28-be8f-b62f0c083efe" absoluteBounds="10.64, 56.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16bfa022-bd7e-4473-aba6-d228ae591d95" absoluteBounds="9.5, 50.125, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/EpicDomainDataContext/TvcForecastFact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10ecb54c-0409-4c16-bbbc-a66857746a65" absoluteBounds="9.515, 50.585, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.59375 : 48.7131982421875); (14.59375 : 52.0729484049479); (11.5 : 52.0729484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcScenario/DimTvcScenario_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="79bd9d2b-6055-4faf-8472-9987003644a2" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 53.4142569986979); (15.4583333333333 : 53.4142569986979 : JumpStart); (15.2916666666667 : 53.4142569986979 : JumpEnd); (11.5 : 53.4142569986979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcKiloVolt/DimTvcKiloVolt_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="b28b6f53-44fc-401e-8d0b-19d07e3d3b3a" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.625 : 51.7656726074219); (14.6770833333333 : 51.7656726074219 : JumpStart); (14.5104166666667 : 51.7656726074219 : JumpEnd); (11.5 : 51.7656726074219)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcLine/DimTvcLine_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="a5ca14bb-8738-4d1f-8e26-992617aed023" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.125 : 49.2604484049479); (14.6770833333333 : 49.2604484049479 : JumpStart); (14.5104166666667 : 49.2604484049479 : JumpEnd); (11.28125 : 49.2604484049479); (11.28125 : 50.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcRate/DimTvcRate_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="1d197a9a-464a-46aa-b89c-dc5cd1bdfb50" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.875 : 54.875); (18.875 : 52.7804996744792); (18.375 : 52.7804996744792); (18.375 : 52.348976702474); (15.4583333333333 : 52.348976702474 : JumpStart); (15.2916666666667 : 52.348976702474 : JumpEnd); (11.5 : 52.348976702474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcStage/DimTvcStage_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="7cd83e5f-d98e-403f-a84f-d66ba1ce0866" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.25 : 55.15625); (11.1458333333333 : 55.15625 : JumpStart); (10.9791666666667 : 55.15625 : JumpEnd); (10.03125 : 55.15625); (10.03125 : 54.2035139973958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcStatuse/DimTvcStatuse_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="07971fb0-bf3c-457e-a7dc-2da9d291219c" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.0625 : 56); (11.0625 : 54.2035139973958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcSubstation/DimTvcSubstation_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="a76792ab-fda7-47f7-b067-b839741fd1bb" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 50.8229484049479); (14.6770833333333 : 50.8229484049479 : JumpStart); (14.5104166666667 : 50.8229484049479 : JumpEnd); (11.5 : 50.8229484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcTimePeriod/DimTvcTimePeriod_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="c525e98f-33a3-4748-ace3-dc00146f6294" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.375 : 53.4767569986979); (9.5 : 53.4767569986979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcTransServiceRequest/DimTvcTransServiceRequest_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="e0e5e31b-dfab-4b0e-ae23-a9a76f4c28f6" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.375 : 57.875); (15.375 : 51.9193105061849); (14.6770833333333 : 51.9193105061849 : JumpStart); (14.5104166666667 : 51.9193105061849 : JumpEnd); (11.5 : 51.9193105061849)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcCustomer/DimTvcCustomer_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="095eb747-d971-4bbb-ac7b-651882714f54" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.53125 : 48.7708968098958); (10.53125 : 50.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/TvcForecast/TvcForecast_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="c1baa82a-145b-4382-a48d-90cc7f86acb3" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ca285c76-299d-4912-a64e-fdaa22f50a08" absoluteBounds="6.875, 50, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicDomainDataContext/DimTvcTransVoltCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="749672b6-76c0-41ac-a151-14287d07bbaa" absoluteBounds="6.8900000000000006, 50.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.875 : 51.1402498372396); (9.5 : 51.1402498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicDomainDataContext/DimTvcTransVoltCustomer/DimTvcTransVoltCustomer_TvcForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="ca285c76-299d-4912-a64e-fdaa22f50a08" />
+        <classShapeMoniker Id="16bfa022-bd7e-4473-aba6-d228ae591d95" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

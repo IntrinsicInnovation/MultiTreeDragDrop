@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CutPlanesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CutPlanesModelStoreContainer">
+    <EntitySet Name="Constraints" EntityType="CutPlanesModel.Store.Constraints" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConstraintSets" EntityType="CutPlanesModel.Store.ConstraintSets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CutPlanes" EntityType="CutPlanesModel.Store.CutPlanes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CutPlaneTypes" EntityType="CutPlanesModel.Store.CutPlaneTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DimCutPlaneSubstations" EntityType="CutPlanesModel.Store.DimCutPlaneSubstations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DimCutPlaneTimePeriods" EntityType="CutPlanesModel.Store.DimCutPlaneTimePeriods" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DimLrbSubstations" EntityType="CutPlanesModel.Store.DimLrbSubstations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LinkSubstationElectricalGroups" EntityType="CutPlanesModel.Store.LinkSubstationElectricalGroups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MapTypes" EntityType="CutPlanesModel.Store.MapTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pools" EntityType="CutPlanesModel.Store.Pools" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PoolTypes" EntityType="CutPlanesModel.Store.PoolTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubstationAttributes" EntityType="CutPlanesModel.Store.SubstationAttributes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Substations" EntityType="CutPlanesModel.Store.Substations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubstationTypes" EntityType="CutPlanesModel.Store.SubstationTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Maps" EntityType="CutPlanesModel.Store.Maps" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ElectricalGroups" EntityType="CutPlanesModel.Store.ElectricalGroups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LinkSubstationPools" EntityType="CutPlanesModel.Store.LinkSubstationPools" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Constraints">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ConstraintSetId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConstraintSetId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="FiscalYear" Type="int" Nullable="true" />
+    <Property Name="SummerN0" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="SummerN1" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="WinterN0" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="WinterN1" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="AreaLoss" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="AreaLossInPercentage" Type="decimal" Nullable="true" Precision="10" Scale="2" />
+    <Property Name="TotalLoss" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="TotalLossInPercentage" Type="decimal" Nullable="true" Precision="10" Scale="2" />
+    <Property Name="IntermittentRmr" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+  </EntityType>
+  <EntityType Name="ConstraintSets">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PoolId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PoolId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CutPlanes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TypeId" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="MapId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="MapId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CutPlaneTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="DimCutPlaneSubstations">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Code" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="UserCreated" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BeginDate" Type="datetime" Nullable="true" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
+    <Property Name="SubtstaionType" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="FuelType" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="PrimaryPoi" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="SecondaryPoi" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="PoiVoltage" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="PoiCircuitDesignation" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapName" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapDivisiion" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapRegion" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapSubRegion" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapArea" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapZone" Type="nvarchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DimCutPlaneTimePeriods">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="UserCreated" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Year" Type="int" Nullable="true" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="UserCreated" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DimLrbSubstations">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserCreated" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Code" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UserCreated" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BeginDate" Type="datetime" Nullable="true" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
+    <Property Name="SubstationType" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="FuelType" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="PrimaryPoi" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="SecondaryPoi" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="PoiVoltage" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="PoiCircuitDesignation" Type="nvarchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="LinkSubstationElectricalGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="SubstationId" />
+      <PropertyRef Name="ElectricalGroupId" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubstationId" Type="int" Nullable="false" />
+    <Property Name="ElectricalGroupId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Pools">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="CutPlaneId" />
+      <PropertyRef Name="PoolTypeId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="CutPlaneId" Type="int" Nullable="false" />
+    <Property Name="PoolTypeId" Type="int" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="PoolTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="SubstationAttributes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="SubstationId" />
+      <PropertyRef Name="ResourcePlanId" />
+      <PropertyRef Name="UsePdgcMasteredValue" />
+      <PropertyRef Name="UsePmpoMasteredValue" />
+      <PropertyRef Name="UsePptpMasteredValue" />
+      <PropertyRef Name="UsePrmrMasteredValue" />
+      <PropertyRef Name="UsePndcMasteredValue" />
+      <PropertyRef Name="UsePnpMasteredValue" />
+      <PropertyRef Name="UsePdmx0MasteredValue" />
+      <PropertyRef Name="UsePdmx1MasteredValue" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OriginalId" Type="int" Nullable="true" />
+    <Property Name="UserCreatedId" Type="int" Nullable="true" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" Nullable="true" />
+    <Property Name="DateReplaced" Type="datetime" Nullable="true" />
+    <Property Name="DateEffective" Type="datetime" Nullable="true" />
+    <Property Name="ProjectPhaseId" Type="int" Nullable="true" />
+    <Property Name="SubstationId" Type="int" Nullable="false" />
+    <Property Name="ResourcePlanId" Type="int" Nullable="false" />
+    <Property Name="RatedMVA" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="RatedOverExcitedPowerFactor" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="RatedUnderExcitedPowerFactor" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="NamePlateCapacityInMW" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="RatedOverExcitedMvar" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="RatedUnderExcitedMvar" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="RatedPowerFactor" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="DependableGeneratingCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="EffectiveLoadCarryingCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="LoadGrossSummerPeak" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="LoadGrossSummerMin" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="LoadGrossWinterPeak" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="LoadGrossWinterMin" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="MaximumPowerOutput" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="Nominated" Type="bit" Nullable="true" />
+    <Property Name="Probability" Type="int" Nullable="true" />
+    <Property Name="InServiceStartDate" Type="datetime" Nullable="true" />
+    <Property Name="InServiceEndDate" Type="datetime" Nullable="true" />
+    <Property Name="NitsDesignatedCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="EPACapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="MaxTakeOrPayCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="PointToPointCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="ReliabilityMustRunCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="SystemCapacity" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="UsePdgcMasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePmpoMasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePptpMasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePrmrMasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePndcMasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePnpMasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePdmx0MasteredValue" Type="bit" Nullable="false" />
+    <Property Name="UsePdmx1MasteredValue" Type="bit" Nullable="false" />
+    <Property Name="MaxOutputForFirmTransmission" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="MaxOutputForNonFirmTransmission" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Substations">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="GeoLocationId" Type="int" Nullable="true" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SingleLineDiagramUri" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="LocalOperationOrderLink" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="MeterId" Type="int" Nullable="true" />
+    <Property Name="ElectricalGroupId" Type="int" Nullable="true" />
+    <Property Name="Latitude" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="Longitude" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="PowerCallId" Type="int" Nullable="true" />
+    <Property Name="IsSynchronousCondenserCapable" Type="bit" Nullable="true" />
+    <Property Name="CIMLoadTS" Type="datetime" Nullable="true" />
+    <Property Name="LRBLoadTS" Type="datetime" Nullable="true" />
+    <Property Name="FacilityLoadTS" Type="datetime" Nullable="true" />
+    <Property Name="NITSPlanLoadTS" Type="datetime" Nullable="true" />
+    <Property Name="SubStationTypeId" Type="int" Nullable="true" />
+    <Property Name="FuelTypeId" Type="int" Nullable="true" />
+    <Property Name="OwnershipTypeId" Type="int" Nullable="true" />
+    <Property Name="LTAPSubRegionId" Type="int" Nullable="true" />
+    <Property Name="ResourceStatusId" Type="int" Nullable="true" />
+    <Property Name="PrimaryPoi" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="SecondaryPoi" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="PoiCircuitDesignation" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="PoiVoltage" Type="decimal" Nullable="true" Precision="20" Scale="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="TLA" Type="nvarchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SubstationTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="DateCreated" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="UserCreatedId" Type="int" Nullable="true" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Maps">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="MapDefinitionRootId" />
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="UserUpatedId" Type="int" Nullable="true" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="IsActive" Type="bit" Nullable="true" />
+    <Property Name="MapDefinitionRootId" Type="int" Nullable="false" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ElectricalGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateCreated" />
+      <PropertyRef Name="UserCreatedId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Abbreviation" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" Nullable="true" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+    <Property Name="UserUpdatedId" Type="int" Nullable="true" />
+    <Property Name="ParentPk" Type="int" Nullable="true" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Abbreviation" Type="nvarchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="LinkSubstationPools">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubstationId" Type="int" Nullable="false" />
+    <Property Name="PoolId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

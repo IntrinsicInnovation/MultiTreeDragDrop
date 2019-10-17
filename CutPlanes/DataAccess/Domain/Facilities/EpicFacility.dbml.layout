@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="EpicFacility">
+  <DataContextMoniker Name="/EpicFacilityDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d53fa17b-0262-4c23-a846-437d5c3329b8" absoluteBounds="0.875, 0.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/EpicFacilityDataContext/Facility" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7371962a-a1f7-4c21-89ae-a79260efdffc" absoluteBounds="0.88999999999999968, 0.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41efd5cb-be9e-4a05-9990-901cd09f4c90" absoluteBounds="6.375, 2.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicFacilityDataContext/FacilityType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adb24b21-92fa-4b3d-926f-49d005417e26" absoluteBounds="6.39, 2.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9eab9b7a-6d8e-45ea-9cb7-9cd02c5a3ccb" absoluteBounds="3.625, 2.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EpicFacilityDataContext/LinkFacilityTypeFaclity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17c4b207-5d27-47b3-982a-fb967bc02a30" absoluteBounds="3.6399999999999997, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="36d3e812-b251-4441-9377-eaab0dc256c5" absoluteBounds="0.875, 5.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicFacilityDataContext/FacilityStatuse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7777048-2df3-436c-8ed5-b4ba02a87910" absoluteBounds="0.88999999999999968, 5.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.875 : 5.125); (1.875 : 4.38621256510417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicFacilityDataContext/FacilityStatuse/FacilityStatuse_Facility" />
+      <nodes>
+        <classShapeMoniker Id="36d3e812-b251-4441-9377-eaab0dc256c5" />
+        <classShapeMoniker Id="d53fa17b-0262-4c23-a846-437d5c3329b8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

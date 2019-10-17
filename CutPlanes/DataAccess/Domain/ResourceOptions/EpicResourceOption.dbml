@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EpicDevNew_20" Class="EpicResourceOptionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=edmepicdv1;Initial Catalog=EpicDevNew_20;Integrated Security=True" SettingsObjectName="EpicDataAccess.Properties.Settings" SettingsPropertyName="EpicDevNew_20ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="domain.EconomicIndicators" Member="EconomicIndicators">
+    <Type Name="EconomicIndicator">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EconomicIndicatorTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Measure" Type="System.Decimal" DbType="Decimal(20,10) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceOptionAttributeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EconomicIndicatorScenarioId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EconomicIndicatorType_EconomicIndicator" Member="EconomicIndicatorType" ThisKey="EconomicIndicatorTypeId" OtherKey="Id" Type="EconomicIndicatorType" IsForeignKey="true" />
+      <Association Name="ResourceOptionAttribute_EconomicIndicator" Member="ResourceOptionAttribute" ThisKey="ResourceOptionAttributeId" OtherKey="Id" Type="ResourceOptionAttribute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.FuelTypes" Member="FuelTypes">
+    <Type Name="FuelType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Classification" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FuelClass" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FuelSubType" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsNonIntermittent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateReplaced" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEffective" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OriginalId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FuelType_BcStatsIndicatorModel" Member="BcStatsIndicatorModels" ThisKey="Id" OtherKey="FuelTypeId" Type="BcStatsIndicatorModel" />
+      <Association Name="FuelType_ResourceOption" Member="ResourceOptions" ThisKey="Id" OtherKey="FuelTypeId" Type="ResourceOption" />
+    </Type>
+  </Table>
+  <Table Name="lookup.TechnicalIndicatorTypes" Member="TechnicalIndicatorTypes">
+    <Type Name="TechnicalIndicatorType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitOfMeasurement" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="[Index]" Member="Index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Readonly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Subtype" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SourceColumn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TechnicalIndicatorType_TechnicalIndicator" Member="TechnicalIndicators" ThisKey="Id" OtherKey="TechnicalIndicatorTypeId" Type="TechnicalIndicator" />
+    </Type>
+  </Table>
+  <Table Name="lookup.EconomicIndicatorTypes" Member="EconomicIndicatorTypes">
+    <Type Name="EconomicIndicatorType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitOfMeasurement" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="[Index]" Member="Index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Readonly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Subtype" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SourceColumn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EconomicIndicatorType_EconomicIndicator" Member="EconomicIndicators" ThisKey="Id" OtherKey="EconomicIndicatorTypeId" Type="EconomicIndicator" />
+    </Type>
+  </Table>
+  <Table Name="lookup.GasPrices" Member="GasPrices">
+    <Type Name="GasPrice">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GasPrice" Member="GasPrice1" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GasPrice_LinkGasPriceDiscountRate" Member="LinkGasPriceDiscountRates" ThisKey="Id" OtherKey="GasPriceId" Type="LinkGasPriceDiscountRate" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkGasPriceDiscountRates" Member="LinkGasPriceDiscountRates">
+    <Type Name="LinkGasPriceDiscountRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GasPriceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountRateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GasPrice_LinkGasPriceDiscountRate" Member="GasPrice" ThisKey="GasPriceId" OtherKey="Id" Type="GasPrice" IsForeignKey="true" />
+      <Association Name="DiscountRate_LinkGasPriceDiscountRate" Member="DiscountRate" ThisKey="DiscountRateId" OtherKey="Id" Type="DiscountRate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.DataSource" Member="DataSources">
+    <Type Name="DataSource">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reference" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="DataSource_ResourceOptionAttribute" Member="ResourceOptionAttributes" ThisKey="Id" OtherKey="DataSourceId" Type="ResourceOptionAttribute" />
+    </Type>
+  </Table>
+  <Table Name="domain.ElectricalGroups" Member="ElectricalGroups">
+    <Type Name="ElectricalGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentPk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ElectricalGroup_LinkResourceOptionMapDefinition" Member="LinkResourceOptionMapDefinitions" ThisKey="Id" OtherKey="ElectricalGroupId" Type="LinkResourceOptionMapDefinition" />
+    </Type>
+  </Table>
+  <Table Name="domain.ResourceBundleAttribute" Member="ResourceBundleAttributes">
+    <Type Name="ResourceBundleAttribute">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OriginalId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateReplaced" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEffective" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EffectiveLoadCarryingCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DependableGenerationCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PotentialIncludeCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="SystemCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="CommercialOperationStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CommercialOperationEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ResourceBundleId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectPhaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourcePlanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaximumPowerOutputCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="NitsDesignatedCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDesignated" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NamePlateCapacityInMW" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="FirmEnergy" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="TotalEnergy" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="UnitEnergyCostStart" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="UnitEnergyCostEnd" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="UnitCapacityCost" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="EnergyAvailableYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AverageEnergy" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="Probability" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="EnergyEfficiency" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DiscountRateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ResourceBundleAttribute_ResourceOptionAttribute" Member="ResourceOptionAttributes" ThisKey="Id" OtherKey="ResourceBundleAttributeId" Type="ResourceOptionAttribute" />
+      <Association Name="DiscountRate_ResourceBundleAttribute" Member="DiscountRate" ThisKey="DiscountRateId" OtherKey="Id" Type="DiscountRate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.BcStatsIndicatorTypes" Member="BcStatsIndicatorTypes">
+    <Type Name="BcStatsIndicatorType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UnitOfMeasure" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BcStatsIndicatorType_BcStatsIndicator" Member="BcStatsIndicators" ThisKey="Id" OtherKey="BcStatsIndicatorTypeId" Type="BcStatsIndicator" />
+    </Type>
+  </Table>
+  <Table Name="domain.BcStatsIndicatorModels" Member="BcStatsIndicatorModels">
+    <Type Name="BcStatsIndicatorModel">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForecastYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FuelTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectCapacityStartRange" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="ProjectCapacityEndRange" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="CapitalCost" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="OptionationalCost" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FinIndicatorTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BcStatsIndicatorModel_BcStatsIndicator" Member="BcStatsIndicators" ThisKey="Id" OtherKey="BcStatsIndicatorModelId" Type="BcStatsIndicator" />
+      <Association Name="FuelType_BcStatsIndicatorModel" Member="FuelType" ThisKey="FuelTypeId" OtherKey="Id" Type="FuelType" IsForeignKey="true" />
+      <Association Name="FinancialIndicatorType_BcStatsIndicatorModel" Member="FinancialIndicatorType" ThisKey="FinIndicatorTypeId" OtherKey="Id" Type="FinancialIndicatorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.BcStatsIndicators" Member="BcStatsIndicators">
+    <Type Name="BcStatsIndicator">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BcStatsIndicatorModelId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DirectCost" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IndirectCost" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="InducedCost" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BcStatsIndicatorTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BcStatsIndicatorModel_BcStatsIndicator" Member="BcStatsIndicatorModel" ThisKey="BcStatsIndicatorModelId" OtherKey="Id" Type="BcStatsIndicatorModel" IsForeignKey="true" />
+      <Association Name="BcStatsIndicatorType_BcStatsIndicator" Member="BcStatsIndicatorType" ThisKey="BcStatsIndicatorTypeId" OtherKey="Id" Type="BcStatsIndicatorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.FinancialIndicatorTypes" Member="FinancialIndicatorTypes">
+    <Type Name="FinancialIndicatorType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitOfMeasurement" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="[Index]" Member="Index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Readonly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Subtype" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SourceColumn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FinancialIndicatorType_BcStatsIndicatorModel" Member="BcStatsIndicatorModels" ThisKey="Id" OtherKey="FinIndicatorTypeId" Type="BcStatsIndicatorModel" />
+      <Association Name="FinancialIndicatorType_FinancialIndicator" Member="FinancialIndicators" ThisKey="Id" OtherKey="FinancialIndicatorTypeId" Type="FinancialIndicator" />
+    </Type>
+  </Table>
+  <Table Name="lookup.FinancialIndicatorScenarios" Member="FinancialIndicatorScenarios">
+    <Type Name="FinancialIndicatorScenario">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FinancialIndicatorScenario_FinancialIndicator" Member="FinancialIndicators" ThisKey="Id" OtherKey="FinancialIndicatorScenarioId" Type="FinancialIndicator" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkFinIndicatorDiscountRate" Member="LinkFinIndicatorDiscountRates">
+    <Type Name="LinkFinIndicatorDiscountRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FinancialIndicatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountRateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DiscountRate_LinkFinIndicatorDiscountRate" Member="DiscountRate" ThisKey="DiscountRateId" OtherKey="Id" Type="DiscountRate" IsForeignKey="true" />
+      <Association Name="FinancialIndicator_LinkFinIndicatorDiscountRate" Member="FinancialIndicator" ThisKey="FinancialIndicatorId" OtherKey="Id" Type="FinancialIndicator" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.DiscountRates" Member="DiscountRates">
+    <Type Name="DiscountRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiscountRate" Member="DiscountRate1" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DiscountRate_LinkGasPriceDiscountRate" Member="LinkGasPriceDiscountRates" ThisKey="Id" OtherKey="DiscountRateId" Type="LinkGasPriceDiscountRate" />
+      <Association Name="DiscountRate_ResourceBundleAttribute" Member="ResourceBundleAttributes" ThisKey="Id" OtherKey="DiscountRateId" Type="ResourceBundleAttribute" />
+      <Association Name="DiscountRate_LinkFinIndicatorDiscountRate" Member="LinkFinIndicatorDiscountRates" ThisKey="Id" OtherKey="DiscountRateId" Type="LinkFinIndicatorDiscountRate" />
+    </Type>
+  </Table>
+  <Table Name="domain.FinancialIndicators" Member="FinancialIndicators">
+    <Type Name="FinancialIndicator">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FinancialIndicatorTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Measure" Type="System.Decimal" DbType="Decimal(20,10) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceOptionAttributeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinancialIndicatorScenarioId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FinancialIndicator_LinkFinIndicatorDiscountRate" Member="LinkFinIndicatorDiscountRates" ThisKey="Id" OtherKey="FinancialIndicatorId" Type="LinkFinIndicatorDiscountRate" />
+      <Association Name="FinancialIndicatorType_FinancialIndicator" Member="FinancialIndicatorType" ThisKey="FinancialIndicatorTypeId" OtherKey="Id" Type="FinancialIndicatorType" IsForeignKey="true" />
+      <Association Name="FinancialIndicatorScenario_FinancialIndicator" Member="FinancialIndicatorScenario" ThisKey="FinancialIndicatorScenarioId" OtherKey="Id" Type="FinancialIndicatorScenario" IsForeignKey="true" />
+      <Association Name="ResourceOptionAttribute_FinancialIndicator" Member="ResourceOptionAttribute" ThisKey="ResourceOptionAttributeId" OtherKey="Id" Type="ResourceOptionAttribute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.EnvironmentalIndicators" Member="EnvironmentalIndicators">
+    <Type Name="EnvironmentalIndicator">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EnvironmentalIndicatorTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Measure" Type="System.Decimal" DbType="Decimal(20,10) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceOptionAttributeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnvironmentalIndicatorScenarioId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EnvironmentalIndicatorType_EnvironmentalIndicator" Member="EnvironmentalIndicatorType" ThisKey="EnvironmentalIndicatorTypeId" OtherKey="Id" Type="EnvironmentalIndicatorType" IsForeignKey="true" />
+      <Association Name="EnvironmentalIndicatorScenario_EnvironmentalIndicator" Member="EnvironmentalIndicatorScenario" ThisKey="EnvironmentalIndicatorScenarioId" OtherKey="Id" Type="EnvironmentalIndicatorScenario" IsForeignKey="true" />
+      <Association Name="ResourceOptionAttribute_EnvironmentalIndicator" Member="ResourceOptionAttribute" ThisKey="ResourceOptionAttributeId" OtherKey="Id" Type="ResourceOptionAttribute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.TechnicalIndicators" Member="TechnicalIndicators">
+    <Type Name="TechnicalIndicator">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TechnicalIndicatorTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Measure" Type="System.Decimal" DbType="Decimal(20,10) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceOptionAttributeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechnicalIndicatorScenarioId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TechnicalIndicatorType_TechnicalIndicator" Member="TechnicalIndicatorType" ThisKey="TechnicalIndicatorTypeId" OtherKey="Id" Type="TechnicalIndicatorType" IsForeignKey="true" />
+      <Association Name="ResourceOptionAttribute_TechnicalIndicator" Member="ResourceOptionAttribute" ThisKey="ResourceOptionAttributeId" OtherKey="Id" Type="ResourceOptionAttribute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.EnvironmentalIndicatorTypes" Member="EnvironmentalIndicatorTypes">
+    <Type Name="EnvironmentalIndicatorType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitOfMeasurement" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="[Index]" Member="Index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Readonly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Subtype" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SourceColumn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EnvironmentalIndicatorType_EnvironmentalIndicator" Member="EnvironmentalIndicators" ThisKey="Id" OtherKey="EnvironmentalIndicatorTypeId" Type="EnvironmentalIndicator" />
+    </Type>
+  </Table>
+  <Table Name="lookup.EnvironmentalIndicatorScenarios" Member="EnvironmentalIndicatorScenarios">
+    <Type Name="EnvironmentalIndicatorScenario">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EnvironmentalIndicatorScenario_EnvironmentalIndicator" Member="EnvironmentalIndicators" ThisKey="Id" OtherKey="EnvironmentalIndicatorScenarioId" Type="EnvironmentalIndicator" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkResourceOptionMapDefinition" Member="LinkResourceOptionMapDefinitions">
+    <Type Name="LinkResourceOptionMapDefinition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ElectricalGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceOptionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ElectricalGroup_LinkResourceOptionMapDefinition" Member="ElectricalGroup" ThisKey="ElectricalGroupId" OtherKey="Id" Type="ElectricalGroup" IsForeignKey="true" />
+      <Association Name="ResourceOption_LinkResourceOptionMapDefinition" Member="ResourceOption" ThisKey="ResourceOptionId" OtherKey="Id" Type="ResourceOption" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.ResourceOptions" Member="ResourceOptions">
+    <Type Name="ResourceOption">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ConfidentialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FuelTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="ResourceType" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="ResourceOption_LinkResourceOptionMapDefinition" Member="LinkResourceOptionMapDefinitions" ThisKey="Id" OtherKey="ResourceOptionId" Type="LinkResourceOptionMapDefinition" />
+      <Association Name="ResourceOption_ResourceOptionAttribute" Member="ResourceOptionAttributes" ThisKey="Id" OtherKey="ResourceOptionId" Type="ResourceOptionAttribute" />
+      <Association Name="FuelType_ResourceOption" Member="FuelType" ThisKey="FuelTypeId" OtherKey="Id" Type="FuelType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.ResourceOptionAttributes" Member="ResourceOptionAttributes">
+    <Type Name="ResourceOptionAttribute">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataSourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MataId" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OwnershipId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceOptionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnergyAvailableYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LevelOfStudyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DevelopmentRiskId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DevelopmentRiskComment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PriceRiskId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceRiskComments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ScreenCriteriaTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequiredToMapa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ResourceBundleAttributeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TaxId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceTypeUncertaintyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostUncertainityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SentToSysOptiimizer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ResourceOptionAttribute_EconomicIndicator" Member="EconomicIndicators" ThisKey="Id" OtherKey="ResourceOptionAttributeId" Type="EconomicIndicator" />
+      <Association Name="ResourceOptionAttribute_FinancialIndicator" Member="FinancialIndicators" ThisKey="Id" OtherKey="ResourceOptionAttributeId" Type="FinancialIndicator" />
+      <Association Name="ResourceOptionAttribute_EnvironmentalIndicator" Member="EnvironmentalIndicators" ThisKey="Id" OtherKey="ResourceOptionAttributeId" Type="EnvironmentalIndicator" />
+      <Association Name="ResourceOptionAttribute_TechnicalIndicator" Member="TechnicalIndicators" ThisKey="Id" OtherKey="ResourceOptionAttributeId" Type="TechnicalIndicator" />
+      <Association Name="DataSource_ResourceOptionAttribute" Member="DataSource" ThisKey="DataSourceId" OtherKey="Id" Type="DataSource" IsForeignKey="true" />
+      <Association Name="ResourceBundleAttribute_ResourceOptionAttribute" Member="ResourceBundleAttribute" ThisKey="ResourceBundleAttributeId" OtherKey="Id" Type="ResourceBundleAttribute" IsForeignKey="true" />
+      <Association Name="ResourceOption_ResourceOptionAttribute" Member="ResourceOption" ThisKey="ResourceOptionId" OtherKey="Id" Type="ResourceOption" IsForeignKey="true" />
+      <Association Name="CostUncertainty_ResourceOptionAttribute" Member="CostUncertainty" ThisKey="CostUncertainityId" OtherKey="Id" Type="CostUncertainty" IsForeignKey="true" />
+      <Association Name="ResourceTypeUncertainty_ResourceOptionAttribute" Member="ResourceTypeUncertainty" ThisKey="ResourceTypeUncertaintyId" OtherKey="Id" Type="ResourceTypeUncertainty" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.CostUncertainties" Member="CostUncertainties">
+    <Type Name="CostUncertainty">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CostUncertainty_ResourceOptionAttribute" Member="ResourceOptionAttributes" ThisKey="Id" OtherKey="CostUncertainityId" Type="ResourceOptionAttribute" />
+    </Type>
+  </Table>
+  <Table Name="lookup.ResourceTypeUncertainties" Member="ResourceTypeUncertainties">
+    <Type Name="ResourceTypeUncertainty">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ResourceTypeUncertainty_ResourceOptionAttribute" Member="ResourceOptionAttributes" ThisKey="Id" OtherKey="ResourceTypeUncertaintyId" Type="ResourceOptionAttribute" />
+    </Type>
+  </Table>
+</Database>

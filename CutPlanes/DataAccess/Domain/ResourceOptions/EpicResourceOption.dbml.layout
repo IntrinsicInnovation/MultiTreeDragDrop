@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.75, 27.125" name="EpicResourceOption">
+  <DataContextMoniker Name="/EpicResourceOptionDataContext" />
+  <nestedChildShapes>
+    <classShape Id="785ddab2-9426-415d-8a3d-03dfdd9f06d4" absoluteBounds="6.75, 3, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/EconomicIndicator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="577e6c1a-f0d1-4836-afb4-ef80234359a5" absoluteBounds="6.765, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f97789b-ee29-4577-97fc-78ff85db18ff" absoluteBounds="0.5, 16.375, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/FuelType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71a44433-7b20-4bf6-8dab-1f73dbc12214" absoluteBounds="0.51500000000000012, 16.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3019f16-8ef2-4163-9fa4-ec67ad911dc5" absoluteBounds="11.125, 5.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/TechnicalIndicatorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1aebf8a-8160-4a11-bf98-9437e9668b7b" absoluteBounds="11.14, 6.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efd17059-5efc-4b35-8ab3-e7a577f38ffa" absoluteBounds="10.375, 2.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/EconomicIndicatorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2473b482-5863-49c9-b8d3-46de5d7e5c6d" absoluteBounds="10.39, 2.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.375 : 4.08735270182292); (8.75 : 4.08735270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/EconomicIndicatorType/EconomicIndicatorType_EconomicIndicator" />
+      <nodes>
+        <classShapeMoniker Id="efd17059-5efc-4b35-8ab3-e7a577f38ffa" />
+        <classShapeMoniker Id="785ddab2-9426-415d-8a3d-03dfdd9f06d4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cc664e34-5873-4315-9554-c2f793bbf11d" absoluteBounds="3.625, 20.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/GasPrice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b44599ef-73dc-4ef5-8d5e-5ab7182cafd4" absoluteBounds="3.6400000000000006, 20.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eed3de04-2f0e-4e77-86b8-2db76f560a1c" absoluteBounds="3.5, 18.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/LinkGasPriceDiscountRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfead4b8-9323-4ed1-b8b2-4bbc14b6962b" absoluteBounds="3.5150000000000006, 18.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5625 : 20.5); (4.5625 : 20.0208968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/GasPrice/GasPrice_LinkGasPriceDiscountRate" />
+      <nodes>
+        <classShapeMoniker Id="cc664e34-5873-4315-9554-c2f793bbf11d" />
+        <classShapeMoniker Id="eed3de04-2f0e-4e77-86b8-2db76f560a1c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="75fc7775-1dc5-4294-af4c-4d42a6759862" absoluteBounds="8.25, 11.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/DataSource" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99bd1962-cb82-4b9b-b774-f1950d48cb1f" absoluteBounds="8.265, 11.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="baa4fac5-63df-4243-8ef9-239408fd4f41" absoluteBounds="0.5, 4.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/ElectricalGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a24fdd34-e2b5-4225-9c1a-2b8b43d3666c" absoluteBounds="0.51500000000000012, 5.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7f437ce-ad90-4a15-afaf-cd68a28ab760" absoluteBounds="2.875, 3.25, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/ResourceBundleAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ac0ba80-3347-4387-8ef1-40bc5abc6804" absoluteBounds="2.89, 3.71, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9adf3988-f846-4b2f-aefb-4d2d719474cc" absoluteBounds="4.125, 24.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/BcStatsIndicatorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79c53eab-8d0e-427c-827c-2cede4815b67" absoluteBounds="4.14, 24.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d6b9fcc-a329-4282-b550-36e44cd5e041" absoluteBounds="1.25, 20.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/BcStatsIndicatorModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fd8ba7a-d995-4340-b6fc-9e7cfc8e4e83" absoluteBounds="1.2650000000000001, 20.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.875 : 19.8766097005208); (1.875 : 20.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/FuelType/FuelType_BcStatsIndicatorModel" />
+      <nodes>
+        <classShapeMoniker Id="0f97789b-ee29-4577-97fc-78ff85db18ff" />
+        <classShapeMoniker Id="7d6b9fcc-a329-4282-b550-36e44cd5e041" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="23e931d6-42f4-4c56-9c17-2624d2fd4414" absoluteBounds="1.25, 24.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/BcStatsIndicator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90a65a51-7a35-42b5-a84e-1d4298da68b0" absoluteBounds="1.2650000000000001, 24.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 23.5593082682292); (2.25 : 24.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/BcStatsIndicatorModel/BcStatsIndicatorModel_BcStatsIndicator" />
+      <nodes>
+        <classShapeMoniker Id="7d6b9fcc-a329-4282-b550-36e44cd5e041" />
+        <classShapeMoniker Id="23e931d6-42f4-4c56-9c17-2624d2fd4414" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.125 : 25.3277498372396); (3.25 : 25.3277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/BcStatsIndicatorType/BcStatsIndicatorType_BcStatsIndicator" />
+      <nodes>
+        <classShapeMoniker Id="9adf3988-f846-4b2f-aefb-4d2d719474cc" />
+        <classShapeMoniker Id="23e931d6-42f4-4c56-9c17-2624d2fd4414" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="55fb525a-8dd4-4521-af97-f087e7c9db7d" absoluteBounds="8.875, 16.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/FinancialIndicatorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c734206-b8ab-416d-9a6d-fc1b939f7807" absoluteBounds="8.89, 17.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.875 : 20.0593082682292); (9.875 : 22.9463525390625); (3.25 : 22.9463525390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/FinancialIndicatorType/FinancialIndicatorType_BcStatsIndicatorModel" />
+      <nodes>
+        <classShapeMoniker Id="55fb525a-8dd4-4521-af97-f087e7c9db7d" />
+        <classShapeMoniker Id="7d6b9fcc-a329-4282-b550-36e44cd5e041" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="089c17ba-4b40-49f0-92bf-8823ebda6529" absoluteBounds="10.875, 14.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/FinancialIndicatorScenario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e8145b2-8a35-4d12-a3d8-27c740400105" absoluteBounds="10.89, 14.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bb5f57b-e599-4af7-b61f-f953df864a97" absoluteBounds="4.625, 13.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/LinkFinIndicatorDiscountRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ca2104a-ed88-4e84-9b6d-1cc0a976584e" absoluteBounds="4.64, 13.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b1ed5e1-29c0-4de2-9c70-76516a921e8a" absoluteBounds="3.375, 15.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/DiscountRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fbe8db14-e098-435e-bc51-64be8fd28259" absoluteBounds="3.3899999999999997, 16.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.4375 : 17.7804996744792); (4.4375 : 18.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/DiscountRate/DiscountRate_LinkGasPriceDiscountRate" />
+      <nodes>
+        <classShapeMoniker Id="1b1ed5e1-29c0-4de2-9c70-76516a921e8a" />
+        <classShapeMoniker Id="eed3de04-2f0e-4e77-86b8-2db76f560a1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.96875 : 15.625); (3.96875 : 10.2130354817708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/DiscountRate/DiscountRate_ResourceBundleAttribute" />
+      <nodes>
+        <classShapeMoniker Id="1b1ed5e1-29c0-4de2-9c70-76516a921e8a" />
+        <classShapeMoniker Id="c7f437ce-ad90-4a15-afaf-cd68a28ab760" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 15.625); (5 : 15.2708968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/DiscountRate/DiscountRate_LinkFinIndicatorDiscountRate" />
+      <nodes>
+        <classShapeMoniker Id="1b1ed5e1-29c0-4de2-9c70-76516a921e8a" />
+        <classShapeMoniker Id="8bb5f57b-e599-4af7-b61f-f953df864a97" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0d94158b-1b67-469a-8d2c-390122ca2c2d" absoluteBounds="7.875, 13.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/FinancialIndicator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ea65a27-9f48-4532-b91a-cec2f1350b13" absoluteBounds="7.8900000000000006, 14.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.875 : 14.5417009049479); (6.625 : 14.5417009049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/FinancialIndicator/FinancialIndicator_LinkFinIndicatorDiscountRate" />
+      <nodes>
+        <classShapeMoniker Id="0d94158b-1b67-469a-8d2c-390122ca2c2d" />
+        <classShapeMoniker Id="8bb5f57b-e599-4af7-b61f-f953df864a97" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.375 : 16.75); (9.375 : 16.2901025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/FinancialIndicatorType/FinancialIndicatorType_FinancialIndicator" />
+      <nodes>
+        <classShapeMoniker Id="55fb525a-8dd4-4521-af97-f087e7c9db7d" />
+        <classShapeMoniker Id="0d94158b-1b67-469a-8d2c-390122ca2c2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.875 : 15.2700512695312); (9.875 : 15.2700512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/FinancialIndicatorScenario/FinancialIndicatorScenario_FinancialIndicator" />
+      <nodes>
+        <classShapeMoniker Id="089c17ba-4b40-49f0-92bf-8823ebda6529" />
+        <classShapeMoniker Id="0d94158b-1b67-469a-8d2c-390122ca2c2d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b6eb7f5d-c32b-4a67-b3b9-39a4773ef6c4" absoluteBounds="8.125, 8.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/EnvironmentalIndicator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2565d6b-21f7-4c3a-93a1-6ef6e5193bbf" absoluteBounds="8.14, 9.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61fd425c-c461-4990-a355-db8713830965" absoluteBounds="8, 5.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/TechnicalIndicator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0a8167d-1573-49c8-acd9-a3f97db10e5b" absoluteBounds="8.015, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.125 : 7.02005126953125); (10 : 7.02005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/TechnicalIndicatorType/TechnicalIndicatorType_TechnicalIndicator" />
+      <nodes>
+        <classShapeMoniker Id="d3019f16-8ef2-4163-9fa4-ec67ad911dc5" />
+        <classShapeMoniker Id="61fd425c-c461-4990-a355-db8713830965" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="20bc7207-bacf-47e4-9172-0b08567ad260" absoluteBounds="13.5, 9.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/EnvironmentalIndicatorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d325ed2-a9a8-4368-a553-a7f5144c2125" absoluteBounds="13.515, 9.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.5 : 9.84375); (10.125 : 9.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/EnvironmentalIndicatorType/EnvironmentalIndicatorType_EnvironmentalIndicator" />
+      <nodes>
+        <classShapeMoniker Id="20bc7207-bacf-47e4-9172-0b08567ad260" />
+        <classShapeMoniker Id="b6eb7f5d-c32b-4a67-b3b9-39a4773ef6c4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="96d12bc1-fbc4-4874-b220-e3e312b4a891" absoluteBounds="10.875, 10.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/EnvironmentalIndicatorScenario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34b8155e-94d3-4ce2-9d7b-4d4d2b2e4c6c" absoluteBounds="10.89, 10.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.875 : 10.8950512695312); (10.125 : 10.8950512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/EnvironmentalIndicatorScenario/EnvironmentalIndicatorScenario_EnvironmentalIndicator" />
+      <nodes>
+        <classShapeMoniker Id="96d12bc1-fbc4-4874-b220-e3e312b4a891" />
+        <classShapeMoniker Id="b6eb7f5d-c32b-4a67-b3b9-39a4773ef6c4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a075da57-3c29-420d-8b59-e9be985dad40" absoluteBounds="0.5, 8, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/LinkResourceOptionMapDefinition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a50cc20e-22a5-4962-bd1f-e5586a6b18f6" absoluteBounds="0.51500000000000012, 8.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 7.22280110677083); (1.5 : 8)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ElectricalGroup/ElectricalGroup_LinkResourceOptionMapDefinition" />
+      <nodes>
+        <classShapeMoniker Id="baa4fac5-63df-4243-8ef9-239408fd4f41" />
+        <classShapeMoniker Id="a075da57-3c29-420d-8b59-e9be985dad40" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="81700d09-4557-471c-b20c-0d333ec783a4" absoluteBounds="1, 10.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/ResourceOption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b6d94ee-c3fa-4129-937e-bd74ace88e7e" absoluteBounds="1.0150000000000001, 10.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 10.5); (1.75 : 9.77089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceOption/ResourceOption_LinkResourceOptionMapDefinition" />
+      <nodes>
+        <classShapeMoniker Id="81700d09-4557-471c-b20c-0d333ec783a4" />
+        <classShapeMoniker Id="a075da57-3c29-420d-8b59-e9be985dad40" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 16.375); (1.75 : 13.8093082682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/FuelType/FuelType_ResourceOption" />
+      <nodes>
+        <classShapeMoniker Id="0f97789b-ee29-4577-97fc-78ff85db18ff" />
+        <classShapeMoniker Id="81700d09-4557-471c-b20c-0d333ec783a4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" absoluteBounds="5.75, 8.25, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/ResourceOptionAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9fd47b20-e70f-498c-89db-8ecfccfc4103" absoluteBounds="5.765, 8.71, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.953126 : 8.25); (6.953126 : 5.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceOptionAttribute/ResourceOptionAttribute_EconomicIndicator" />
+      <nodes>
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+        <classShapeMoniker Id="785ddab2-9426-415d-8a3d-03dfdd9f06d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 13.2900211588542); (7.875 : 13.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceOptionAttribute/ResourceOptionAttribute_FinancialIndicator" />
+      <nodes>
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+        <classShapeMoniker Id="0d94158b-1b67-469a-8d2c-390122ca2c2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 10.0200512695312); (8.125 : 10.0200512695312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceOptionAttribute/ResourceOptionAttribute_EnvironmentalIndicator" />
+      <nodes>
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+        <classShapeMoniker Id="b6eb7f5d-c32b-4a67-b3b9-39a4773ef6c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.281252 : 8.25); (7.281252 : 6.968748); (8 : 6.968748)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceOptionAttribute/ResourceOptionAttribute_TechnicalIndicator" />
+      <nodes>
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+        <classShapeMoniker Id="61fd425c-c461-4990-a355-db8713830965" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 12.3637580794271); (7.75 : 12.3637580794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/DataSource/DataSource_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="75fc7775-1dc5-4294-af4c-4d42a6759862" />
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 9.23151774088542); (5.75 : 9.23151774088542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceBundleAttribute/ResourceBundleAttribute_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="c7f437ce-ad90-4a15-afaf-cd68a28ab760" />
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 11.8950105794271); (3.88541666666667 : 11.8950105794271 : JumpStart); (4.05208333333333 : 11.8950105794271 : JumpEnd); (5.75 : 11.8950105794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceOption/ResourceOption_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="81700d09-4557-471c-b20c-0d333ec783a4" />
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="90c107dc-d269-4cb7-b710-ff3a5aaa7d0f" absoluteBounds="2.75, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/CostUncertainty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0185cefd-e7a1-477d-93b4-72e2b19510f5" absoluteBounds="2.765, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 1.59375); (5.32291666666667 : 1.59375); (5.32291666666667 : 7.552359375); (6.21875 : 7.552359375); (6.21875 : 8.25)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/CostUncertainty/CostUncertainty_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="90c107dc-d269-4cb7-b710-ff3a5aaa7d0f" />
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f6c4a62e-ce72-43f5-96cc-137be26568d1" absoluteBounds="5.75, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/EpicResourceOptionDataContext/ResourceTypeUncertainty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e0a4c23-dd73-47be-9d41-3e4ea26c326a" absoluteBounds="5.765, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.515625 : 2.84780110677083); (6.515625 : 8.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EpicResourceOptionDataContext/ResourceTypeUncertainty/ResourceTypeUncertainty_ResourceOptionAttribute" />
+      <nodes>
+        <classShapeMoniker Id="f6c4a62e-ce72-43f5-96cc-137be26568d1" />
+        <classShapeMoniker Id="9af2c323-7c02-4e0b-82f6-9261bc9d1515" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,105 @@
+﻿body 
+{
+    color: #000000;
+    font: 12px/19px Arial,Helvetica,sans-serif;
+}
+
+#divPageFooter
+{
+    color:#A9A9A9;
+    float:left;
+    width:800px;
+    margin:20px 0px 0px 20px;
+}
+
+
+#divMenu 
+{
+    background-image:url("/Images/menuBar.jpg");
+    background-repeat:no-repeat;
+    width:1100px;
+    height:50px;
+    margin: 0px 20px 20px 20px;
+}
+
+#divMain
+{    
+    float:left;
+    margin:0px 0px 0px 20px;
+    width:1100px;
+    display:block;
+}
+
+#h2PageHeadline
+{
+    margin:0px 0px 20px 20px;
+    color:#1E90FF;
+    color: #00ADEF;
+}
+
+.epicButton
+{
+    border: 1px solid #A9A9A9; 
+    color:#1E90FF;
+    background-color:#FFFFFF;   
+}
+
+
+/* Little CSS hack to fix z-order bug on the main menu */
+#wrapper #divMenu {
+    position: relative;
+    z-index: 2;
+}
+
+#wrapper #divMain {
+    position: relative;
+}
+
+/**************************** Menu ************************************/
+
+
+
+
+#divMenu #menuMain {padding: 15px 10px 0px 170px; z-index: -1000;}
+
+#divMenu #menuMain ul li { cursor:pointer; }
+.static {   padding-top: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 0px;
+          }
+            
+            
+.static a {color:#FFFFFF; font-weight: bolder; font-size: 14px }
+.static a:hover {color:#1E90FF;}
+
+.dynamic 
+{
+    padding:0px 0px 0px 0px;
+    margin: 0 0 0 0;
+}
+
+.dynamic a
+{
+     color:#000000; 
+     font-weight: normal;
+      font-size: small;
+     background-color:#E2FBB1; 
+     border: 1px solid #93B84A;  
+     margin: 0 0 0 0;    
+     padding: 0 10px 0 10px;
+}
+
+.dynamic a:hover
+{
+      color:#FFFFFF;
+      background-color:#93B84A;
+      font-size: 2.0;
+}
+/**************************** END Menu ************************************/
+
+
+.validationMsg
+{
+    color:Red;
+}

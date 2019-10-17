@@ -1,0 +1,261 @@
+﻿body {
+}
+
+.formBlock
+{
+    color:#1E90FF;
+}  
+
+.formBlockHead
+{
+    margin: 20px 20px 20px 20px;
+}
+
+/*================================================================================
+    Standard screen block or form 
+================================================================================*/
+.standardBlock
+ {
+    width: 1100px;    
+    color:#EEEEEE;
+    background-color: #EEEEEE;
+    background: -moz-linear-gradient(top, #EEEEEE, #FDFDFD);
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#EEEEEE', EndColorStr='#F8F8F8', GradientType=0);*/
+ } 
+
+.standardBlock h1
+{
+     margin: 20px 20px 00px 20px;
+
+     font-size: 16pt;
+     font-weight: 300;
+     color: #4e6ca3;
+     font-family: "Georgia", Serif;
+}
+
+.standardBlock h2
+{
+     margin: 5px 10px 10px 10px;
+     font-size: 12pt;
+     font-weight: 300;
+     color: #777777;
+     font-family: "Georgia", Serif;
+}
+
+
+.standardBlock hr
+{
+    margin: 20px 20px 20px 20px;
+}
+
+.standardBlock h3 {
+    color: #4E6CA3;
+    font-family: "Georgia",Serif;
+    font-size: 12pt;
+    font-weight: 300;
+    mmmmargin: 20px 20px 0;
+}
+
+.standardBlock h4 {
+    color: #4E6CA3;
+    font-family: "Georgia",Serif;
+    font-size: 10pt;
+    font-weight: 300;
+    mmmmargin: 20px 20px 0;
+}
+
+
+/*================================================================================
+    Form Elements 
+================================================================================*/
+.fieldTitle
+{
+    font: "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 10pt;
+}
+
+.disabledText
+{
+    color: #BBBBBB;
+}
+
+.formLabels
+{
+    width:125px;
+    padding: 2px 20px 0px 20px;
+    font: 9pt "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align:right;
+    float:left;
+    font-weight: normal;
+    color: #000000;
+}
+
+.formStaticText
+{
+    padding: 2px 2px 0px 2px;
+    font: 9pt "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align:left;
+    float:left;
+    font-weight: normal;
+    color: #444444;
+    border: none;
+}
+
+.formElements 
+{
+	background-color: #fff;
+	font: 14px/16px "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	/*color: #5A698B;*/
+	color: #555555;
+	border: 1px solid #8595B2;
+	padding: 2px 4px 2px 4px;
+}
+
+.formCalculatedElements 
+{
+    width: 50px;
+    background-color: #fff;
+	font: 14px/16px "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	     /*color: #5A698B;*/
+	color: #555555;
+	border: 1px solid #8595B2;
+	padding: 2px 4px 2px 4px;
+    float:left;
+	font-style: italic;
+}
+ 
+
+.formDDLs
+{
+    width:205px;
+    background-color: #fff;
+	font: 14px/16px "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5A698B;
+	border: 1px solid #8595B2;
+	padding: 2px 4px 2px 4px;
+}
+
+ .tableHeader
+ {
+    color:#000000;
+    font-weight: bold;
+    background-color: #EEEEEE;
+  } 
+
+
+
+/*================================================================================
+    Misc Text 
+================================================================================*/
+
+/* hint displayed under/near a form field */
+.hintText
+{
+    font-weight: normal;
+    font-size: 8pt;
+    color: #4e6ca3; 
+}
+
+/*==================================================================================
+    Tables
+===================================================================================*/
+
+
+.columnHead {font-weight:bold; background-color:#FAFAFA;color:#000000; border-bottom-style:groove; border-bottom-width: thin;}
+   
+/* Annotations Table */
+.authorColumn 
+{
+    font: "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 10pt;
+    width:170px; 
+    float:left;
+}
+.annotationDate
+{
+    width: 170px;
+    font-weight: normal;
+    font-size: 8pt;
+    color: #4e6ca3; 
+}
+
+.annotationText
+{
+    font-weight: normal;
+    font-size: 8pt;
+    color: #000000; 
+    width: 530px;
+    float: left;
+    margin-right: 20px;
+}
+
+.annotationTextArea
+{
+    overflow: auto;
+    font-size: 8pt;
+    margin-left: 170px;
+}
+
+.attachIcon 
+{
+    padding: 5px 5px 5px 5px;
+}
+
+.deleteIcon 
+{
+    padding: 5px 5px 5px 5px;
+}
+
+a img 
+{
+    border: 0;
+}
+
+.error  
+{
+  border-width: 1px !important; 
+  border-color: #ff4444 !important;
+  background: #ffdddd !important; 
+}
+
+#formEpic label.error {  
+  padding-left: 1px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  color: #EA5200;
+  font-size: 16pt;
+  background: #EEEEEE;
+}
+
+.ui-widget-overlay  {      position: fixed;  } 
+
+ .dialogBoxClass .ui-dialog-titlebar { background: #8CBE29; color: White }
+ 
+ #divAssociatedResourceList div:hover{background-color:#87CEFF !important;}
+ 
+ .yes_img
+ {
+     width:15px;
+     height:15px;
+     padding:2px;
+     background-repeat: no-repeat;
+     background-image: url("/CSS/Images/ui-icons_454545_256x240.png");
+     background-position: -69px -144px;
+ }
+ 
+ .no_img
+ {
+     width:15px;
+     height:15px;
+     padding:2px;
+     background-repeat: no-repeat;
+     background-image: url("/CSS/Images/ui-icons_454545_256x240.png");
+     background-position: -85px -129px;
+ }
+

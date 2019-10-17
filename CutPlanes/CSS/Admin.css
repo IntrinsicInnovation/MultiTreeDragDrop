@@ -1,0 +1,26 @@
+﻿
+.AdminRow
+{
+    width:1100px;    
+    margin-top:10px;
+    float:left;
+}
+
+.AdminRow div
+{    
+    float:left;
+}
+
+.UserButtonRow
+{
+    margin:20px 60px 0px 0px;
+    float:right;
+}
+
+.UserMsgRow
+{
+    margin:50px 0px 0px 20px;
+    float:left;
+    color:Red;
+    width:760px;
+}

@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CutPlanesModelStoreContainer" CdmEntityContainer="CutPlanesEntities">
+    <EntitySetMapping Name="Constraints">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.Constraint)">
+        <MappingFragment StoreEntitySet="Constraints">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ConstraintSetId" ColumnName="ConstraintSetId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+          <ScalarProperty Name="FiscalYear" ColumnName="FiscalYear" />
+          <ScalarProperty Name="SummerN0" ColumnName="SummerN0" />
+          <ScalarProperty Name="SummerN1" ColumnName="SummerN1" />
+          <ScalarProperty Name="WinterN0" ColumnName="WinterN0" />
+          <ScalarProperty Name="WinterN1" ColumnName="WinterN1" />
+          <ScalarProperty Name="AreaLoss" ColumnName="AreaLoss" />
+          <ScalarProperty Name="AreaLossInPercentage" ColumnName="AreaLossInPercentage" />
+          <ScalarProperty Name="TotalLoss" ColumnName="TotalLoss" />
+          <ScalarProperty Name="TotalLossInPercentage" ColumnName="TotalLossInPercentage" />
+          <ScalarProperty Name="IntermittentRmr" ColumnName="IntermittentRmr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConstraintSets">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.ConstraintSet)">
+        <MappingFragment StoreEntitySet="ConstraintSets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PoolId" ColumnName="PoolId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CutPlanes">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.CutPlane)">
+        <MappingFragment StoreEntitySet="CutPlanes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="MapId" ColumnName="MapId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CutPlaneTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.CutPlaneType)">
+        <MappingFragment StoreEntitySet="CutPlaneTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimCutPlaneSubstations">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.DimCutPlaneSubstation)">
+        <MappingFragment StoreEntitySet="DimCutPlaneSubstations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="SubtstaionType" ColumnName="SubtstaionType" />
+          <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+          <ScalarProperty Name="PrimaryPoi" ColumnName="PrimaryPoi" />
+          <ScalarProperty Name="SecondaryPoi" ColumnName="SecondaryPoi" />
+          <ScalarProperty Name="PoiVoltage" ColumnName="PoiVoltage" />
+          <ScalarProperty Name="PoiCircuitDesignation" ColumnName="PoiCircuitDesignation" />
+          <ScalarProperty Name="MapName" ColumnName="MapName" />
+          <ScalarProperty Name="MapDivisiion" ColumnName="MapDivisiion" />
+          <ScalarProperty Name="MapRegion" ColumnName="MapRegion" />
+          <ScalarProperty Name="MapSubRegion" ColumnName="MapSubRegion" />
+          <ScalarProperty Name="MapArea" ColumnName="MapArea" />
+          <ScalarProperty Name="MapZone" ColumnName="MapZone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimCutPlaneTimePeriods">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.DimCutPlaneTimePeriod)">
+        <MappingFragment StoreEntitySet="DimCutPlaneTimePeriods">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimLrbSubstations">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.DimLrbSubstation)">
+        <MappingFragment StoreEntitySet="DimLrbSubstations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="SubstationType" ColumnName="SubstationType" />
+          <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+          <ScalarProperty Name="PrimaryPoi" ColumnName="PrimaryPoi" />
+          <ScalarProperty Name="SecondaryPoi" ColumnName="SecondaryPoi" />
+          <ScalarProperty Name="PoiVoltage" ColumnName="PoiVoltage" />
+          <ScalarProperty Name="PoiCircuitDesignation" ColumnName="PoiCircuitDesignation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinkSubstationElectricalGroups">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.LinkSubstationElectricalGroup)">
+        <MappingFragment StoreEntitySet="LinkSubstationElectricalGroups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubstationId" ColumnName="SubstationId" />
+          <ScalarProperty Name="ElectricalGroupId" ColumnName="ElectricalGroupId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.MapType)">
+        <MappingFragment StoreEntitySet="MapTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pools">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.Pool)">
+        <MappingFragment StoreEntitySet="Pools">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="CutPlaneId" ColumnName="CutPlaneId" />
+          <ScalarProperty Name="PoolTypeId" ColumnName="PoolTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PoolTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.PoolType)">
+        <MappingFragment StoreEntitySet="PoolTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubstationAttributes">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.SubstationAttribute)">
+        <MappingFragment StoreEntitySet="SubstationAttributes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SubstationId" ColumnName="SubstationId" />
+          <ScalarProperty Name="ResourcePlanId" ColumnName="ResourcePlanId" />
+          <ScalarProperty Name="UsePdgcMasteredValue" ColumnName="UsePdgcMasteredValue" />
+          <ScalarProperty Name="UsePmpoMasteredValue" ColumnName="UsePmpoMasteredValue" />
+          <ScalarProperty Name="UsePptpMasteredValue" ColumnName="UsePptpMasteredValue" />
+          <ScalarProperty Name="UsePrmrMasteredValue" ColumnName="UsePrmrMasteredValue" />
+          <ScalarProperty Name="UsePndcMasteredValue" ColumnName="UsePndcMasteredValue" />
+          <ScalarProperty Name="UsePnpMasteredValue" ColumnName="UsePnpMasteredValue" />
+          <ScalarProperty Name="UsePdmx0MasteredValue" ColumnName="UsePdmx0MasteredValue" />
+          <ScalarProperty Name="UsePdmx1MasteredValue" ColumnName="UsePdmx1MasteredValue" />
+          <ScalarProperty Name="OriginalId" ColumnName="OriginalId" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="DateReplaced" ColumnName="DateReplaced" />
+          <ScalarProperty Name="DateEffective" ColumnName="DateEffective" />
+          <ScalarProperty Name="ProjectPhaseId" ColumnName="ProjectPhaseId" />
+          <ScalarProperty Name="RatedMVA" ColumnName="RatedMVA" />
+          <ScalarProperty Name="RatedOverExcitedPowerFactor" ColumnName="RatedOverExcitedPowerFactor" />
+          <ScalarProperty Name="RatedUnderExcitedPowerFactor" ColumnName="RatedUnderExcitedPowerFactor" />
+          <ScalarProperty Name="NamePlateCapacityInMW" ColumnName="NamePlateCapacityInMW" />
+          <ScalarProperty Name="RatedOverExcitedMvar" ColumnName="RatedOverExcitedMvar" />
+          <ScalarProperty Name="RatedUnderExcitedMvar" ColumnName="RatedUnderExcitedMvar" />
+          <ScalarProperty Name="RatedPowerFactor" ColumnName="RatedPowerFactor" />
+          <ScalarProperty Name="DependableGeneratingCapacity" ColumnName="DependableGeneratingCapacity" />
+          <ScalarProperty Name="EffectiveLoadCarryingCapacity" ColumnName="EffectiveLoadCarryingCapacity" />
+          <ScalarProperty Name="LoadGrossSummerPeak" ColumnName="LoadGrossSummerPeak" />
+          <ScalarProperty Name="LoadGrossSummerMin" ColumnName="LoadGrossSummerMin" />
+          <ScalarProperty Name="LoadGrossWinterPeak" ColumnName="LoadGrossWinterPeak" />
+          <ScalarProperty Name="LoadGrossWinterMin" ColumnName="LoadGrossWinterMin" />
+          <ScalarProperty Name="MaximumPowerOutput" ColumnName="MaximumPowerOutput" />
+          <ScalarProperty Name="Nominated" ColumnName="Nominated" />
+          <ScalarProperty Name="Probability" ColumnName="Probability" />
+          <ScalarProperty Name="InServiceStartDate" ColumnName="InServiceStartDate" />
+          <ScalarProperty Name="InServiceEndDate" ColumnName="InServiceEndDate" />
+          <ScalarProperty Name="NitsDesignatedCapacity" ColumnName="NitsDesignatedCapacity" />
+          <ScalarProperty Name="EPACapacity" ColumnName="EPACapacity" />
+          <ScalarProperty Name="MaxTakeOrPayCapacity" ColumnName="MaxTakeOrPayCapacity" />
+          <ScalarProperty Name="PointToPointCapacity" ColumnName="PointToPointCapacity" />
+          <ScalarProperty Name="ReliabilityMustRunCapacity" ColumnName="ReliabilityMustRunCapacity" />
+          <ScalarProperty Name="SystemCapacity" ColumnName="SystemCapacity" />
+          <ScalarProperty Name="MaxOutputForFirmTransmission" ColumnName="MaxOutputForFirmTransmission" />
+          <ScalarProperty Name="MaxOutputForNonFirmTransmission" ColumnName="MaxOutputForNonFirmTransmission" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Substations">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.Substation)">
+        <MappingFragment StoreEntitySet="Substations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+          <ScalarProperty Name="GeoLocationId" ColumnName="GeoLocationId" />
+          <ScalarProperty Name="SingleLineDiagramUri" ColumnName="SingleLineDiagramUri" />
+          <ScalarProperty Name="LocalOperationOrderLink" ColumnName="LocalOperationOrderLink" />
+          <ScalarProperty Name="MeterId" ColumnName="MeterId" />
+          <ScalarProperty Name="ElectricalGroupId" ColumnName="ElectricalGroupId" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="PowerCallId" ColumnName="PowerCallId" />
+          <ScalarProperty Name="IsSynchronousCondenserCapable" ColumnName="IsSynchronousCondenserCapable" />
+          <ScalarProperty Name="CIMLoadTS" ColumnName="CIMLoadTS" />
+          <ScalarProperty Name="LRBLoadTS" ColumnName="LRBLoadTS" />
+          <ScalarProperty Name="FacilityLoadTS" ColumnName="FacilityLoadTS" />
+          <ScalarProperty Name="NITSPlanLoadTS" ColumnName="NITSPlanLoadTS" />
+          <ScalarProperty Name="SubStationTypeId" ColumnName="SubStationTypeId" />
+          <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+          <ScalarProperty Name="OwnershipTypeId" ColumnName="OwnershipTypeId" />
+          <ScalarProperty Name="LTAPSubRegionId" ColumnName="LTAPSubRegionId" />
+          <ScalarProperty Name="ResourceStatusId" ColumnName="ResourceStatusId" />
+          <ScalarProperty Name="PrimaryPoi" ColumnName="PrimaryPoi" />
+          <ScalarProperty Name="SecondaryPoi" ColumnName="SecondaryPoi" />
+          <ScalarProperty Name="PoiCircuitDesignation" ColumnName="PoiCircuitDesignation" />
+          <ScalarProperty Name="PoiVoltage" ColumnName="PoiVoltage" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TLA" ColumnName="TLA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubstationTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.SubstationType)">
+        <MappingFragment StoreEntitySet="SubstationTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maps">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.Map)">
+        <MappingFragment StoreEntitySet="Maps">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="MapDefinitionRootId" ColumnName="MapDefinitionRootId" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserUpatedId" ColumnName="UserUpatedId" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ElectricalGroups">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.ElectricalGroup)">
+        <MappingFragment StoreEntitySet="ElectricalGroups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserUpdatedId" ColumnName="UserUpdatedId" />
+          <ScalarProperty Name="ParentPk" ColumnName="ParentPk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinkSubstationPools">
+      <EntityTypeMapping TypeName="IsTypeOf(CutPlanesModel.LinkSubstationPool)">
+        <MappingFragment StoreEntitySet="LinkSubstationPools">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubstationId" ColumnName="SubstationId" />
+          <ScalarProperty Name="PoolId" ColumnName="PoolId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

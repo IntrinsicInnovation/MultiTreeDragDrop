@@ -1,0 +1,69 @@
+﻿.groupTree,
+.groupTree ul
+{
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.ChildGroupList
+{
+    padding-left: 20px !important;
+}
+.expandImage
+{
+	margin-right: 4px;
+	padding: 0 0 1px 3px;
+	width:10px;
+	height:10px;	
+}
+.folderImage
+{
+    margin:0px 0px 3px 0px;
+    height: 16px;
+    width: 16px;
+    vertical-align:bottom;
+}
+.textHolder
+{
+	height: 16px;
+	line-height: 16px;
+	padding-left: 6px;
+	
+}
+
+.treeItem
+{
+	list-style: none;
+}
+
+.treeBranchSpacer
+{    
+    background-repeat: no-repeat;
+    background-image: url("/CSS/Images/ui-icons_222222_256x240.png");
+    width:16px;height:16px;
+    background-position: -36px -16px;
+    float:left;
+    margin-left:5px;
+}
+
+.treeBranch
+{
+    width:auto;
+    height:20px;
+    border:1px groove #000000;
+    padding: 3px;
+    margin:3px 0px 3px 0px;
+}
+
+.treeBranchItem
+{
+    width:auto; /*20px;*/
+    height:20px;
+    float:left;
+    text-align:center;
+}
+
+.first{ width:25px;}
+.last{ background-color:#63B8FF;}
+.aMap {color:#000000;}
+/**************** end tree style **************/

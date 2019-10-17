@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 43.5" name="EpicCutPlanes">
+  <DataContextMoniker Name="/CutPlanesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="315b6ec0-099f-4386-bf42-ee3e47bffd1d" absoluteBounds="0.5, 3.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CutPlanesDataContext/Pool" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cdd442a-df18-4e87-94b9-a0e03fdd0030" absoluteBounds="0.51499999999999968, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ded8a75-4143-4153-905e-e68128cdbb95" absoluteBounds="3.375, 3.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CutPlanesDataContext/PoolType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be01e5e6-1662-436b-a582-07d76c0fd7e1" absoluteBounds="3.3899999999999997, 3.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 4.32294840494792); (2.5 : 4.32294840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/PoolType/PoolType_Pool" />
+      <nodes>
+        <classShapeMoniker Id="9ded8a75-4143-4153-905e-e68128cdbb95" />
+        <classShapeMoniker Id="315b6ec0-099f-4386-bf42-ee3e47bffd1d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b9bb195f-b5b9-41c9-b1d5-30a5140e71af" absoluteBounds="0.5, 5.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CutPlanesDataContext/LinkSubstationPool" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1254f37-0699-474b-ba51-8a5ca6078df4" absoluteBounds="0.51499999999999968, 6.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 5.5881982421875); (1.5 : 5.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/Pool/Pool_LinkSubstationPool" />
+      <nodes>
+        <classShapeMoniker Id="315b6ec0-099f-4386-bf42-ee3e47bffd1d" />
+        <classShapeMoniker Id="b9bb195f-b5b9-41c9-b1d5-30a5140e71af" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" absoluteBounds="0.5, 8, 2, 6.1938297526041657">
+      <DataClassMoniker Name="/CutPlanesDataContext/Substation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a539e07-b0f3-47b4-aeb8-218f6c2e9cf2" absoluteBounds="0.51499999999999968, 8.46, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 8); (1.5 : 7.64589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/Substation/Substation_LinkSubstationPool" />
+      <nodes>
+        <classShapeMoniker Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" />
+        <classShapeMoniker Id="b9bb195f-b5b9-41c9-b1d5-30a5140e71af" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="35d1f0b7-a5de-429a-a5bc-8f96696a98e5" absoluteBounds="6, 8.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CutPlanesDataContext/ElectricalGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed495d40-8d22-42c8-b095-59465d9c99b7" absoluteBounds="6.015, 8.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 10.3405989583333); (2.5 : 10.3405989583333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/ElectricalGroup/ElectricalGroup_Substation" />
+      <nodes>
+        <classShapeMoniker Id="35d1f0b7-a5de-429a-a5bc-8f96696a98e5" />
+        <classShapeMoniker Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="48805c4d-6721-42b7-82d7-b7950f7434cf" absoluteBounds="3.375, 10.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CutPlanesDataContext/Name" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ab541eb-793c-4fae-8ba9-386bddc0ed8d" absoluteBounds="3.3899999999999997, 11.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 11.7989005533854); (3.375 : 11.7989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/Substation/Substation_Name" />
+      <nodes>
+        <classShapeMoniker Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" />
+        <classShapeMoniker Id="48805c4d-6721-42b7-82d7-b7950f7434cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="827cbf19-7b4c-44e4-ad59-ee2501539750" absoluteBounds="3.375, 13.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CutPlanesDataContext/NameType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b246a3bd-c7a5-4ff2-a934-e291ca6fa701" absoluteBounds="3.3899999999999997, 13.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 13.375); (4.375 : 12.9728011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/NameType/NameType_Name" />
+      <nodes>
+        <classShapeMoniker Id="827cbf19-7b4c-44e4-ad59-ee2501539750" />
+        <classShapeMoniker Id="48805c4d-6721-42b7-82d7-b7950f7434cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1a4259de-dde6-4db4-b693-d4c133d19203" absoluteBounds="3.375, 5.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CutPlanesDataContext/ConstraintSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4826892e-eaea-47a4-8c9c-61386966f169" absoluteBounds="3.3899999999999997, 5.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 5.58668708969351); (2.875 : 5.96168708969351); (2.875 : 5.125); (3.00153746153846 : 5.125); (3.37653746153846 : 5.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/Pool/Pool_ConstraintSet" />
+      <nodes>
+        <classShapeMoniker Id="315b6ec0-099f-4386-bf42-ee3e47bffd1d" />
+        <classShapeMoniker Id="1a4259de-dde6-4db4-b693-d4c133d19203" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="231708e2-e03b-4d7b-90d8-f440f0bddd9a" absoluteBounds="0.5, 14.625, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/CutPlanesDataContext/ResourcePlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a55c8ac8-65b5-4fa4-9894-65006cd82ddc" absoluteBounds="0.51499999999999968, 15.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3901b9b6-1b78-4298-8140-3f7b0f5b6b62" absoluteBounds="3.375, 15.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CutPlanesDataContext/GenerationForecast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f2eb3ab-0129-4535-a482-e3693b10fc32" absoluteBounds="3.3899999999999997, 15.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 16.0392976888021); (3.375 : 16.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/ResourcePlan/ResourcePlan_GenerationForecast" />
+      <nodes>
+        <classShapeMoniker Id="231708e2-e03b-4d7b-90d8-f440f0bddd9a" />
+        <classShapeMoniker Id="3901b9b6-1b78-4298-8140-3f7b0f5b6b62" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6a23d1db-ed80-4043-a828-25f7bac423bc" absoluteBounds="6.25, 17, 2, 9.0783512369791648">
+      <DataClassMoniker Name="/CutPlanesDataContext/GenerationForecastFact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c28d69d8-8684-442c-890d-c196ee015647" absoluteBounds="6.265, 17.46, 1.9700000000000002, 8.5183512369791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.40625 : 16.8285953776042); (3.40625 : 21.7844555664063); (4.47916666666667 : 21.7844555664063 : JumpStart); (4.64583333333333 : 21.7844555664063 : JumpEnd); (6.25 : 21.7844555664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/GenerationForecast/GenerationForecast_GenerationForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="3901b9b6-1b78-4298-8140-3f7b0f5b6b62" />
+        <classShapeMoniker Id="6a23d1db-ed80-4043-a828-25f7bac423bc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="50f84a6b-adcd-4d1f-a69e-8dc7222552c0" absoluteBounds="6.25, 11, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/CutPlanesDataContext/NitsReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e80f142a-b0b7-4425-9b17-ae5ad181306e" absoluteBounds="6.2650000000000006, 11.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c59cc5a-b581-4b76-bd7f-03e7924365c9" absoluteBounds="6, 15.375, 2.875, 1.3862939453125">
+      <DataClassMoniker Name="/CutPlanesDataContext/LinkGenerationForecastNitsReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba747995-fd10-41a0-a26c-e95f5e45d630" absoluteBounds="6.015, 15.835, 2.8449999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 16.0681469726563); (6 : 16.0681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/GenerationForecast/GenerationForecast_LinkGenerationForecastNitsReport" />
+      <nodes>
+        <classShapeMoniker Id="3901b9b6-1b78-4298-8140-3f7b0f5b6b62" />
+        <classShapeMoniker Id="4c59cc5a-b581-4b76-bd7f-03e7924365c9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 14.6939111328125); (7.25 : 15.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/NitsReport/NitsReport_LinkGenerationForecastNitsReport" />
+      <nodes>
+        <classShapeMoniker Id="50f84a6b-adcd-4d1f-a69e-8dc7222552c0" />
+        <classShapeMoniker Id="4c59cc5a-b581-4b76-bd7f-03e7924365c9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8d3bf000-b0c5-4f50-92f8-dc6750468f5c" absoluteBounds="3, 26.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CutPlanesDataContext/Capability" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f21f78cd-937d-4d1b-ab5a-0e081ed19107" absoluteBounds="3.0149999999999997, 27.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2864d569-8b49-4909-9116-a6ba67e51305" absoluteBounds="5.75, 26.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CutPlanesDataContext/Season" />
+      <nestedChildShapes>
+        <elementListCompartment Id="110825cf-1579-496a-b7ee-4d0207c107f3" absoluteBounds="5.765, 27.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f035326-75c8-4648-8e42-aa00fabaf9a9" absoluteBounds="3.375, 8.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CutPlanesDataContext/LinkSubstationElectricalGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9054bcd4-d878-44fa-bfbd-64831dc482b6" absoluteBounds="3.3899999999999997, 8.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 9.13544840494792); (5.375 : 9.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/ElectricalGroup/ElectricalGroup_LinkSubstationElectricalGroup" />
+      <nodes>
+        <classShapeMoniker Id="35d1f0b7-a5de-429a-a5bc-8f96696a98e5" />
+        <classShapeMoniker Id="8f035326-75c8-4648-8e42-aa00fabaf9a9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 9.13544840494792); (3.375 : 9.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/Substation/Substation_LinkSubstationElectricalGroup" />
+      <nodes>
+        <classShapeMoniker Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" />
+        <classShapeMoniker Id="8f035326-75c8-4648-8e42-aa00fabaf9a9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="454a108d-06b9-4267-a4b5-947f404b49e7" absoluteBounds="6, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/CutPlanesDataContext/Map" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a32ff184-0ded-4033-890e-49bff6975dc1" absoluteBounds="6.015, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8 : 8.25); (8.375 : 7.875); (8.375 : 3.6058645098157); (8 : 3.23086450981571)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/ElectricalGroup/ElectricalGroup_Map" />
+      <nodes>
+        <classShapeMoniker Id="35d1f0b7-a5de-429a-a5bc-8f96696a98e5" />
+        <classShapeMoniker Id="454a108d-06b9-4267-a4b5-947f404b49e7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4e4f499e-441b-45bd-a6a2-3f9329ec7552" absoluteBounds="3.375, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CutPlanesDataContext/CutPlaneType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6eaa1246-b6d7-41c1-9c84-dcad939c541e" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76d4ab11-f751-4857-8c8b-4931d188e6b0" absoluteBounds="0.5, 28.375, 2, 4.8477197265625">
+      <DataClassMoniker Name="/CutPlanesDataContext/DimSubstation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="713e1b8c-e84d-401e-961b-52f38409a2dc" absoluteBounds="0.51499999999999968, 28.835, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 28.8854484049479); (2.76041666666667 : 28.8854484049479 : JumpStart); (2.92708333333333 : 28.8854484049479 : JumpEnd); (5.60416666666667 : 28.8854484049479 : JumpStart); (5.83333333333333 : 28.8854484049479 : JumpEnd); (8.0312495 : 28.8854484049479); (8.0312495 : 26.0783512369792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimSubstation/DimSubstation_GenerationForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="76d4ab11-f751-4857-8c8b-4931d188e6b0" />
+        <classShapeMoniker Id="6a23d1db-ed80-4043-a828-25f7bac423bc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cc048b42-7459-40e7-b16b-b5d884c21e80" absoluteBounds="3.125, 29.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CutPlanesDataContext/DimTimePeriod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d953801-c2c0-417d-9197-cfc8c571b19c" absoluteBounds="3.1399999999999997, 29.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 30.3277498372396); (5.75 : 30.3277498372396); (5.75 : 28.6458968098958); (7.875 : 28.6458968098958); (7.875 : 26.6170068359375); (7.6562495 : 26.6170068359375); (7.6562495 : 26.0783512369792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimTimePeriod/DimTimePeriod_GenerationForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="cc048b42-7459-40e7-b16b-b5d884c21e80" />
+        <classShapeMoniker Id="6a23d1db-ed80-4043-a828-25f7bac423bc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="89528d95-f34e-4478-a247-7b9f31eed3dd" absoluteBounds="0.5, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CutPlanesDataContext/CutPlane" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40d393c8-fe62-41a2-9de6-a2cf72bd7d17" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 3.0401025390625); (1.5 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CutPlanesDataContext/CutPlane/CutPlane_Pool" />
+      <nodes>
+        <classShapeMoniker Id="89528d95-f34e-4478-a247-7b9f31eed3dd" />
+        <classShapeMoniker Id="315b6ec0-099f-4386-bf42-ee3e47bffd1d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6 : 2.68674967447917); (2.5 : 2.68674967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CutPlanesDataContext/Map/Map_CutPlane" />
+      <nodes>
+        <classShapeMoniker Id="454a108d-06b9-4267-a4b5-947f404b49e7" />
+        <classShapeMoniker Id="89528d95-f34e-4478-a247-7b9f31eed3dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.375 : 1.38544840494792); (2.5 : 1.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CutPlanesDataContext/CutPlaneType/CutPlaneType_CutPlane" />
+      <nodes>
+        <classShapeMoniker Id="4e4f499e-441b-45bd-a6a2-3f9329ec7552" />
+        <classShapeMoniker Id="89528d95-f34e-4478-a247-7b9f31eed3dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d3049960-3c10-4305-965a-e52a83ae5ae6" absoluteBounds="0.5, 21.875, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/CutPlanesDataContext/DimCutPlaneSubstation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ce8d66e-427a-4b44-a1ba-ac876630574e" absoluteBounds="0.51499999999999968, 22.335, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b934f840-e469-4c1a-a09f-a06194c982a4" absoluteBounds="0.5, 25.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CutPlanesDataContext/DimCutPlaneTimePeriod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2941e170-0cc2-40f3-bf4a-1c7c83aa8067" absoluteBounds="0.51499999999999968, 26.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4fd65bae-c4a7-4f2e-8ab4-979cef60eee6" absoluteBounds="6, 29.25, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/CutPlanesDataContext/FuelType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0644e99d-83a2-4c7f-b23b-41bfca1feaa6" absoluteBounds="6.015, 29.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 31.5396792688802); (5.77083333333333 : 31.5396792688802 : JumpStart); (5.60416666666667 : 31.5396792688802 : JumpEnd); (5.1875 : 31.5396792688802); (5.1875 : 29.1875); (2.92708333333333 : 29.1875 : JumpStart); (2.76041666666667 : 29.1875 : JumpEnd); (2.5625 : 29.1875); (2.5625 : 14.2875797526042); (1.5 : 14.2875797526042); (1.5 : 14.1938297526042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/FuelType/FuelType_Substation" />
+      <nodes>
+        <classShapeMoniker Id="4fd65bae-c4a7-4f2e-8ab4-979cef60eee6" />
+        <classShapeMoniker Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="739915bb-daec-4bbf-97de-dd83c418e3b6" absoluteBounds="0.5, 18.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/CutPlanesDataContext/CutPlaneForecastFact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0aa2fe0-1ed0-4151-acf2-e3c30c3574a4" absoluteBounds="0.51499999999999968, 18.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.50150915249399 : 25.875); (0.125 : 25.498490847506); (0.125 : 21.9343082682292); (0.5 : 21.5593082682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimCutPlaneTimePeriod/DimCutPlaneTimePeriod_CutPlaneForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="b934f840-e469-4c1a-a09f-a06194c982a4" />
+        <classShapeMoniker Id="739915bb-daec-4bbf-97de-dd83c418e3b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5312525 : 21.875); (1.5312525 : 21.5593082682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimCutPlaneSubstation/DimCutPlaneSubstation_CutPlaneForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="d3049960-3c10-4305-965a-e52a83ae5ae6" />
+        <classShapeMoniker Id="739915bb-daec-4bbf-97de-dd83c418e3b6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cbe20299-4384-4ea3-b700-7403fe69c4d0" absoluteBounds="5, 33.125, 2, 10.0398583984375">
+      <DataClassMoniker Name="/CutPlanesDataContext/SubstationAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1728181c-686c-4919-aa98-5da666bae08d" absoluteBounds="5.015, 33.585, 1.9700000000000002, 9.4798583984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 16.3758048502604); (3.3125 : 16.3758048502604); (3.3125 : 26.6875); (5.6875 : 26.6875); (5.6875 : 33.03125); (6 : 33.03125); (6 : 33.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/ResourcePlan/ResourcePlan_SubstationAttribute" />
+      <nodes>
+        <classShapeMoniker Id="231708e2-e03b-4d7b-90d8-f440f0bddd9a" />
+        <classShapeMoniker Id="cbe20299-4384-4ea3-b700-7403fe69c4d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 11.0969148763021); (3.3125 : 11.0969148763021); (3.3125 : 26.625); (5.6875 : 26.625); (5.6875 : 32.96875); (6.531252 : 32.96875); (6.531252 : 33.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/Substation/Substation_SubstationAttribute" />
+      <nodes>
+        <classShapeMoniker Id="68cc8d82-aa14-48b3-9573-e6825b5cda65" />
+        <classShapeMoniker Id="cbe20299-4384-4ea3-b700-7403fe69c4d0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3d6bed5d-e964-431c-9ace-e82d7c2495e1" absoluteBounds="0.5, 37.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CutPlanesDataContext/DimLoadForecastSubstation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3319ff81-c728-4cd3-8346-bc16ccd03ab5" absoluteBounds="0.51499999999999968, 38.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f33dcca-7388-400a-b63f-5dd945f4c14d" absoluteBounds="0.5, 41.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CutPlanesDataContext/DimLoadForecastTimePeriod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3cd9bcb-3a4e-400d-8d46-e37a9cfb7300" absoluteBounds="0.51499999999999968, 41.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2e16bff-a9ff-4aad-939a-9db2fcc3dcc9" absoluteBounds="3.5, 17.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/CutPlanesDataContext/CutPlaneForecast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8806a19a-81cd-491b-a59a-c04ffa80d127" absoluteBounds="3.5149999999999997, 18.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 19.7844555664063); (3.48958333333333 : 19.7844555664063 : JumpStart); (3.22916666666667 : 19.7844555664063 : JumpEnd); (2.92708333333333 : 19.7844555664063 : JumpStart); (2.76041666666667 : 19.7844555664063 : JumpEnd); (2.5 : 19.7844555664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/CutPlaneForecast/CutPlaneForecast_CutPlaneForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="f2e16bff-a9ff-4aad-939a-9db2fcc3dcc9" />
+        <classShapeMoniker Id="739915bb-daec-4bbf-97de-dd83c418e3b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 13.1739005533854); (5.46875 : 13.1739005533854); (5.46875 : 17.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/NitsReport/NitsReport_CutPlaneForecast" />
+      <nodes>
+        <classShapeMoniker Id="50f84a6b-adcd-4d1f-a69e-8dc7222552c0" />
+        <classShapeMoniker Id="f2e16bff-a9ff-4aad-939a-9db2fcc3dcc9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0460a1ec-58c8-4f18-a831-fc41b3762d8f" absoluteBounds="3.625, 22.25, 2, 3.1170068359375">
+      <DataClassMoniker Name="/CutPlanesDataContext/CutPlaneConstraintsForecastFact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d8d2126-d95b-437d-b920-a3245bd5f389" absoluteBounds="3.6399999999999997, 22.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 26.25); (2.76041666666667 : 26.25 : JumpStart); (2.92708333333333 : 26.25 : JumpEnd); (3.22916666666667 : 26.25 : JumpStart); (3.39583333333333 : 26.25 : JumpEnd); (5.34375 : 26.25); (5.34375 : 25.3670068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimCutPlaneTimePeriod/DimCutPlaneTimePeriod_CutPlaneConstraintsForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="b934f840-e469-4c1a-a09f-a06194c982a4" />
+        <classShapeMoniker Id="0460a1ec-58c8-4f18-a831-fc41b3762d8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5625 : 21.3189111328125); (4.5625 : 22.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/CutPlaneForecast/CutPlaneForecast_CutPlaneConstraintsForecastFact" />
+      <nodes>
+        <classShapeMoniker Id="f2e16bff-a9ff-4aad-939a-9db2fcc3dcc9" />
+        <classShapeMoniker Id="0460a1ec-58c8-4f18-a831-fc41b3762d8f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3da6178f-41ef-48dd-b4b6-7aa3dc5fcf68" absoluteBounds="6, 3.625, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/CutPlanesDataContext/Constraint" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce44dd39-a3d5-4ce7-acb6-8cc0ab347861" absoluteBounds="6.015, 4.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 6.50560628255208); (6 : 6.50560628255208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/ConstraintSet/ConstraintSet_Constraint" />
+      <nodes>
+        <classShapeMoniker Id="1a4259de-dde6-4db4-b693-d4c133d19203" />
+        <classShapeMoniker Id="3da6178f-41ef-48dd-b4b6-7aa3dc5fcf68" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2c6ef65a-ab9d-4e0f-a769-50e9e078f3ae" absoluteBounds="2.75, 33.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CutPlanesDataContext/FacilityLoadForecast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98b3298f-1d0b-4159-98be-b77d81c86f69" absoluteBounds="2.7649999999999997, 33.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 17.2267976888021); (2.84375 : 17.2267976888021); (2.84375 : 33.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CutPlanesDataContext/ResourcePlan/ResourcePlan_FacilityLoadForecast" />
+      <nodes>
+        <classShapeMoniker Id="231708e2-e03b-4d7b-90d8-f440f0bddd9a" />
+        <classShapeMoniker Id="2c6ef65a-ab9d-4e0f-a769-50e9e078f3ae" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ca7a8ad0-b972-4413-9e0c-cd2eace6001e" absoluteBounds="0.5, 33.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CutPlanesDataContext/FacilityLoadForecastPeakFact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38b4e4e0-eebf-4853-b241-76c49985d145" absoluteBounds="0.51500000000000057, 33.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 37.625); (1.5 : 36.0401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimLoadForecastSubstation/DimLoadForecastSubstation_FacilityLoadForecastPeakFact" />
+      <nodes>
+        <classShapeMoniker Id="3d6bed5d-e964-431c-9ace-e82d7c2495e1" />
+        <classShapeMoniker Id="ca7a8ad0-b972-4413-9e0c-cd2eace6001e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.50150915249399 : 41.25); (0.125 : 40.873490847506); (0.125 : 36.4151025390625); (0.5 : 36.0401025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CutPlanesDataContext/DimLoadForecastTimePeriod/DimLoadForecastTimePeriod_FacilityLoadForecastPeakFact" />
+      <nodes>
+        <classShapeMoniker Id="8f33dcca-7388-400a-b63f-5dd945f4c14d" />
+        <classShapeMoniker Id="ca7a8ad0-b972-4413-9e0c-cd2eace6001e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 34.6450512695313); (2.5 : 34.6450512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CutPlanesDataContext/FacilityLoadForecast/FacilityLoadForecast_FacilityLoadForecastPeakFact" />
+      <nodes>
+        <classShapeMoniker Id="2c6ef65a-ab9d-4e0f-a769-50e9e078f3ae" />
+        <classShapeMoniker Id="ca7a8ad0-b972-4413-9e0c-cd2eace6001e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

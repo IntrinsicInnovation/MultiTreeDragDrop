@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EpicDevNew_20" Class="CutPlanesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=edmepicdv1;Initial Catalog=EpicDevNew_20;Integrated Security=True" SettingsObjectName="EpicDataAccess.Properties.Settings" SettingsPropertyName="EpicDevNew_20ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="domain.Pools" Member="Pools">
+    <Type Name="Pool">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CutPlaneId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PoolTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Pool_LinkSubstationPool" Member="LinkSubstationPools" ThisKey="Id" OtherKey="PoolId" Type="LinkSubstationPool" />
+      <Association Name="Pool_ConstraintSet" Member="ConstraintSets" ThisKey="Id" OtherKey="PoolId" Type="ConstraintSet" />
+      <Association Name="PoolType_Pool" Member="PoolType" ThisKey="PoolTypeId" OtherKey="Id" Type="PoolType" IsForeignKey="true" />
+      <Association Name="CutPlane_Pool" Member="CutPlane" ThisKey="CutPlaneId" OtherKey="Id" Type="CutPlane" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.PoolTypes" Member="PoolTypes">
+    <Type Name="PoolType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="PoolType_Pool" Member="Pools" ThisKey="Id" OtherKey="PoolTypeId" Type="Pool" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkSubstationPools" Member="LinkSubstationPools">
+    <Type Name="LinkSubstationPool">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubstationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PoolId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Pool_LinkSubstationPool" Member="Pool" ThisKey="PoolId" OtherKey="Id" Type="Pool" IsForeignKey="true" />
+      <Association Name="Substation_LinkSubstationPool" Member="Substation" ThisKey="SubstationId" OtherKey="Id" Type="Substation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.Substations" Member="Substations">
+    <Type Name="Substation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GeoLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SingleLineDiagramUri" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LocalOperationOrderLink" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="MeterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ElectricalGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PowerCallId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSynchronousCondenserCapable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CIMLoadTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LRBLoadTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FacilityLoadTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NITSPlanLoadTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SubStationTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FuelTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OwnershipTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LTAPSubRegionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrimaryPoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SecondaryPoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PoiCircuitDesignation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PoiVoltage" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Association Name="Substation_LinkSubstationPool" Member="LinkSubstationPools" ThisKey="Id" OtherKey="SubstationId" Type="LinkSubstationPool" />
+      <Association Name="Substation_Name" Member="Names" ThisKey="Id" OtherKey="SubstationId" Type="Name" />
+      <Association Name="Substation_LinkSubstationElectricalGroup" Member="LinkSubstationElectricalGroups" ThisKey="Id" OtherKey="SubstationId" Type="LinkSubstationElectricalGroup" />
+      <Association Name="Substation_SubstationAttribute" Member="SubstationAttributes" ThisKey="Id" OtherKey="SubstationId" Type="SubstationAttribute" />
+      <Association Name="ElectricalGroup_Substation" Member="ElectricalGroup" ThisKey="ElectricalGroupId" OtherKey="Id" Type="ElectricalGroup" IsForeignKey="true" />
+      <Association Name="FuelType_Substation" Member="FuelType" ThisKey="FuelTypeId" OtherKey="Id" Type="FuelType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.ElectricalGroups" Member="ElectricalGroups">
+    <Type Name="ElectricalGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentPk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ElectricalGroup_Substation" Member="Substations" ThisKey="Id" OtherKey="ElectricalGroupId" Type="Substation" />
+      <Association Name="ElectricalGroup_LinkSubstationElectricalGroup" Member="LinkSubstationElectricalGroups" ThisKey="Id" OtherKey="ElectricalGroupId" Type="LinkSubstationElectricalGroup" />
+      <Association Name="ElectricalGroup_Map" Member="Maps" ThisKey="Id" OtherKey="MapDefinitionRootId" Type="Map" />
+    </Type>
+  </Table>
+  <Table Name="domain.Names" Member="Names">
+    <Type Name="Name">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Member="Name1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="NameTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubstationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GeneratingUnitId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceBundleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoadId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Substation_Name" Member="Substation" ThisKey="SubstationId" OtherKey="Id" Type="Substation" IsForeignKey="true" />
+      <Association Name="NameType_Name" Member="NameType" ThisKey="NameTypeId" OtherKey="Id" Type="NameType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.NameTypes" Member="NameTypes">
+    <Type Name="NameType">
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NameTypeAuthoritiesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NameType_Name" Member="Names" ThisKey="Id" OtherKey="NameTypeId" Type="Name" />
+    </Type>
+  </Table>
+  <Table Name="domain.ConstraintSets" Member="ConstraintSets">
+    <Type Name="ConstraintSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PoolId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ConstraintSet_Constraint" Member="Constraints" ThisKey="Id" OtherKey="ConstraintSetId" Type="Constraint" />
+      <Association Name="Pool_ConstraintSet" Member="Pool" ThisKey="PoolId" OtherKey="Id" Type="Pool" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.ResourcePlans" Member="ResourcePlans">
+    <Type Name="ResourcePlan">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CreatedByUserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedByUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FiscalYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourcePlanTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourcePlanIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileReferenceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForecastBeginYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForecastEndYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ResourcePlan_GenerationForecast" Member="GenerationForecasts" ThisKey="Id" OtherKey="ResourcePlanId" Type="GenerationForecast" />
+      <Association Name="ResourcePlan_SubstationAttribute" Member="SubstationAttributes" ThisKey="Id" OtherKey="ResourcePlanId" Type="SubstationAttribute" />
+      <Association Name="ResourcePlan_FacilityLoadForecast" Member="FacilityLoadForecasts" ThisKey="Id" OtherKey="ResourcePlanId" Type="FacilityLoadForecast" />
+    </Type>
+  </Table>
+  <Table Name="forecast.GenerationForecasts" Member="GenerationForecasts">
+    <Type Name="GenerationForecast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourcePlanId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GenerationForecast_GenerationForecastFact" Member="GenerationForecastFacts" ThisKey="Id" OtherKey="GenerationForecastId" Type="GenerationForecastFact" />
+      <Association Name="GenerationForecast_LinkGenerationForecastNitsReport" Member="LinkGenerationForecastNitsReports" ThisKey="Id" OtherKey="GenerationForecastId" Type="LinkGenerationForecastNitsReport" />
+      <Association Name="ResourcePlan_GenerationForecast" Member="ResourcePlan" ThisKey="ResourcePlanId" OtherKey="Id" Type="ResourcePlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="forecast.GenerationForecastFacts" Member="GenerationForecastFacts">
+    <Type Name="GenerationForecastFact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GeoLocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GeneratorDimensionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImportTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GenerationForecastId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForecastTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamePlateCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaximumContinuousRating" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaxPowerOutput" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="EpaPlantCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaxEpaTakeOrPay" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="NitsDesignatedCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DependableGeneratingCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="EffectiveLoadCarryingCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="SystemCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PointToPointCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaxOutputNonFirm" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaxOutputFirm" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="ReliabilityMustRunCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MonthlyAverageCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PhysicalMinimumOutput" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="RegulatoryMinimumOutput" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="NameplatedOverexcitedMvar" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="NameplateUnderexcitedMvar" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PowerCallId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimePeriodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubstationDimId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPACode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EPAName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContractManager" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SecondaryContractManager" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PowerFactorOverExcited" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PowerFactorUnderExcited" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ownership" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NetworkResource" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CODStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CODEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DimResourceBundleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GenerationForecast_GenerationForecastFact" Member="GenerationForecast" ThisKey="GenerationForecastId" OtherKey="Id" Type="GenerationForecast" IsForeignKey="true" />
+      <Association Name="DimSubstation_GenerationForecastFact" Member="DimSubstation" ThisKey="SubstationDimId" OtherKey="Id" Type="DimSubstation" IsForeignKey="true" />
+      <Association Name="DimTimePeriod_GenerationForecastFact" Member="DimTimePeriod" ThisKey="TimePeriodId" OtherKey="Id" Type="DimTimePeriod" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="reports.NitsReports" Member="NitsReports">
+    <Type Name="NitsReport">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportApprovalStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Uri" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="DateApproved" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserApprovedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DatePublished" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserPublishedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NitsReportTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NitsReportIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlanName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlanDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ForecastBeginYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForecastEndYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NitsReport_LinkGenerationForecastNitsReport" Member="LinkGenerationForecastNitsReports" ThisKey="Id" OtherKey="NitsReportId" Type="LinkGenerationForecastNitsReport" />
+      <Association Name="NitsReport_CutPlaneForecast" Member="CutPlaneForecasts" ThisKey="Id" OtherKey="NitsResourcePlanId" Type="CutPlaneForecast" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkGenerationForecastNitsReport" Member="LinkGenerationForecastNitsReports">
+    <Type Name="LinkGenerationForecastNitsReport">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GenerationForecastId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NitsReportId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GenerationForecast_LinkGenerationForecastNitsReport" Member="GenerationForecast" ThisKey="GenerationForecastId" OtherKey="Id" Type="GenerationForecast" IsForeignKey="true" />
+      <Association Name="NitsReport_LinkGenerationForecastNitsReport" Member="NitsReport" ThisKey="NitsReportId" OtherKey="Id" Type="NitsReport" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.Capabilities" Member="Capabilities">
+    <Type Name="Capability">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="lookup.Seasons" Member="Seasons">
+    <Type Name="Season">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="link.LinkSubstationElectricalGroups" Member="LinkSubstationElectricalGroups">
+    <Type Name="LinkSubstationElectricalGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubstationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ElectricalGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ElectricalGroup_LinkSubstationElectricalGroup" Member="ElectricalGroup" ThisKey="ElectricalGroupId" OtherKey="Id" Type="ElectricalGroup" IsForeignKey="true" />
+      <Association Name="Substation_LinkSubstationElectricalGroup" Member="Substation" ThisKey="SubstationId" OtherKey="Id" Type="Substation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.Maps" Member="Maps">
+    <Type Name="Map">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserUpatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MapDefinitionRootId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Map_CutPlane" Member="CutPlanes" ThisKey="Id" OtherKey="MapId" Type="CutPlane" />
+      <Association Name="ElectricalGroup_Map" Member="ElectricalGroup" ThisKey="MapDefinitionRootId" OtherKey="Id" Type="ElectricalGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="lookup.CutPlaneTypes" Member="CutPlaneTypes">
+    <Type Name="CutPlaneType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CutPlaneType_CutPlane" Member="CutPlanes" ThisKey="Id" OtherKey="TypeId" Type="CutPlane" />
+    </Type>
+  </Table>
+  <Table Name="forecast.DimSubstations" Member="DimSubstations">
+    <Type Name="DimSubstation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TLA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateBegin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ElectricalGroupDivision" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ElectricalGroupRegion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ElectricalGroupSubRegion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ElectricalGroupArea" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ElectricalGroupZone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FuelType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PrimaryPoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SecondaryPoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PoiVoltage" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PoiCircuitDesignation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FacilityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LTAPRegion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LTAPSubRegion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubstationType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DimSubstation_GenerationForecastFact" Member="GenerationForecastFacts" ThisKey="Id" OtherKey="SubstationDimId" Type="GenerationForecastFact" />
+    </Type>
+  </Table>
+  <Table Name="forecast.DimTimePeriod" Member="DimTimePeriods">
+    <Type Name="DimTimePeriod">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateBegin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DimTimePeriod_GenerationForecastFact" Member="GenerationForecastFacts" ThisKey="Id" OtherKey="TimePeriodId" Type="GenerationForecastFact" />
+    </Type>
+  </Table>
+  <Table Name="domain.CutPlanes" Member="CutPlanes">
+    <Type Name="CutPlane">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MapId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CutPlane_Pool" Member="Pools" ThisKey="Id" OtherKey="CutPlaneId" Type="Pool" />
+      <Association Name="Map_CutPlane" Member="Map" ThisKey="MapId" OtherKey="Id" Type="Map" IsForeignKey="true" />
+      <Association Name="CutPlaneType_CutPlane" Member="CutPlaneType" ThisKey="TypeId" OtherKey="Id" Type="CutPlaneType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="forecast.DimCutPlaneSubstations" Member="DimCutPlaneSubstations">
+    <Type Name="DimCutPlaneSubstation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BeginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SubtstaionType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FuelType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PrimaryPoi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SecondaryPoi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PoiVoltage" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PoiCircuitDesignation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="DimCutPlaneSubstation_CutPlaneForecastFact" Member="CutPlaneForecastFacts" ThisKey="Id" OtherKey="DimSubstationId" Type="CutPlaneForecastFact" />
+    </Type>
+  </Table>
+  <Table Name="forecast.DimCutPlaneTimePeriods" Member="DimCutPlaneTimePeriods">
+    <Type Name="DimCutPlaneTimePeriod">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="DimCutPlaneTimePeriod_CutPlaneForecastFact" Member="CutPlaneForecastFacts" ThisKey="Id" OtherKey="DimTimePeriodId" Type="CutPlaneForecastFact" />
+      <Association Name="DimCutPlaneTimePeriod_CutPlaneConstraintsForecastFact" Member="CutPlaneConstraintsForecastFacts" ThisKey="Id" OtherKey="DimTimePeriodId" Type="CutPlaneConstraintsForecastFact" />
+    </Type>
+  </Table>
+  <Table Name="lookup.FuelTypes" Member="FuelTypes">
+    <Type Name="FuelType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Classification" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FuelClass" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FuelSubType" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsNonIntermittent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateReplaced" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEffective" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OriginalId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FuelType_Substation" Member="Substations" ThisKey="Id" OtherKey="FuelTypeId" Type="Substation" />
+    </Type>
+  </Table>
+  <Table Name="forecast.CutPlaneForecastFacts" Member="CutPlaneForecastFacts">
+    <Type Name="CutPlaneForecastFact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CutPlaneForecastId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DimMapDefinitionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DimMapId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DimTimePeriodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DimSubstationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EffectiveLoadCarryingCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaximumPowerOutput" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="ReliabilityMustRun" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DependableGenerationCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="[Load]" Member="Load" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Association Name="DimCutPlaneTimePeriod_CutPlaneForecastFact" Member="DimCutPlaneTimePeriod" ThisKey="DimTimePeriodId" OtherKey="Id" Type="DimCutPlaneTimePeriod" IsForeignKey="true" />
+      <Association Name="DimCutPlaneSubstation_CutPlaneForecastFact" Member="DimCutPlaneSubstation" ThisKey="DimSubstationId" OtherKey="Id" Type="DimCutPlaneSubstation" IsForeignKey="true" />
+      <Association Name="CutPlaneForecast_CutPlaneForecastFact" Member="CutPlaneForecast" ThisKey="CutPlaneForecastId" OtherKey="Id" Type="CutPlaneForecast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.SubstationAttributes" Member="SubstationAttributes">
+    <Type Name="SubstationAttribute">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OriginalId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateReplaced" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEffective" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProjectPhaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubstationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourcePlanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RatedMVA" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="RatedOverExcitedPowerFactor" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="RatedUnderExcitedPowerFactor" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="NamePlateCapacityInMW" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="RatedOverExcitedMvar" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="RatedUnderExcitedMvar" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="RatedPowerFactor" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DependableGeneratingCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="EffectiveLoadCarryingCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="LoadGrossSummerPeak" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="LoadGrossSummerMin" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="LoadGrossWinterPeak" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="LoadGrossWinterMin" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaximumPowerOutput" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="Nominated" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Probability" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InServiceStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InServiceEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NitsDesignatedCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="EPACapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaxTakeOrPayCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PointToPointCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="ReliabilityMustRunCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="SystemCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="UsePdgcMasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePmpoMasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePptpMasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePrmrMasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePndcMasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePnpMasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePdmx0MasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsePdmx1MasteredValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MaxOutputForFirmTransmission" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="MaxOutputForNonFirmTransmission" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InterconnectionsRequestCapacity" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="UsePelccMasteredValue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="ResourcePlan_SubstationAttribute" Member="ResourcePlan" ThisKey="ResourcePlanId" OtherKey="Id" Type="ResourcePlan" IsForeignKey="true" />
+      <Association Name="Substation_SubstationAttribute" Member="Substation" ThisKey="SubstationId" OtherKey="Id" Type="Substation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="forecast.DimLoadForecastSubstations" Member="DimLoadForecastSubstations">
+    <Type Name="DimLoadForecastSubstation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateBegin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SubstationType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubRegion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="DimLoadForecastSubstation_FacilityLoadForecastPeakFact" Member="FacilityLoadForecastPeakFacts" ThisKey="Id" OtherKey="DimSubstationId" Type="FacilityLoadForecastPeakFact" />
+    </Type>
+  </Table>
+  <Table Name="forecast.DimLoadForecastTimePeriods" Member="DimLoadForecastTimePeriods">
+    <Type Name="DimLoadForecastTimePeriod">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="DimLoadForecastTimePeriod_FacilityLoadForecastPeakFact" Member="FacilityLoadForecastPeakFacts" ThisKey="Id" OtherKey="DimTimePeriodId" Type="FacilityLoadForecastPeakFact" />
+    </Type>
+  </Table>
+  <Table Name="forecast.CutPlaneForecasts" Member="CutPlaneForecasts">
+    <Type Name="CutPlaneForecast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="CutPlaneName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="NitsResourcePlanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoadForecastId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForecastStartYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForecastEndYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TransmissionCapability" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SeasonType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CutPlaneType" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="CoincidenceFactor" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="LevelofInterest" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="GenerationType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="CutPlaneForecast_CutPlaneForecastFact" Member="CutPlaneForecastFacts" ThisKey="Id" OtherKey="CutPlaneForecastId" Type="CutPlaneForecastFact" />
+      <Association Name="CutPlaneForecast_CutPlaneConstraintsForecastFact" Member="CutPlaneConstraintsForecastFacts" ThisKey="Id" OtherKey="CutPlaneForecastId" Type="CutPlaneConstraintsForecastFact" />
+      <Association Name="NitsReport_CutPlaneForecast" Member="NitsReport" ThisKey="NitsResourcePlanId" OtherKey="Id" Type="NitsReport" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="forecast.CutPlaneConstraintsForecastFacts" Member="CutPlaneConstraintsForecastFacts">
+    <Type Name="CutPlaneConstraintsForecastFact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CutPlaneForecastId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DimTimePeriodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SummerN0" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="SummerN1" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="WinterN0" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="WinterN1" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="AreaLoss" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="CutPlaneLoss" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="IntermittentRmr" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Association Name="DimCutPlaneTimePeriod_CutPlaneConstraintsForecastFact" Member="DimCutPlaneTimePeriod" ThisKey="DimTimePeriodId" OtherKey="Id" Type="DimCutPlaneTimePeriod" IsForeignKey="true" />
+      <Association Name="CutPlaneForecast_CutPlaneConstraintsForecastFact" Member="CutPlaneForecast" ThisKey="CutPlaneForecastId" OtherKey="Id" Type="CutPlaneForecast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="domain.Constraints" Member="Constraints">
+    <Type Name="Constraint">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConstraintSetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreatedId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserUpdatedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FiscalYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SummerN0" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="SummerN1" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="WinterN0" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="WinterN1" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="AreaLoss" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="AreaLossInPercentage" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="TotalLoss" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="TotalLossInPercentage" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="IntermittentRmr" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Association Name="ConstraintSet_Constraint" Member="ConstraintSet" ThisKey="ConstraintSetId" OtherKey="Id" Type="ConstraintSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="forecast.FacilityLoadForecasts" Member="FacilityLoadForecasts">
+    <Type Name="FacilityLoadForecast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ResourcePlanId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserCreated" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ForecastYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForecastBeginYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForecastEndYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FacilityLoadForecast_FacilityLoadForecastPeakFact" Member="FacilityLoadForecastPeakFacts" ThisKey="Id" OtherKey="FacilityLoadForecastId" Type="FacilityLoadForecastPeakFact" />
+      <Association Name="ResourcePlan_FacilityLoadForecast" Member="ResourcePlan" ThisKey="ResourcePlanId" OtherKey="Id" Type="ResourcePlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="forecast.FacilityLoadForecastPeakFacts" Member="FacilityLoadForecastPeakFacts">
+    <Type Name="FacilityLoadForecastPeakFact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FacilityLoadForecastId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DimSubstationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DimSeasonId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DimTimePeriodId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BaseLoad" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="SpotLoad" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="PeakDemandLoad" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Column Name="TransmissionLoad" Type="System.Decimal" DbType="Decimal(20,10)" CanBeNull="true" />
+      <Association Name="DimLoadForecastSubstation_FacilityLoadForecastPeakFact" Member="DimLoadForecastSubstation" ThisKey="DimSubstationId" OtherKey="Id" Type="DimLoadForecastSubstation" IsForeignKey="true" />
+      <Association Name="DimLoadForecastTimePeriod_FacilityLoadForecastPeakFact" Member="DimLoadForecastTimePeriod" ThisKey="DimTimePeriodId" OtherKey="Id" Type="DimLoadForecastTimePeriod" IsForeignKey="true" />
+      <Association Name="FacilityLoadForecast_FacilityLoadForecastPeakFact" Member="FacilityLoadForecast" ThisKey="FacilityLoadForecastId" OtherKey="Id" Type="FacilityLoadForecast" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
