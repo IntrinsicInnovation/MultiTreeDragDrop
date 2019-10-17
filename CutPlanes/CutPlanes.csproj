@@ -193,6 +193,7 @@
       <DependentUpon>CutPlanes.edmx</DependentUpon>
     </Content>
     <Content Include="Images\arrows.psd" />
+    <Content Include="DbBackup\database.bak" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\ajax-loader-spinner.gif" />
     <Content Include="Images\ajax-loader.gif" />
